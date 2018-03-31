@@ -60,7 +60,9 @@ nav {
 			&:last-child{}
 
 			&:hover{
-				@include box-shadow(0px, 6px, 30px);
+				-webkit-box-shadow: 0px 6px 30px 0 rgba(50, 50, 50, 0.75);
+				-moz-box-shadow: 0px 6px 30px 0 rgba(50, 50, 50, 0.75);
+				box-shadow: 0px 6px 30px 0 rgba(50, 50, 50, 0.75);
 			}
 		}
 	}
