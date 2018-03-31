@@ -111,6 +111,189 @@ header{
 
 }
 
+/***** CONTENT ****/
 
+.arrow-wrap-red{
+	background-color: $red;
+	clear: both;
+	.arrow-red{
+		@include arrow;
+		border-color: $white transparent transparent transparent;
+	}
+}
+
+.arrow-wrap-white{
+	background-color: $white;
+	clear: both;
+	.arrow-white{
+		@include arrow;
+		border-color: $red transparent transparent transparent;
+	}
+	.arrow-white-from-black{
+		@include arrow;
+		border-color: $black transparent transparent transparent;
+	}
+}
+
+.arrow-wrap-black{
+	background-color: $black;
+	clear: both;
+	.arrow-black{
+		@include arrow;
+		border-color: $red transparent transparent transparent;
+
+	}
+}
+
+.red{
+	background-color: $red;
+	color: $white;
+	li {
+		color: $white;
+		.experience-item {
+			color: $black;
+			.item-title, .key-word {
+				color: $white;
+			}
+		}
+	}
+}
+
+.white{
+	background-color: $white;
+	li {
+		color: $red;
+		.experience-item {
+			color: $black;
+			.item-title, .key-word {
+				color: $red;
+			}
+		}
+	}
+}
+
+.black{
+	background-color: $black;
+	color: $white;
+	.achievement-item {
+		color: $white;
+		.item-title, .key-word {
+			color: $red;
+		}
+	}
+}
+
+section{
+	padding: 50px 50px;
+	position: relative;
+	clear: both;
+
+	h3{
+		font-family: 'headline-font';
+		text-transform: uppercase;
+		font-size: 3em;
+		margin: -40px 0 40px 0;
+		text-align: left;
+	}
+
+	h4{
+		font-family: 'headline-font';
+		font-size: 1.8em;
+		font-weight: 400;
+		letter-spacing: 1px;
+		margin: 20px 0;		
+	}
+
+	ul {
+		margin-left: 30px;
+
+		li {
+			list-style: square;
+			font-size: 30px;
+			margin-bottom: 40px;
+
+			.experience-item {
+				font-size: 0.8em;
+
+				h5 {
+					font-weight: normal;
+				}
+
+				.item-duration {
+					font-size: 0.7em;
+				}
+
+				.item-description {
+					font-size: 0.6em;
+					margin-left: 30px;
+					font-style: italic;
+				}
+			}
+		}
+	}
+
+	p {
+		text-align: justify;
+		margin-bottom: 20px;
+	}
+}
+
+/***** ACHIEVEMENTS ****/
+
+#achievements {
+	.achievement-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		.achievement-item {
+			width: 40%;
+			text-align: center;
+			h5 {
+				color: $red;
+				font-size: 2em;
+			}
+			.item-description {
+				text-align: center;
+				font-style: italic;
+			}
+		}
+	}
+}
+
+/***** ACHIEVEMENTS ****/
+
+#skills {
+	text-align: center;
+	h5 {
+		text-align: left;
+		font-weight: normal;
+		font-size: 0.7em;
+	}
+	.skill {
+		font-size: 0.5em;
+		color: $black;
+		// border: solid 1px $black;
+		border: solid 1px $cream;
+		border-radius: 3px;
+		padding: 5px 10px;
+		background: $cream;
+	}
+}
+
+/***** FOOTER ****/
+
+footer {
+	background-color: $red;
+	padding: 20px;
+	color: white;
+	p{
+		text-align: center;
+		img{
+			vertical-align: bottom;
+			width: 25px;
+			height: auto;
+		}
+	}
+}
 
 
