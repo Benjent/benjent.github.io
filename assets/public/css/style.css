@@ -1,0 +1,124 @@
+/***** RESET *****/
+body, ul, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+/***** COLORS ****/
+/***** VALUES ****/
+/***** FONTS *****/
+@font-face {
+  font-family: 'main-font';
+  src: url("../../public/font/CenturyGothic.ttf");
+}
+
+@font-face {
+  font-family: 'headline-font';
+  src: url("../../public/font/LeagueGothic-Regular.otf");
+}
+
+/***** MIXINS ****/
+/***** MAIN ****/
+body {
+  font-family: 'main-font';
+  color: #1e1e1e;
+}
+
+#page-width {
+  width: 1080px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  position: relative;
+  overflow: hidden !important;
+}
+
+/***** NAV ****/
+nav {
+  width: 100%;
+  height: 50px;
+  background-color: #9a0707;
+  color: #f2f2f2;
+  letter-spacing: 3px;
+  position: fixed;
+  top: -50px;
+  z-index: 10;
+  font-family: 'headline-font' !important;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+nav ul {
+  width: 1080px;
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+
+nav ul a {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+nav ul li {
+  display: inline-block;
+  width: auto;
+  height: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+nav ul li:hover {
+  -webkit-box-shadow: 0px 0px 6px 30px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 0px 6px 30px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 0px 6px 30px rgba(50, 50, 50, 0.75);
+}
+
+#home {
+  padding-bottom: 280px;
+}
+
+/***** HEADER ****/
+header {
+  margin-bottom: 300px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'headline-font';
+  letter-spacing: 4px;
+  margin-top: 280px;
+  height: 17vh;
+}
+
+header .red-bar-top, header .red-bar-bottom {
+  width: 35%;
+  position: absolute;
+  opacity: 0;
+}
+
+header .red-bar-top {
+  border-bottom: solid #9a0707 5px;
+  left: 0;
+}
+
+header .red-bar-bottom {
+  border-top: solid #9a0707 5px;
+  right: 0;
+}
+
+header h1 {
+  font-size: 3em;
+  padding-top: 20px;
+}
+
+header h2 {
+  font-size: 2.2em;
+  margin-bottom: 18px;
+}

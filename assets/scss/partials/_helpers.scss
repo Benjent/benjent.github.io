@@ -1,0 +1,31 @@
+/***** MIXINS ****/
+
+@mixin border-radius($br){
+	-webkit-border-radius: $br;
+	-moz-border-radius: $br;
+	border-radius: $br;
+}
+
+@mixin box-shadow($h: 3px, $w: 5px, $o: 0px){
+	-webkit-box-shadow: 0px $h $w $o rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px $h $w $o rgba(50, 50, 50, 0.75);
+	box-shadow: 0px $h $w $o rgba(50, 50, 50, 0.75);
+}
+
+@mixin filter($type, $f){
+    -webkit-filter: $type($f);
+    -moz-filter: $type($f);
+    filter: $type($f);
+}
+
+@mixin ease($ease){
+	-webkit-transition: all $ease ease-in-out;
+    -moz-transition: all $ease ease-in-out;
+    transition: all $ease ease-in-out;
+}
+
+@mixin arrow{
+	width: 0;
+	height: 0;
+	border-style: solid;
+}
