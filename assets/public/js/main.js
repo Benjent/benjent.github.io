@@ -1,8 +1,11 @@
+
+// ********** NAV ANIMATIONS **********//
 function animateNav() {
     // Nav
     document.querySelector("nav").classList.add("move");
 };animateNav();
 
+// ********** EYE LISTENER **********//
 function animateEye() {
     // Eye
     document.querySelector("#eye").addEventListener("mouseover", function(){
@@ -13,7 +16,7 @@ function animateEye() {
     }, false);
 };animateEye();
 
-
+// ********** HEADER ANIMATIONS **********//
 function animateHeader() {
     // Fade
     let fadingElements = document.querySelectorAll(".fade");
@@ -27,16 +30,31 @@ function animateHeader() {
     unstableElements[1].classList.add("unstabilize-right");
 };setTimeout(animateHeader, 400)
 
-
+// ********** SMOOTH SCROLL **********//
 function scrollTo(element, to, duration = 600) {
-    if (duration <= 0) return;
-    var difference = to - element.scrollTop;
-    var perTick = difference / duration * 10;
+
+    if (duration <= 0) {
+        return;
+    }
+
+    let difference  = to - element.scrollTop;
+    let perTick     = difference / duration * 10;
 
     setTimeout(function() {
         element.scrollTop = element.scrollTop + perTick;
-        if (element.scrollTop === to) return;
-        scrollTo(element, to, duration - 10);
+
+        if (element.scrollTop == to) {
+            return
+        };
+
+        // Ease-out scroll
+        if(duration > 100) {
+            scrollTo(element, to, duration - 10);
+        } else if(duration > 20) {
+            scrollTo(element, to, duration - 5);
+        } else {
+            scrollTo(element, to, duration - 2);
+        }
     }, 10);
 }
 
