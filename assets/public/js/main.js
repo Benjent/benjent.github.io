@@ -33,6 +33,7 @@ function animateHeader() {
 // ********** SMOOTH SCROLL **********//
 function scrollTo(element, to, duration = 600) {
 
+    // Checkout Tejas Shah's answer: https://stackoverflow.com/questions/17733076/smooth-scroll-anchor-links-without-jquery
     if (duration <= 0) {
         return;
     }
