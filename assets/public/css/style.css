@@ -493,7 +493,8 @@ section p {
 }
 
 #skills .skill-wrapper img {
-  width: 30px;
+  max-width: 30px;
+  max-height: 30px;
   position: relative;
   left: -15px;
   margin-right: -15px;

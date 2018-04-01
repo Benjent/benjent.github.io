@@ -76,8 +76,10 @@ function appendIconsToSkills() {
     let skills = document.querySelectorAll(".skill-wrapper");
     for(let i = 0; i < skills.length; i++) {
         let img = document.createElement("img");
-        img.setAttribute("src", "assets/public/img/logos/" + skills[i].getAttribute("skill") + ".png");
-        skills[i].append(img);
+        if(skills[i].hasAttribute("skill")) {
+            img.setAttribute("src", "assets/public/img/logos/" + skills[i].getAttribute("skill") + ".png");
+            skills[i].append(img);
+        }
     }
 }appendIconsToSkills();
 
