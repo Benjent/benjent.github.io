@@ -9,7 +9,7 @@
 
 .fadeIn {
     opacity: 1;
-    transition: opacity 1.7s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
 .unstabilize {
@@ -17,26 +17,26 @@
 }
 
 .unstabilize-left {
-    -webkit-animation: unstabilize-left 6s infinite ease-in-out; /* Safari 4.0 - 8.0 */
-    animation: unstabilize-left 6s infinite ease-in-out;
+    -webkit-animation: unstabilize-left 8s infinite ease-in-out; /* Safari 4.0 - 8.0 */
+    animation: unstabilize-left 8s infinite ease-in-out;
 }
 
 .unstabilize-right {
-    -webkit-animation: unstabilize-right 6s infinite ease-in-out; /* Safari 4.0 - 8.0 */
-    animation: unstabilize-right 6s infinite ease-in-out;
+    -webkit-animation: unstabilize-right 8s infinite ease-in-out; /* Safari 4.0 - 8.0 */
+    animation: unstabilize-right 8s infinite ease-in-out;
 }
 
 @keyframes unstabilize-left {
     0% {left: 0; opacity: 0;}
-    25% {left: 0; opacity: 0;}
-    26% {opacity: 0;}
+    5% {left: 0; opacity: 0;}
+    6% {opacity: 0;}
     
-    30% {left: 30%; opacity: 1;}
-    // 50% {left: 30%; opacity: 1;}
-    70% {left: 30%; opacity: 1;}
+    10% {left: 30%; opacity: 1;}
+    // 30% {left: 30%; opacity: 1;}
+    50% {left: 30%; opacity: 1;}
     
-    74% {opacity: 0;}
-    75% {left: 60%; opacity: 0;}
+    54% {opacity: 0;}
+    55% {left: 60%; opacity: 0;}
     100% {left: 60%; opacity: 0;}
 }
 
@@ -47,9 +47,22 @@
     
     30% {right: 30%; opacity: 1;}
     // 50% {right: 30%; opacity: 1;}
-    70% {right: 30%; opacity: 1;}
+    50% {right: 30%; opacity: 1;}
     
-    74% {opacity: 0;}
-    75% {right: 60%; opacity: 0;}
+    54% {opacity: 0;}
+    55% {right: 60%; opacity: 0;}
     100% {right: 60%; opacity: 0;}
+}
+
+.shake {
+    -webkit-animation: shake 8s infinite ease-in-out;
+    animation: shake 8s infinite ease-in-out;
+}
+
+@keyframes shake {
+    0%, 44%, 48%, 100%{transform: translate3d(0, 0, 0);}
+
+    45%{transform: translate3d(-4px, 3px, 0);}
+    46%{transform: translate3d(2px, -1px, 0);}
+    47%{transform: translate3d(-3px, 1px, 0);}
 }

@@ -1,8 +1,20 @@
-function animateElements() {
-
+function animateNav() {
     // Nav
     document.querySelector("nav").classList.add("move");
+};animateNav();
 
+function animateEye() {
+    // Eye
+    document.querySelector("#eye").addEventListener("mouseover", function(){
+        document.querySelector("#eye").src = "assets/public/img/eyeCenter.jpg";
+    }, false);
+    document.querySelector("#eye").addEventListener("mouseout", function(){
+        document.querySelector("#eye").src = "assets/public/img/eyeLeft.jpg";
+    }, false);
+};animateEye();
+
+
+function animateHeader() {
     // Fade
     let fadingElements = document.querySelectorAll(".fade");
     for(let i = 0; i < fadingElements.length; i++) {
@@ -13,15 +25,8 @@ function animateElements() {
     let unstableElements = document.querySelectorAll(".unstable");
     unstableElements[0].classList.add("unstabilize-left");
     unstableElements[1].classList.add("unstabilize-right");
+};setTimeout(animateHeader, 400)
 
-    // Eye
-    document.querySelector("#eye").addEventListener("mouseover", function(){
-        document.querySelector("#eye").src = "assets/public/img/eyeCenter.jpg";
-    }, false);
-    document.querySelector("#eye").addEventListener("mouseout", function(){
-        document.querySelector("#eye").src = "assets/public/img/eyeLeft.jpg";
-    }, false);
-};animateElements();
 
 function scrollTo(element, to, duration = 600) {
     if (duration <= 0) return;
