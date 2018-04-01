@@ -10,29 +10,40 @@
     <body>
         <nav>
             <ul>
-				<a id="nav-top" href="#top"><li>Top</li></a>
+				<!-- <a id="nav-top" href="#top"><li>Top</li></a>
 				<a id="nav-profile" href="#profile"><li>Profile</li></a>
 				<a id="nav-experience" href="#experience"><li>Professional experience</li></a>
 				<a id="nav-studies" href="#studies"><li>Professional development</li></a>
 				<a id="nav-skills" href="#skills"><li>Skills</li></a>
 				<a id="nav-projects" href="#projects"><li>Projects</li></a>
-				<a id="nav-contact" href="#contact"><li>Contact</li></a>
+				<a id="nav-contact" href="#contact"><li>Contact</li></a> -->
+				<li ref="#top">Top</li>
+				<li ref="#profile">Profile</li>
+				<li ref="#experience">Professional experience</li>
+				<li ref="#studies">Professional development</li>
+				<li ref="#achievements">Achievements</li>
+				<li ref="#skills">Skills</li>
+				<li ref="#contact">Contact</li>
             </ul>
         </nav>
         <div id="page-width">
 
-            <!-- ********** HEADER ********** -->
+            <section id="top">
 
-            <header>
-                <div class="move-right red-bar-top"></div>
-                    <h1 class="fade">Benjamin Morvan</h1>
-                    <h2 class="fade">
-                        Software engineer
-                        <br>
-                        Full-stack web developer
-                    </h2>
-                <div class="move-left red-bar-bottom"></div>
-            </header>
+                <!-- ********** HEADER ********** -->
+
+                <header>
+                    <div class="fade move-right red-bar-top"></div>
+                        <h1 class="fade">Benjamin Morvan</h1>
+                        <h2 class="fade">
+                            Software engineer
+                            <br>
+                            Full-stack web developer
+                        </h2>
+                    <div class="fade move-left red-bar-bottom"></div>
+                </header>
+
+            </section>
 
             <!-- ********** PROFILE ********** -->
 
@@ -261,6 +272,9 @@
                     </li>
                     <li>
                         <h5>Graphic design</h5>
+                        <span class="skill">UI</span>
+                        <span class="skill">Icon design</span>
+                        <span class="skill">SVG</span>
                         <span class="skill">Illustrator</span>
                         <span class="skill">Photoshop</span>
                         <span class="skill">InDesign</span>
@@ -294,6 +308,38 @@
                 </ul>
             </section>
 
+            <!-- ********** CONTACT ********** -->
+
+            <div class="arrow-wrap-black">
+                <div class="arrow-black-from-white"></div>
+            </div>
+            <div class="arrow-wrap-red">
+                <div class="arrow-red-from-black"></div>
+            </div>
+            <div class="arrow-wrap-white">
+                    <div class="arrow-white"></div>
+                </div>
+
+            <section id="contact" class="white">
+                <h3>Contact</h3>
+                <img id="eye" src="assets/public/img/eyeLeft.jpg" />
+                <ul>
+                    <li>
+                        <h5>benjaminjeanmorvan@gmail.com</h5>
+                    </li>
+                    <li>
+                        <h5>0643414065</h5>
+                    </li>
+                    <li>
+                        <h5>
+                            <a href="http://fr.linkedin.com/pub/benjamin-morvan/b5/3b7/353" target="_blank">
+                                LinkedIn
+                            </a>
+                        </h5>
+                    </li>
+                </ul>
+            </section>
+
             <!-- ********** FOOTER ********** -->
 
             <div class="arrow-wrap-red">
@@ -301,7 +347,8 @@
             </div>
 
             <footer>
-                    <p>Benjamin Morvan &reg; - 2018 - <a href="http://fr.linkedin.com/pub/benjamin-morvan/b5/3b7/353" target="_blank"><img src="img/li.png" /></a></p>
+                <img id="backToTop" src="assets/public/img/top-arrow.svg" alt="Top arrow">
+                <p>Benjamin Morvan &reg; - 2018</p>
             </footer>
         </div>
         <script src="assets/public/js/main.js"></script>

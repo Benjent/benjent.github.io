@@ -13,6 +13,10 @@ body {
 	@include box-shadow();
 	position: relative;
 	overflow: hidden !important;
+	// background-image: url("../img/self.jpg");
+	// background-position: 130% 0%;
+	// background-size: 60%;
+	// background-repeat: no-repeat;
 }
 
 /***** NAV ****/
@@ -81,7 +85,7 @@ header{
 	font-family: 'headline-font';
 	letter-spacing: 4px;
 	margin-top: 280px;
-	height: 17vh;
+	// height: 17vh;
 
 	.red-bar-top, .red-bar-bottom{
 		width: 35%;
@@ -114,11 +118,15 @@ header{
 /***** CONTENT ****/
 
 .arrow-wrap-red{
-	background-color: $red;
+	background-color: transparent;
 	clear: both;
 	.arrow-red{
 		@include arrow;
-		border-color: $white transparent transparent transparent;
+		border-color: transparent $red $red $red;
+	}
+	.arrow-red-from-black{
+		@include arrow;
+		border-color: $black $red $red $red;
 	}
 }
 
@@ -141,7 +149,10 @@ header{
 	.arrow-black{
 		@include arrow;
 		border-color: $red transparent transparent transparent;
-
+	}
+	.arrow-black-from-white{
+		@include arrow;
+		border-color: $white transparent transparent transparent;
 	}
 }
 
@@ -248,6 +259,11 @@ section{
 		.achievement-item {
 			width: 40%;
 			text-align: center;
+			// padding: 30px;
+			// border-radius: 5px;
+			// background: $cream;
+			// color: $black;
+			// margin-bottom: 50px;
 			h5 {
 				color: $red;
 				font-size: 2em;
@@ -280,19 +296,34 @@ section{
 	}
 }
 
+/***** CONTACT ****/
+
+#contact {
+	#eye {
+		float: right;
+		width: 200px;
+		@include border-radius(40%);
+		margin-top: -40px;
+	}
+	h5 {
+		font-weight: normal;
+		font-size: 0.7em;
+	}
+	a {
+		color: $red;
+	}
+}
+
 /***** FOOTER ****/
 
 footer {
 	background-color: $red;
 	padding: 20px;
-	color: white;
-	p{
-		text-align: center;
-		img{
-			vertical-align: bottom;
-			width: 25px;
-			height: auto;
-		}
+	color: $white;
+	text-align: center;
+	img {
+		width: 50px;
+		margin-bottom: 20px;
 	}
 }
 
