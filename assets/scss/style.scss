@@ -1,0 +1,359 @@
+@import "partials/gatherer";
+
+/***** MAIN ****/
+
+body {
+	font-family: 'main-font';
+	color: $black;
+}
+
+#page-width {
+	width: $page-width;
+	margin: 0 auto;
+	@include box-shadow();
+	position: relative;
+	overflow: hidden !important;
+	// background-image: url("../img/self.jpg");
+	// background-position: 130% 0%;
+	// background-size: 60%;
+	// background-repeat: no-repeat;
+}
+
+/***** NAV ****/
+
+nav {
+	width: 100%;
+	height: 50px;
+	background-color: $red;
+	color: $white;
+	
+	letter-spacing: 3px;
+	position: fixed;
+
+	top: -50px;
+	z-index: 10;
+
+	font-family: 'headline-font' !important;
+
+	@include box-shadow();	
+
+	ul {	
+		width: $page-width;
+		max-width: $page-width;
+		margin: 0 auto;
+		text-align: center;
+		text-transform: uppercase;
+		position: relative;	
+
+		li {
+			display: inline-block;
+			width: auto;
+			height: 35px;
+
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 15px;
+
+			@include ease(0.2s);
+
+			&:last-child{}
+
+			&:hover{
+				-webkit-box-shadow: 0px 6px 30px 0 rgba(50, 50, 50, 0.75);
+				-moz-box-shadow: 0px 6px 30px 0 rgba(50, 50, 50, 0.75);
+				box-shadow: 0px 6px 30px 0 rgba(50, 50, 50, 0.75);
+				cursor: pointer;
+			}
+			&:active {
+				-webkit-box-shadow: 0px 6px 30px 0 rgba(50, 50, 50, 0.75) inset;
+				-moz-box-shadow: 0px 6px 30px 0 rgba(50, 50, 50, 0.75) inset;
+				box-shadow: 0px 6px 30px 0 rgba(50, 50, 50, 0.75) inset;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+#home {
+	padding-bottom: 280px;
+}
+
+/***** HEADER ****/
+
+header{
+	margin-bottom: 300px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'headline-font';
+	letter-spacing: 4px;
+	margin-top: 280px;
+	// height: 17vh;
+
+	.red-bar-top, .red-bar-bottom{
+		width: 40%;
+		position: absolute;
+		opacity: 0;
+	}
+
+	.red-bar-top{
+		border-bottom: solid $red 5px;
+		left: 0;
+	}
+
+	.red-bar-bottom{
+		border-top: solid $red 5px;
+		right: 0;
+	}
+
+	h1{
+		font-size: 3em;
+		padding-top: 20px;
+	}
+
+	h2{
+		font-size: 2.2em;
+		margin-bottom: 18px;
+	}
+
+}
+
+/***** SECTION TRANSITION ****/
+
+// Arrows are created this tricky way to prevent aliasing
+.arrow-wrap-red{
+	background-color: transparent;
+	clear: both;
+	.arrow-red{
+		@include arrow;
+		border-color: transparent $red $red $red;
+	}
+	.arrow-red-from-black{
+		@include arrow;
+		border-color: $black $red $red $red;
+	}
+	.arrow-red-from-orange{
+		@include arrow;
+		border-color: $orange $red $red $red;
+	}
+}
+
+.arrow-wrap-white{
+	background-color: $white;
+	clear: both;
+	.arrow-white{
+		@include arrow;
+		border-color: $red transparent transparent transparent;
+	}
+	.arrow-white-from-black{
+		@include arrow;
+		border-color: $black transparent transparent transparent;
+	}
+}
+
+.arrow-wrap-black{
+	background-color: $black;
+	clear: both;
+	.arrow-black{
+		@include arrow;
+		border-color: $red transparent transparent transparent;
+	}
+	.arrow-black-from-white{
+		@include arrow;
+		border-color: $white transparent transparent transparent;
+	}
+}
+
+.arrow-wrap-orange{
+	background-color: $orange;
+	clear: both;
+	.arrow-orange{
+		@include arrow;
+		border-color: $red transparent transparent transparent;
+	}
+	.arrow-orange-from-black{
+		@include arrow;
+		border-color: $black transparent transparent transparent;
+	}
+}
+
+/***** CONTENT ****/
+
+.red{
+	background-color: $red;
+	color: $cream;
+	li {
+		color: $orange;
+		.experience-item {
+			color: $cream;
+			.item-title, .key-word {
+				color: $orange;
+			}
+		}
+	}
+}
+
+.white{
+	background-color: $white;
+	li {
+		color: $red;
+		.experience-item {
+			color: $black;
+			.item-title, .key-word {
+				color: $red;
+			}
+		}
+	}
+}
+
+.black{
+	background-color: $black;
+	color: $cream;
+	.achievement-item {
+		color: $cream;
+		.item-title, .key-word {
+			color: $red;
+		}
+	}
+}
+
+section{
+	padding: 50px 50px;
+	position: relative;
+	clear: both;
+
+	h3{
+		font-family: 'headline-font';
+		text-transform: uppercase;
+		font-size: 3em;
+		margin: -40px 0 40px 0;
+		text-align: left;
+	}
+
+	h4{
+		font-family: 'headline-font';
+		font-size: 1.8em;
+		font-weight: 400;
+		letter-spacing: 1px;
+		margin: 20px 0;		
+	}
+
+	h5{
+		font-size: $font-size-item-title;
+		font-weight: normal;
+	}
+
+	ul {
+		margin-left: $font-size-list-point;
+
+		li {
+			list-style: square;
+			font-size: $font-size-list-point;
+			margin-bottom: 40px;
+
+			.experience-item {
+				font-size: $font-size-item-title;
+
+				.item-duration {
+					font-size: $font-size-item-subtitle;
+				}
+
+				.item-description {
+					font-size: $font-size-descr;
+					margin-left: 30px;
+					font-style: italic;
+				}
+			}
+		}
+	}
+
+	p {
+		text-align: justify;
+		margin-bottom: 20px;
+	}
+}
+
+/***** ACHIEVEMENTS ****/
+
+#achievements {
+	h3 {
+		color: $orange;
+	}
+	.achievement-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		$projectMargin: 100px;
+		margin-bottom: -$projectMargin;
+		.achievement-item {
+			width: 40%;
+			text-align: center;
+			// padding: 30px;
+			// border-radius: 5px;
+			// background: $cream;
+			// color: $black;
+			margin-bottom: $projectMargin;
+			h5 {
+				color: $red;
+				font-size: $font-size-project-title;
+			}
+			.item-team {
+				color: $orange;
+			}
+			.item-description {
+				// text-align: center;
+				text-align: justify;
+				font-style: italic;
+				font-size: $font-size-descr;
+				// margin: 20px 0 100px 0;
+			}
+		}
+	}
+}
+
+/***** SKILLS ****/
+
+#skills {
+	text-align: center;
+	h5 {
+		text-align: left;
+	}
+	.skill {
+		font-size: $font-size-skill;
+		color: $black;
+		// border: solid 1px $black;
+		border: solid 1px $cream;
+		border-radius: 3px;
+		padding: 5px 10px;
+		background: $cream;
+	}
+}
+
+/***** CONTACT ****/
+
+#contact {
+	#eye {
+		float: right;
+		width: 200px;
+		@include border-radius(40%);
+		margin-top: -40px;
+	}
+	a {
+		color: $red;
+	}
+}
+
+/***** FOOTER ****/
+
+footer {
+	background-color: $red;
+	padding: 20px;
+	color: $white;
+	text-align: center;
+	#backToTop {
+		width: 50px;
+		margin-bottom: 20px;
+		cursor: pointer;
+	}
+}
+
+
