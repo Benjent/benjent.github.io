@@ -1,12 +1,19 @@
 function animateElements() {
 
+    // Nav
+    document.querySelector("nav").classList.add("move");
+
     // Fade
     let fadingElements = document.querySelectorAll(".fade");
     for(let i = 0; i < fadingElements.length; i++) {
-        fadingElements[i].classList.remove("fade");
+        fadingElements[i].classList.add("fadeIn");
     }
-    // Nav
-    document.querySelector("nav").classList.add("move");
+
+    // Unstable
+    let unstableElements = document.querySelectorAll(".unstable");
+    unstableElements[0].classList.add("unstabilize-left");
+    unstableElements[1].classList.add("unstabilize-right");
+
     // Eye
     document.querySelector("#eye").addEventListener("mouseover", function(){
         document.querySelector("#eye").src = "assets/public/img/eyeCenter.jpg";
@@ -14,10 +21,7 @@ function animateElements() {
     document.querySelector("#eye").addEventListener("mouseout", function(){
         document.querySelector("#eye").src = "assets/public/img/eyeLeft.jpg";
     }, false);
-
-}
-
-animateElements();
+};animateElements();
 
 function scrollTo(element, to, duration = 600) {
     if (duration <= 0) return;
