@@ -71,4 +71,13 @@ document.querySelector("#backToTop").addEventListener("click", function(){
     scrollTo(document.documentElement , document.querySelector("#top").offsetTop - 80, 200);
 }, false);
 
+// SKILLS ICONS
+function appendIconsToSkills() {
+    let skills = document.querySelectorAll(".skill-wrapper");
+    for(let i = 0; i < skills.length; i++) {
+        let img = document.createElement("img");
+        img.setAttribute("src", "assets/public/img/logos/" + skills[i].getAttribute("skill") + ".png");
+        skills[i].append(img);
+    }
+}appendIconsToSkills();
 

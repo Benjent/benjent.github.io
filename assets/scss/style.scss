@@ -317,14 +317,27 @@ section{
 	h5 {
 		text-align: left;
 	}
-	.skill {
-		font-size: $font-size-skill;
-		color: $black;
-		// border: solid 1px $black;
-		border: solid 1px $cream;
-		border-radius: 3px;
-		padding: 5px 10px;
-		background: $cream;
+
+	.skill-wrapper {
+		display: inline;
+
+		.skill {
+			font-size: $font-size-skill;
+			color: $black;
+			// border: solid 1px $black;
+			border: solid 1px $cream;
+			border-radius: 3px;
+			padding: 5px 10px;
+			background: $cream;
+		}
+		
+		img {
+			width: 30px;
+			position: relative;
+			$offset: 15px;
+			left: -$offset;
+			margin-right: -$offset;
+		}
 	}
 }
 
