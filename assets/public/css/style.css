@@ -430,6 +430,12 @@ section ul li .experience-item {
   font-size: 22px;
 }
 
+section ul li .experience-item img {
+  float: right;
+  width: 150px;
+  margin-right: 50px;
+}
+
 section ul li .experience-item .item-duration {
   font-size: 17px;
 }

@@ -257,6 +257,12 @@ section{
 			.experience-item {
 				font-size: $font-size-item-title;
 
+				img {
+					float: right;
+					width: 150px;
+					margin-right: 50px;
+				}
+
 				.item-duration {
 					font-size: $font-size-item-subtitle;
 				}
