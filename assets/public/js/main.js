@@ -63,12 +63,12 @@ let navItems = document.querySelectorAll("nav ul li");
 
 for(let i = 0; i < navItems.length; i++) {
     navItems[i].addEventListener("click", function(){
-        scrollTo(document.documentElement , document.querySelector(navItems[i].getAttribute("ref")).offsetTop - 80, 200);
+        scrollTo(document.documentElement , document.querySelector(navItems[i].getAttribute("ref")).offsetTop - 50, 200);
     }, false);
 }
 
 document.querySelector("#backToTop").addEventListener("click", function(){
-    scrollTo(document.documentElement , document.querySelector("#top").offsetTop - 80, 200);
+    scrollTo(document.documentElement , document.querySelector("#top").offsetTop - 50, 200);
 }, false);
 
 // SKILLS ICONS

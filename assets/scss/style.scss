@@ -480,8 +480,21 @@ footer {
 	#contact {
 		background-size: 150%;
 		.contentWrapper {
+			margin-left: 50vw;
 			h5 {
-				font-size: $font-size-project-title;
+				font-size: $font-size-item-title;
+			}
+		}
+	}
+}
+
+@media all and (min-width: 200px) and (max-width: 479px){
+	#contact {
+		background-size: 180%;
+		.contentWrapper {
+			margin-left: 40vw;
+			h5 {
+				word-wrap: break-word;
 			}
 		}
 	}
