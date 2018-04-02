@@ -156,6 +156,10 @@ header{
 		@include arrow;
 		border-color: $black transparent transparent transparent;
 	}
+	.arrow-white-from-alpha{
+		@include arrow;
+		border-color: $white transparent transparent transparent;
+	}
 }
 
 .arrow-wrap-black{
@@ -247,7 +251,7 @@ header{
 		.experience-item {
 			color: $black;
 			.item-title, .key-word {
-				color: $red;
+				color: $white;
 			}
 		}
 	}
@@ -388,18 +392,29 @@ section{
 
 /***** CONTACT ****/
 
-// #landscape {
-// 	background: url("../img/photos/orcieres.jpg");
-// 	background-repeat: no-repeat;
-// 	background-size: 100%;
-// 	background-position: bottom;
-// 	margin-top: -50px;
-// 	z-index: -1;
-// 	margin-bottom: -50px;
-// 	filter: grayscale(50%);
-// }
+$landscapeOffset: 100px;
+
+#landscape {
+	background: url("../img/photos/test1.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	margin-top: -$arrowSize;
+	// height: 50vw;
+	z-index: -1;
+	// margin-bottom: -50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	#landscapeOffset {
+		margin-bottom: $arrowSize;
+	}
+}
 
 #contact {
+	color: $white;
+	// padding-top: $landscapeOffset;
 	#eye {
 		float: right;
 		width: 200px;
@@ -407,22 +422,48 @@ section{
 		margin-top: -40px;
 	}
 	a {
-		color: $red;
+		color: $white;
+	}
+
+	.contentWrapper {
+		// float: right;
+		//  12vw 20px 20px;
+		margin-left: 40vw;
+		h5 {
+			font-size: $font-size-catchphrase;
+			font-family: "headline-font";
+			margin-bottom: 2vw;
+		}
 	}
 }
 
 /***** FOOTER ****/
 
 footer {
-	background-color: $red;
+	// background-color: $red;
+	// margin-top: -$landscapeOffset;
 	padding: 20px;
 	color: $white;
 	text-align: center;
+	margin-top: $arrowSize;
 	#backToTop {
 		width: 50px;
 		margin-bottom: 20px;
 		cursor: pointer;
 	}
+}
+
+@media all and (min-width: 200px) and (max-width: 1279px){
+
+	#contact {
+		// padding: 100px 250px 20px 20px;
+		.contentWrapper {
+			h5 {
+				font-size: $font-size-project-title;
+			}
+		}
+	}
+
 }
 
 @media all and (min-width: 680px) and (max-width: 1079px){
@@ -480,6 +521,15 @@ footer {
 	}
 	section {
 		padding: 50px 50px;
+	}
+
+	#contact {
+		height: 400px;
+		.contentWrapper {
+			h5 {
+				font-size: $font-size-project-title;
+			}
+		}
 	}
 }
 
