@@ -15,10 +15,6 @@ body {
 	@include box-shadow();
 	position: relative;
 	overflow: hidden !important;
-	// background-image: url("../img/self.jpg");
-	// background-position: 130% 0%;
-	// background-size: 60%;
-	// background-repeat: no-repeat;
 }
 
 /***** NAV ****/
@@ -339,7 +335,7 @@ section{
 $landscapeOffset: 100px;
 
 #landscape {
-	background: url("../img/photos/test1.jpg");
+	background: url("../img/photos/sugiton-filtered.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: center;
