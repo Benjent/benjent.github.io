@@ -125,82 +125,26 @@ header{
 
 /***** SECTION TRANSITION ****/
 
-// Arrows are created this tricky way to prevent aliasing
-.arrow-wrap-red{
-	background-color: $red;
+.arrow-wrapper {
 	display: flex;
 	justify-content: flex-end;
-	.arrow-red{
-		@include arrow;
-		border-color: $white transparent transparent transparent;
-	}
-	.arrow-red-from-black{
-		@include arrow;
-		border-color: $black transparent transparent transparent;
-	}
-	.arrow-red-from-orange{
-		@include arrow;
-		border-color: $orange transparent transparent transparent;
-	}
-}
-
-.arrow-wrap-white{
-	background-color: $white;
-	display: flex;
-	justify-content: flex-end;
-	.arrow-white{
-		@include arrow;
-		border-color: $red transparent transparent transparent;
-	}
-	.arrow-white-from-black{
-		@include arrow;
-		border-color: $black transparent transparent transparent;
-	}
-	.arrow-white-from-alpha{
-		@include arrow;
-		border-color: $white transparent transparent transparent;
-	}
-}
-
-.arrow-wrap-black{
-	background-color: $black;
-	display: flex;
-	justify-content: flex-end;
-	.arrow-black{
-		@include arrow;
-		border-color: $red transparent transparent transparent;
-	}
-	.arrow-black-from-white{
-		@include arrow;
-		border-color: $white transparent transparent transparent;
-	}
-}
-
-.arrow-wrap-orange{
-	background-color: $orange;
-	display: flex;
-	justify-content: flex-end;
-	.arrow-orange{
-		@include arrow;
-		border-color: $red transparent transparent transparent;
-	}
-	.arrow-orange-from-black{
-		@include arrow;
-		border-color: $black transparent transparent transparent;
-	}
-	.arrow-orange-from-white{
-		@include arrow;
-		border-color: $white transparent transparent transparent;
-	}
-}
-
-.arrow-wrap-alpha{
-	background-color: transparent;
-	display: flex;
-	justify-content: flex-end;
-	.arrow-alpha{
-		@include arrow;
-		border-color: $red transparent transparent transparent;
+	position: relative;
+	z-index: 1;
+	margin-bottom: -$arrowSize;
+	.arrow {
+		width: 1080px;
+		&.arrow-red {
+			fill: $red;
+		}
+		&.arrow-orange {
+			fill: $orange;
+		}
+		&.arrow-white {
+			fill: $white;
+		}
+		&.arrow-black {
+			fill: $black;
+		}
 	}
 }
 
@@ -258,9 +202,9 @@ header{
 }
 
 section{
-	padding: 50px 50px;
+	// padding: 50px 50px;
 	position: relative;
-	padding: 50px 20vw;
+	padding: 2 * $arrowSize 20vw $arrowSize 20vw;
 
 	h3{
 		font-family: 'headline-font';

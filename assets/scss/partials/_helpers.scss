@@ -23,12 +23,3 @@
     -moz-transition: all $ease ease-in-out;
     transition: all $ease ease-in-out;
 }
-
-$arrowSize: 50px;
-
-@mixin arrow{
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: $arrowSize 280px 0 800px;
-}
