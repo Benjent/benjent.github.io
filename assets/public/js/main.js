@@ -68,7 +68,7 @@ for(let i = 0; i < navItems.length; i++) {
 }
 
 document.querySelector("#backToTop").addEventListener("click", function(){
-    scrollTo(document.documentElement , document.querySelector("#top").offsetTop - 50, 200);
+    scrollTo(document.documentElement , document.querySelector("#page-width").offsetTop - 50, 200);
 }, false);
 
 // SKILLS ICONS
