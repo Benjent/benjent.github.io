@@ -8,8 +8,9 @@ body {
 }
 
 #page-width {
-	width: $page-width;
-	margin: 0 auto;
+	// width: $page-width;
+	width: 100vw;
+	// margin: 0 auto;
 	@include box-shadow();
 	position: relative;
 	overflow: hidden !important;
@@ -121,25 +122,27 @@ header{
 
 // Arrows are created this tricky way to prevent aliasing
 .arrow-wrap-red{
-	background-color: transparent;
-	clear: both;
+	background-color: $red;
+	display: flex;
+	justify-content: flex-end;
 	.arrow-red{
 		@include arrow;
-		border-color: transparent $red $red $red;
+		border-color: $white transparent transparent transparent;
 	}
 	.arrow-red-from-black{
 		@include arrow;
-		border-color: $black $red $red $red;
+		border-color: $black transparent transparent transparent;
 	}
 	.arrow-red-from-orange{
 		@include arrow;
-		border-color: $orange $red $red $red;
+		border-color: $orange transparent transparent transparent;
 	}
 }
 
 .arrow-wrap-white{
 	background-color: $white;
-	clear: both;
+	display: flex;
+	justify-content: flex-end;
 	.arrow-white{
 		@include arrow;
 		border-color: $red transparent transparent transparent;
@@ -152,7 +155,8 @@ header{
 
 .arrow-wrap-black{
 	background-color: $black;
-	clear: both;
+	display: flex;
+	justify-content: flex-end;
 	.arrow-black{
 		@include arrow;
 		border-color: $red transparent transparent transparent;
@@ -165,7 +169,8 @@ header{
 
 .arrow-wrap-orange{
 	background-color: $orange;
-	clear: both;
+	display: flex;
+	justify-content: flex-end;
 	.arrow-orange{
 		@include arrow;
 		border-color: $red transparent transparent transparent;
@@ -223,7 +228,7 @@ header{
 section{
 	padding: 50px 50px;
 	position: relative;
-	clear: both;
+	padding: 50px 10vw;
 
 	h3{
 		font-family: 'headline-font';
@@ -260,7 +265,8 @@ section{
 				img {
 					float: right;
 					width: 150px;
-					margin-right: 50px;
+					// margin-right: 50px;
+					margin: 0 50px 20px 20px;
 				}
 
 				.item-duration {

@@ -141,8 +141,7 @@ body {
 }
 
 #page-width {
-  width: 1080px;
-  margin: 0 auto;
+  width: 100vw;
   -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
   -moz-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
   box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
@@ -243,8 +242,9 @@ header h2 {
 
 /***** SECTION TRANSITION ****/
 .arrow-wrap-red {
-  background-color: transparent;
-  clear: both;
+  background-color: #AB3134;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .arrow-wrap-red .arrow-red {
@@ -252,7 +252,7 @@ header h2 {
   height: 0;
   border-style: solid;
   border-width: 50px 280px 0 800px;
-  border-color: transparent #AB3134 #AB3134 #AB3134;
+  border-color: #ffffff transparent transparent transparent;
 }
 
 .arrow-wrap-red .arrow-red-from-black {
@@ -260,7 +260,7 @@ header h2 {
   height: 0;
   border-style: solid;
   border-width: 50px 280px 0 800px;
-  border-color: #1e1e1e #AB3134 #AB3134 #AB3134;
+  border-color: #1e1e1e transparent transparent transparent;
 }
 
 .arrow-wrap-red .arrow-red-from-orange {
@@ -268,12 +268,13 @@ header h2 {
   height: 0;
   border-style: solid;
   border-width: 50px 280px 0 800px;
-  border-color: #e58141 #AB3134 #AB3134 #AB3134;
+  border-color: #e58141 transparent transparent transparent;
 }
 
 .arrow-wrap-white {
   background-color: #ffffff;
-  clear: both;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .arrow-wrap-white .arrow-white {
@@ -294,7 +295,8 @@ header h2 {
 
 .arrow-wrap-black {
   background-color: #1e1e1e;
-  clear: both;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .arrow-wrap-black .arrow-black {
@@ -315,7 +317,8 @@ header h2 {
 
 .arrow-wrap-orange {
   background-color: #e58141;
-  clear: both;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .arrow-wrap-orange .arrow-orange {
@@ -392,7 +395,7 @@ header h2 {
 section {
   padding: 50px 50px;
   position: relative;
-  clear: both;
+  padding: 50px 10vw;
 }
 
 section h3 {
@@ -433,7 +436,7 @@ section ul li .experience-item {
 section ul li .experience-item img {
   float: right;
   width: 150px;
-  margin-right: 50px;
+  margin: 0 50px 20px 20px;
 }
 
 section ul li .experience-item .item-duration {
