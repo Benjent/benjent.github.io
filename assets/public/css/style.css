@@ -245,32 +245,26 @@ header h2 {
 }
 
 /***** SECTION TRANSITION ****/
-.arrow-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  z-index: 1;
-  margin-bottom: -50px;
+.arrow {
+  background-repeat: no-repeat;
+  background-position-x: right;
+  height: 50px;
 }
 
-.arrow-wrapper .arrow {
-  width: 1080px;
+.arrow.arrow-red {
+  background-image: url("../img/arrow-red.svg");
 }
 
-.arrow-wrapper .arrow.arrow-red {
-  fill: #AB3134;
+.arrow.arrow-orange {
+  background-image: url("../img/arrow-orange.svg");
 }
 
-.arrow-wrapper .arrow.arrow-orange {
-  fill: #e58141;
+.arrow.arrow-white {
+  background-image: url("../img/arrow-white.svg");
 }
 
-.arrow-wrapper .arrow.arrow-white {
-  fill: #ffffff;
-}
-
-.arrow-wrapper .arrow.arrow-black {
-  fill: #1e1e1e;
+.arrow.arrow-black {
+  background-image: url("../img/arrow-black.svg");
 }
 
 /***** CONTENT ****/
@@ -338,10 +332,13 @@ header h2 {
 
 section {
   position: relative;
-  padding: 100px 20vw 50px 20vw;
 }
 
-section h3 {
+section .content {
+  padding: 50px 20vw;
+}
+
+section .content h3 {
   font-family: 'headline-font';
   text-transform: uppercase;
   font-size: 3em;
@@ -349,7 +346,7 @@ section h3 {
   text-align: left;
 }
 
-section h4 {
+section .content h4 {
   font-family: 'headline-font';
   font-size: 1.8em;
   font-weight: 400;
@@ -357,42 +354,42 @@ section h4 {
   margin: 20px 0;
 }
 
-section h5 {
+section .content h5 {
   font-size: 22px;
   font-weight: normal;
 }
 
-section ul {
+section .content ul {
   margin-left: 30px;
 }
 
-section ul li {
+section .content ul li {
   list-style: square;
   font-size: 30px;
   margin-bottom: 40px;
 }
 
-section ul li .experience-item {
+section .content ul li .experience-item {
   font-size: 22px;
 }
 
-section ul li .experience-item img {
+section .content ul li .experience-item img {
   float: right;
   width: 150px;
   margin: 0 50px 20px 20px;
 }
 
-section ul li .experience-item .item-duration {
+section .content ul li .experience-item .item-duration {
   font-size: 17px;
 }
 
-section ul li .experience-item .item-description {
+section .content ul li .experience-item .item-description {
   font-size: 14px;
   margin-left: 30px;
   font-style: italic;
 }
 
-section p {
+section .content p {
   text-align: justify;
   margin-bottom: 20px;
 }
@@ -461,33 +458,16 @@ section p {
 }
 
 /***** CONTACT ****/
-#landscape {
-  background: url("../img/photos/sugiton-filtered.jpg");
+#contact {
+  background-image: url("../img/photos/sugiton-filtered.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
-  margin-top: -50px;
+  color: #ffffff;
   z-index: -1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-#landscape #landscapeOffset {
-  margin-bottom: 50px;
-}
-
-#contact {
-  color: #ffffff;
-}
-
-#contact #eye {
-  float: right;
-  width: 200px;
-  -webkit-border-radius: 40%;
-  -moz-border-radius: 40%;
-  border-radius: 40%;
-  margin-top: -40px;
 }
 
 #contact a {
@@ -509,7 +489,6 @@ footer {
   padding: 20px;
   color: #ffffff;
   text-align: center;
-  margin-top: 50px;
 }
 
 footer #backToTop {
@@ -533,8 +512,11 @@ footer #backToTop {
     letter-spacing: 1px;
     padding: 15px 10px 0 10px;
   }
-  section {
-    padding: 50px 10vw;
+  section .content {
+    padding: 50px;
+  }
+  #contact .contentWrapper {
+    margin-left: 45vw;
   }
 }
 
@@ -570,19 +552,13 @@ footer #backToTop {
   nav ul li:hover {
     z-index: 1;
   }
-  section {
-    padding: 50px 50px;
+  section .content {
+    padding: 20px;
   }
   #contact {
-    height: 400px;
+    background-size: 150%;
   }
   #contact .contentWrapper h5 {
     font-size: 32px;
-  }
-}
-
-@media all and (min-width: 200px) and (max-width: 760px) {
-  #contact #eye {
-    display: none;
   }
 }

@@ -121,28 +121,49 @@ header{
 
 /***** SECTION TRANSITION ****/
 
-.arrow-wrapper {
-	display: flex;
-	justify-content: flex-end;
-	position: relative;
-	z-index: 1;
-	margin-bottom: -$arrowSize;
-	.arrow {
-		width: 1080px;
-		&.arrow-red {
-			fill: $red;
-		}
-		&.arrow-orange {
-			fill: $orange;
-		}
-		&.arrow-white {
-			fill: $white;
-		}
-		&.arrow-black {
-			fill: $black;
-		}
+// Directly using svg in the DOM causes top aliasing effect...
+
+.arrow {
+	background-repeat: no-repeat;
+	background-position-x: right;
+	height: $arrowSize;
+
+	&.arrow-red {
+		background-image: url("../img/arrow-red.svg");
+	}
+	&.arrow-orange {
+		background-image: url("../img/arrow-orange.svg");
+	}
+	&.arrow-white {
+		background-image: url("../img/arrow-white.svg");
+	}
+	&.arrow-black {
+		background-image: url("../img/arrow-black.svg");
 	}
 }
+
+// .arrow-wrapper {
+// 	display: flex;
+// 	justify-content: flex-end;
+// 	position: relative;
+// 	z-index: 1;
+// 	margin-bottom: -$arrowSize;
+// 	.arrow {
+// 		width: 1080px;
+// 		&.arrow-red {
+// 			fill: $red;
+// 		}
+// 		&.arrow-orange {
+// 			fill: $orange;
+// 		}
+// 		&.arrow-white {
+// 			fill: $white;
+// 		}
+// 		&.arrow-black {
+// 			fill: $black;
+// 		}
+// 	}
+// }
 
 /***** CONTENT ****/
 
@@ -200,63 +221,66 @@ header{
 section{
 	// padding: 50px 50px;
 	position: relative;
-	padding: 2 * $arrowSize 20vw $arrowSize 20vw;
 
-	h3{
-		font-family: 'headline-font';
-		text-transform: uppercase;
-		font-size: 3em;
-		margin: -40px 0 40px 0;
-		text-align: left;
-	}
-
-	h4{
-		font-family: 'headline-font';
-		font-size: 1.8em;
-		font-weight: 400;
-		letter-spacing: 1px;
-		margin: 20px 0;		
-	}
-
-	h5{
-		font-size: $font-size-item-title;
-		font-weight: normal;
-	}
-
-	ul {
-		margin-left: $font-size-list-point;
-
-		li {
-			list-style: square;
-			font-size: $font-size-list-point;
-			margin-bottom: 40px;
-
-			.experience-item {
-				font-size: $font-size-item-title;
-
-				img {
-					float: right;
-					width: 150px;
-					// margin-right: 50px;
-					margin: 0 50px 20px 20px;
-				}
-
-				.item-duration {
-					font-size: $font-size-item-subtitle;
-				}
-
-				.item-description {
-					font-size: $font-size-descr;
-					margin-left: 30px;
-					font-style: italic;
+	.content {
+		padding: $arrowSize 20vw;
+	
+		h3{
+			font-family: 'headline-font';
+			text-transform: uppercase;
+			font-size: 3em;
+			margin: -40px 0 40px 0;
+			text-align: left;
+		}
+	
+		h4{
+			font-family: 'headline-font';
+			font-size: 1.8em;
+			font-weight: 400;
+			letter-spacing: 1px;
+			margin: 20px 0;		
+		}
+	
+		h5{
+			font-size: $font-size-item-title;
+			font-weight: normal;
+		}
+	
+		ul {
+			margin-left: $font-size-list-point;
+	
+			li {
+				list-style: square;
+				font-size: $font-size-list-point;
+				margin-bottom: 40px;
+	
+				.experience-item {
+					font-size: $font-size-item-title;
+	
+					img {
+						float: right;
+						width: 150px;
+						// margin-right: 50px;
+						margin: 0 50px 20px 20px;
+					}
+	
+					.item-duration {
+						font-size: $font-size-item-subtitle;
+					}
+	
+					.item-description {
+						font-size: $font-size-descr;
+						margin-left: 30px;
+						font-style: italic;
+					}
 				}
 			}
 		}
-	}
-
-	p {
-		text-align: justify;
-		margin-bottom: 20px;
+	
+		p {
+			text-align: justify;
+			margin-bottom: 20px;
+		}
 	}
 }
 
@@ -332,35 +356,19 @@ section{
 
 /***** CONTACT ****/
 
-$landscapeOffset: 100px;
-
-#landscape {
-	background: url("../img/photos/sugiton-filtered.jpg");
+#contact {
+	background-image: url("../img/photos/sugiton-filtered.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: center;
-	margin-top: -$arrowSize;
+	color: $white;
 	// height: 50vw;
 	z-index: -1;
 	// margin-bottom: -50px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-
-	#landscapeOffset {
-		margin-bottom: $arrowSize;
-	}
-}
-
-#contact {
-	color: $white;
-	// padding-top: $landscapeOffset;
-	#eye {
-		float: right;
-		width: 200px;
-		@include border-radius(40%);
-		margin-top: -40px;
-	}
+	
 	a {
 		color: $white;
 	}
@@ -381,11 +389,9 @@ $landscapeOffset: 100px;
 
 footer {
 	// background-color: $red;
-	// margin-top: -$landscapeOffset;
 	padding: 20px;
 	color: $white;
 	text-align: center;
-	margin-top: $arrowSize;
 	#backToTop {
 		width: 50px;
 		margin-bottom: 20px;
@@ -396,7 +402,6 @@ footer {
 @media all and (min-width: 200px) and (max-width: 1279px){
 
 	#contact {
-		// padding: 100px 250px 20px 20px;
 		.contentWrapper {
 			h5 {
 				font-size: $font-size-project-title;
@@ -408,6 +413,10 @@ footer {
 
 @media all and (min-width: 680px) and (max-width: 1079px){
 
+	// .arrow-wrapper {
+	// 	width: 100%;
+	// }
+
 	nav{
 		ul{
 			width: 100%;
@@ -418,9 +427,15 @@ footer {
 			}
 		}
 	}
-
 	section {
-		padding: 50px 10vw;
+		.content {
+			padding: 50px;
+		}
+	}
+	#contact {
+		.contentWrapper {
+			margin-left: 45vw;
+		}
 	}
 }
 
@@ -458,30 +473,19 @@ footer {
 				}
 			}
 		}
-	}
+	}	
 	section {
-		padding: 50px 50px;
+		.content {
+			padding: 20px;
+		}
 	}
 
 	#contact {
-		height: 400px;
+		background-size: 150%;
 		.contentWrapper {
 			h5 {
 				font-size: $font-size-project-title;
 			}
-		}
-	}
-}
-
-@media all and (min-width: 200px) and (max-width: 760px){
-
-	#contact {
-
-		#eye {
-			// position: relative;
-			// top: 110px;
-			// width: 100px;
-			display: none;
 		}
 	}
 }
