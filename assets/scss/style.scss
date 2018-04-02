@@ -9,7 +9,8 @@ body {
 
 #page-width {
 	// width: $page-width;
-	width: 100vw;
+	// width: 100vw;
+	width: 100%;
 	// margin: 0 auto;
 	@include box-shadow();
 	position: relative;
@@ -232,7 +233,7 @@ header{
 section{
 	padding: 50px 50px;
 	position: relative;
-	padding: 50px 10vw;
+	padding: 50px 20vw;
 
 	h3{
 		font-family: 'headline-font';
@@ -402,6 +403,10 @@ footer {
 			}
 		}
 	}
+
+	section {
+		padding: 50px 10vw;
+	}
 }
 
 @media all and (min-width: 200px) and (max-width: 679px){
@@ -439,6 +444,9 @@ footer {
 			}
 		}
 	}
+	section {
+		padding: 50px 50px;
+	}
 }
 
 @media all and (min-width: 200px) and (max-width: 760px){
@@ -453,3 +461,5 @@ footer {
 		}
 	}
 }
+
+// TODO remove header margin top and bottom for mobile
