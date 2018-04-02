@@ -6,15 +6,15 @@ function animateNav() {
 };animateNav();
 
 // ********** EYE LISTENER **********//
-function animateEye() {
-    // Eye
-    document.querySelector("#eye").addEventListener("mouseover", function(){
-        document.querySelector("#eye").src = "assets/public/img/eyeCenter.jpg";
-    }, false);
-    document.querySelector("#eye").addEventListener("mouseout", function(){
-        document.querySelector("#eye").src = "assets/public/img/eyeLeft.jpg";
-    }, false);
-};animateEye();
+// function animateEye() {
+//     // Eye
+//     document.querySelector("#eye").addEventListener("mouseover", function(){
+//         document.querySelector("#eye").src = "assets/public/img/eyeCenter.jpg";
+//     }, false);
+//     document.querySelector("#eye").addEventListener("mouseout", function(){
+//         document.querySelector("#eye").src = "assets/public/img/eyeLeft.jpg";
+//     }, false);
+// };animateEye();
 
 // ********** HEADER ANIMATIONS **********//
 function animateHeader() {
