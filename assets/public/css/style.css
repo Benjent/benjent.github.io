@@ -488,6 +488,7 @@ footer {
   padding: 20px;
   color: #ffffff;
   text-align: center;
+  margin-top: 100px;
 }
 
 footer #backToTop {
@@ -516,6 +517,9 @@ footer #backToTop {
   }
   #contact .contentWrapper {
     margin-left: 45vw;
+  }
+  footer {
+    margin-top: 0;
   }
 }
 
@@ -562,6 +566,9 @@ footer #backToTop {
   }
   #contact .contentWrapper h5 {
     font-size: 22px;
+  }
+  footer {
+    margin-top: 0;
   }
 }
 
