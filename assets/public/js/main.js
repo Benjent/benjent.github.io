@@ -83,3 +83,33 @@ function appendIconsToSkills() {
     }
 }appendIconsToSkills();
 
+// ********** NAV BURGER LISTENER **********//
+function toggleNav() {
+    // Toggle nav
+    document.querySelector("#nav-burger").addEventListener("click", function(){
+
+        if(document.querySelector("nav ul").classList.contains("open")) {
+            // Close nav
+            document.querySelector("nav ul").classList.remove("open")
+        } else {
+            // Open nav
+            document.querySelector("nav ul").classList.add("open");
+        }
+    }, false);
+    
+};toggleNav();
+
+function closeNav() {
+
+    let listItems = document.querySelectorAll("nav ul li");
+
+    // Add li listener
+    for(let i = 0; i < listItems.length; i++) {
+        // Close nav on li click
+        listItems[i].addEventListener("click", function(){
+            // Close nav
+            document.querySelector("nav ul").classList.remove("open")
+        }, false);
+    }
+
+}closeNav();

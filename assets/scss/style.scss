@@ -36,7 +36,11 @@ nav {
 
 	font-family: 'headline-font' !important;
 
-	@include box-shadow();	
+	@include box-shadow();
+	
+	#nav-burger {
+		display: none;
+	}
 
 	ul {	
 		width: $page-width;
@@ -386,4 +390,66 @@ footer {
 	}
 }
 
+@media all and (min-width: 680px) and (max-width: 1079px){
 
+	nav{
+		ul{
+			width: 100%;
+			li{
+				font-size: $font-size-skill;
+				letter-spacing: 1px;
+				padding: 15px 10px 0 10px;
+			}
+		}
+	}
+}
+
+@media all and (min-width: 200px) and (max-width: 679px){
+
+	.open {
+		top: -50px; // Height of the ul
+	}
+
+	nav{
+		#nav-burger {
+			display: block;
+			position: relative;
+			z-index: 2;
+			top: 0px;
+			left: 10px;
+			width: 50px;
+			cursor: pointer;
+		}
+	
+		ul{
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			@include box-shadow;
+			top: -657px; // Height of the cumulated li
+			transition: top 0.5s;
+			background: $red;
+			li{
+				font-size: $font-size-skill;
+				letter-spacing: 1px;
+				padding: 15px 10px 0 10px;
+				&:hover {
+					z-index: 1;
+				}
+			}
+		}
+	}
+}
+
+@media all and (min-width: 200px) and (max-width: 760px){
+
+	#contact {
+
+		#eye {
+			// position: relative;
+			// top: 110px;
+			// width: 100px;
+			display: none;
+		}
+	}
+}
