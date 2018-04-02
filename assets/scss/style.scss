@@ -190,6 +190,16 @@ header{
 	}
 }
 
+.arrow-wrap-alpha{
+	background-color: transparent;
+	display: flex;
+	justify-content: flex-end;
+	.arrow-alpha{
+		@include arrow;
+		border-color: $red transparent transparent transparent;
+	}
+}
+
 /***** CONTENT ****/
 
 .red{
@@ -226,6 +236,19 @@ header{
 		color: $cream;
 		.item-title, .key-word {
 			color: $red;
+		}
+	}
+}
+
+.alpha{
+	background-color: transparent;
+	li {
+		color: $red;
+		.experience-item {
+			color: $black;
+			.item-title, .key-word {
+				color: $red;
+			}
 		}
 	}
 }
@@ -364,6 +387,17 @@ section{
 }
 
 /***** CONTACT ****/
+
+// #landscape {
+// 	background: url("../img/photos/orcieres.jpg");
+// 	background-repeat: no-repeat;
+// 	background-size: 100%;
+// 	background-position: bottom;
+// 	margin-top: -50px;
+// 	z-index: -1;
+// 	margin-bottom: -50px;
+// 	filter: grayscale(50%);
+// }
 
 #contact {
 	#eye {
