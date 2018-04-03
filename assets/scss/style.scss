@@ -223,7 +223,7 @@ section{
 	position: relative;
 
 	.content {
-		padding: $arrowSize 20vw;
+		padding: 80px 20vw;
 	
 		h3{
 			font-family: 'headline-font';
@@ -252,7 +252,7 @@ section{
 			li {
 				list-style: square;
 				font-size: $font-size-list-point;
-				margin-bottom: 40px;
+				margin-bottom: 50px;
 	
 				.experience-item {
 					font-size: $font-size-item-title;
@@ -325,14 +325,22 @@ section{
 /***** SKILLS ****/
 
 #skills {
-	text-align: center;
+	// text-align: center;
 	h5 {
 		text-align: left;
 	}
 
 	.skill-wrapper {
-		display: inline;
+		display: inline-block;
+		margin-top: 10px;
 
+		// font-size: $font-size-skill;
+		// color: $black;
+		// // border: solid 1px $black;
+		// border: solid 1px $cream;
+		// border-radius: 3px;
+		// padding: 5px 10px;
+		// background: $cream;
 		.skill {
 			font-size: $font-size-skill;
 			color: $black;
@@ -357,6 +365,7 @@ section{
 /***** CONTACT ****/
 
 #contact {
+	background-color: $red;
 	background-image: url("../img/photos/sugiton-filtered.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;

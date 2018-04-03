@@ -335,7 +335,7 @@ section {
 }
 
 section .content {
-  padding: 50px 20vw;
+  padding: 80px 20vw;
 }
 
 section .content h3 {
@@ -366,7 +366,7 @@ section .content ul {
 section .content ul li {
   list-style: square;
   font-size: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 section .content ul li .experience-item {
@@ -428,16 +428,13 @@ section .content p {
 }
 
 /***** SKILLS ****/
-#skills {
-  text-align: center;
-}
-
 #skills h5 {
   text-align: left;
 }
 
 #skills .skill-wrapper {
-  display: inline;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 #skills .skill-wrapper .skill {
@@ -459,6 +456,7 @@ section .content p {
 
 /***** CONTACT ****/
 #contact {
+  background-color: #AB3134;
   background-image: url("../img/photos/sugiton-filtered.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
