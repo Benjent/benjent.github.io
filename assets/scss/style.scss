@@ -92,7 +92,7 @@ header{
 	// height: 17vh;
 
 	.red-bar-top, .red-bar-bottom{
-		width: 40%;
+		width: $barWidth;
 		position: absolute;
 		opacity: 0;
 	}
@@ -108,12 +108,12 @@ header{
 	}
 
 	h1{
-		font-size: 3em;
+		font-size: 3.6em;
 		padding-top: 20px;
 	}
 
 	h2{
-		font-size: 2.2em;
+		font-size: 2.8em;
 		margin-bottom: 18px;
 	}
 
@@ -326,6 +326,7 @@ section{
 
 #skills {
 	// text-align: center;
+	text-align: right;
 	h5 {
 		text-align: left;
 	}

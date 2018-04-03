@@ -31,13 +31,12 @@
     5% {left: 0; opacity: 0;}
     6% {opacity: 0;}
     
-    10% {left: 30%; opacity: 1;}
-    // 30% {left: 30%; opacity: 1;}
-    50% {left: 30%; opacity: 1;}
+    10% {left: 0.5 * (100% - $barWidth); opacity: 1;}
+    50% {left: 0.5 * (100% - $barWidth); opacity: 1;}
     
     54% {opacity: 0;}
-    55% {left: 60%; opacity: 0;}
-    100% {left: 60%; opacity: 0;}
+    55% {left: 100% - $barWidth; opacity: 0;}
+    100% {left: 100% - $barWidth; opacity: 0;}
 }
 
 @keyframes unstabilize-right {
@@ -45,13 +44,12 @@
     25% {right: 0; opacity: 0;}
     26% {opacity: 0;}
     
-    30% {right: 30%; opacity: 1;}
-    // 50% {right: 30%; opacity: 1;}
-    50% {right: 30%; opacity: 1;}
+    30% {right: 0.5 * (100% - $barWidth); opacity: 1;}
+    50% {right: 0.5 * (100% - $barWidth); opacity: 1;}
     
     54% {opacity: 0;}
-    55% {right: 60%; opacity: 0;}
-    100% {right: 60%; opacity: 0;}
+    55% {right: 100% - $barWidth; opacity: 0;}
+    100% {right: 100% - $barWidth; opacity: 0;}
 }
 
 .shake {
