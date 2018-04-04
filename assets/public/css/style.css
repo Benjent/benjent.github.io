@@ -533,9 +533,9 @@ footer #backToTop {
     display: block;
     position: relative;
     z-index: 2;
-    top: 0px;
+    top: 5px;
     left: 10px;
-    width: 50px;
+    width: 40px;
     cursor: pointer;
   }
   nav ul {
@@ -583,7 +583,7 @@ footer #backToTop {
     font-size: 18px;
   }
   section .content ul li .experience-item img {
-    width: 60px;
+    width: 100px;
     margin: 5px 0 5px 5px;
   }
   section .content ul li .experience-item .item-duration {
