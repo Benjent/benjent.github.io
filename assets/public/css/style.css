@@ -576,6 +576,9 @@ footer #backToTop {
   section .content h5 {
     font-size: 16px;
   }
+  section .content h5 .avoidwrap {
+    display: inline-block;
+  }
   section .content ul {
     margin-left: 18px;
   }

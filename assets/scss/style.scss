@@ -508,6 +508,9 @@ footer {
 		
 			h5{
 				font-size: $small-font-size-title;
+				.avoidwrap {
+					display:inline-block;
+				}
 			}
 
 			ul {
