@@ -407,7 +407,7 @@ footer {
 	}
 }
 
-@media all and (min-width: 200px) and (max-width: 1279px){
+@media all and (max-width: 1279px){
 
 	#contact {
 		.contentWrapper {
@@ -450,7 +450,7 @@ footer {
 	}
 }
 
-@media all and (min-width: 200px) and (max-width: 679px){
+@media all and (max-width: 679px){
 
 	.open {
 		top: -50px; // Height of the ul
@@ -484,10 +484,95 @@ footer {
 				}
 			}
 		}
-	}	
+	}
+
+	header {
+		margin: 100px 0;
+		h1 {
+			font-size: 30px;
+		}
+		h2 {
+			font-size: 25px;
+		}
+	}
+
 	section {
 		.content {
 			padding: 20px;
+			h3{
+				font-size: 30px;
+				margin-bottom: 20px;
+			}
+		
+			h4{}
+		
+			h5{
+				font-size: $small-font-size-title;
+			}
+
+			ul {
+				margin-left: $small-font-size-list-point;
+				li {
+					font-size: $small-font-size-list-point;
+					.experience-item {
+						img {
+							width: 60px;
+							margin: 5px 0 5px 5px;
+						}
+						.item-duration {
+							font-size: $small-font-size-content;
+						}
+						.item-description {
+							font-size: $small-font-size-descr;
+							margin-left: 0;
+						}
+					}
+				}
+			}
+			p {
+				text-align: left;
+				font-size: $small-font-size-content;
+			}
+		}
+	}
+
+	#achievements {
+		h3 {
+		}
+		.achievement-list {
+			justify-content: space-evenly;
+			margin-bottom: 0;
+			.achievement-item {
+				width: 100%;
+				margin-bottom: 0;
+				h5 {
+					font-size: 20px;
+				}
+				.item-team {
+					font-size: $small-font-size-content;
+				}
+				.item-description {
+					font-size: $small-font-size-descr;
+					text-align: left;
+				}
+			}
+		}
+	}
+
+	#skills {
+		text-align: left;
+		.skill-wrapper {
+			display: flex;
+			align-items: flex-start;
+			.skill {
+				font-size: $small-font-size-content;
+			}
+			img {
+				max-width: 25px;
+				max-height: 25px;
+				left: 10px;
+				margin-right: 0;
+			}
 		}
 	}
 
@@ -505,7 +590,7 @@ footer {
 	}
 }
 
-@media all and (min-width: 200px) and (max-width: 479px){
+@media all and (max-width: 479px){
 	#contact {
 		background-size: 180%;
 		.contentWrapper {
