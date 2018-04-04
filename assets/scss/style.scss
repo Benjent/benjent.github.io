@@ -453,7 +453,7 @@ footer {
 @media all and (max-width: 679px){
 
 	.open {
-		top: -50px; // Height of the ul
+		top: -40px; // Height of the ul
 	}
 
 	nav{
@@ -475,10 +475,13 @@ footer {
 			top: -657px; // Height of the cumulated li
 			transition: top 0.5s;
 			background: $red;
+			padding: 5px 0;
 			li{
 				font-size: $font-size-skill;
 				letter-spacing: 1px;
-				padding: 15px 10px 0 10px;
+				// padding: 15px 10px 0 10px;
+				padding: 5px;
+				height: auto;
 				&:hover {
 					z-index: 1;
 				}
@@ -597,7 +600,8 @@ footer {
 	#contact {
 		background-size: 180%;
 		.contentWrapper {
-			margin-left: 40vw;
+			// margin-left: 40vw; // Better for browsers, but give up as it is ridiculous to resize to this value
+			margin-left: 50vw; // Better for mobile devices
 			h5 {
 				word-wrap: break-word;
 			}

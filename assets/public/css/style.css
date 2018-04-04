@@ -527,7 +527,7 @@ footer #backToTop {
 
 @media all and (max-width: 679px) {
   .open {
-    top: -50px;
+    top: -40px;
   }
   nav #nav-burger {
     display: block;
@@ -548,11 +548,13 @@ footer #backToTop {
     top: -657px;
     transition: top 0.5s;
     background: #AB3134;
+    padding: 5px 0;
   }
   nav ul li {
     font-size: 15px;
     letter-spacing: 1px;
-    padding: 15px 10px 0 10px;
+    padding: 5px;
+    height: auto;
   }
   nav ul li:hover {
     z-index: 1;
@@ -653,7 +655,7 @@ footer #backToTop {
     background-size: 180%;
   }
   #contact .contentWrapper {
-    margin-left: 40vw;
+    margin-left: 50vw;
   }
   #contact .contentWrapper h5 {
     word-wrap: break-word;
