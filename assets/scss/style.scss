@@ -126,6 +126,7 @@ header{
 .arrow {
 	background-repeat: no-repeat;
 	background-position-x: right;
+	background-position-y: -1%; // Prevent the sort-of "aliasing"...
 	height: $arrowSize;
 
 	&.arrow-red {
