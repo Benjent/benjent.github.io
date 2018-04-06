@@ -1,23 +1,17 @@
 
-// ********** NAV ANIMATIONS **********//
+// ********** NAV ANIMATIONS ********** //
+
 function animateNav() {
     // Nav
     document.querySelector("nav").classList.add("move");
-};animateNav();
+};
 
-// ********** EYE LISTENER **********//
-// function animateEye() {
-//     // Eye
-//     document.querySelector("#eye").addEventListener("mouseover", function(){
-//         document.querySelector("#eye").src = "assets/public/img/eyeCenter.jpg";
-//     }, false);
-//     document.querySelector("#eye").addEventListener("mouseout", function(){
-//         document.querySelector("#eye").src = "assets/public/img/eyeLeft.jpg";
-//     }, false);
-// };animateEye();
+animateNav();
 
-// ********** HEADER ANIMATIONS **********//
+// ********** HEADER ANIMATIONS ********** //
+
 function animateHeader() {
+
     // Fade
     let fadingElements = document.querySelectorAll(".fade");
     for(let i = 0; i < fadingElements.length; i++) {
@@ -28,9 +22,27 @@ function animateHeader() {
     let unstableElements = document.querySelectorAll(".unstable");
     unstableElements[0].classList.add("unstabilize-left");
     unstableElements[1].classList.add("unstabilize-right");
-};setTimeout(animateHeader, 400)
+};
 
-// ********** SMOOTH SCROLL **********//
+setTimeout(animateHeader, 400);
+
+// ********** ADD SKILLS ICONS ********** //
+
+function appendIconsToSkills() {
+    let skills = document.querySelectorAll(".skill-wrapper");
+    for(let i = 0; i < skills.length; i++) {
+        let img = document.createElement("img");
+        if(skills[i].hasAttribute("skill")) {
+            img.setAttribute("src", "assets/public/img/logos/" + skills[i].getAttribute("skill") + ".png");
+            skills[i].append(img);
+        }
+    }
+}
+
+appendIconsToSkills();
+
+// ********** SMOOTH SCROLL ********** //
+
 function scrollTo(element, to, duration = 600) {
 
     // Checkout Tejas Shah's answer: https://stackoverflow.com/questions/17733076/smooth-scroll-anchor-links-without-jquery
@@ -59,67 +71,3 @@ function scrollTo(element, to, duration = 600) {
     }, 10);
 }
 
-let navItems = document.querySelectorAll("nav ul li");
-
-for(let i = 0; i < navItems.length; i++) {
-    navItems[i].addEventListener("click", function(){
-        scrollTo(document.documentElement , document.querySelector(navItems[i].getAttribute("ref")).offsetTop - 50, 200);
-    }, false);
-    navItems[i].addEventListener("touchstart", function(){
-        scrollTo(document.documentElement , document.querySelector(navItems[i].getAttribute("ref")).offsetTop - 50, 200);
-    }, false);
-}
-
-document.querySelector("#backToTop").addEventListener("click", function(){
-    scrollTo(document.documentElement , document.querySelector("#page-width").offsetTop - 50, 200);
-}, false);
-document.querySelector("#backToTop").addEventListener("touchstart", function(){
-    scrollTo(document.documentElement , document.querySelector("#page-width").offsetTop - 50, 200);
-}, false);
-
-// SKILLS ICONS
-function appendIconsToSkills() {
-    let skills = document.querySelectorAll(".skill-wrapper");
-    for(let i = 0; i < skills.length; i++) {
-        let img = document.createElement("img");
-        if(skills[i].hasAttribute("skill")) {
-            img.setAttribute("src", "assets/public/img/logos/" + skills[i].getAttribute("skill") + ".png");
-            skills[i].append(img);
-        }
-    }
-}appendIconsToSkills();
-
-// ********** NAV BURGER LISTENER **********//
-function toggleNav() {
-    // Toggle nav
-    document.querySelector("#nav-burger").addEventListener("click", function(){
-
-        if(document.querySelector("nav ul").classList.contains("open")) {
-            // Close nav
-            document.querySelector("nav ul").classList.remove("open")
-        } else {
-            // Open nav
-            document.querySelector("nav ul").classList.add("open");
-        }
-    }, false);
-    
-};toggleNav();
-
-function closeNav() {
-
-    let listItems = document.querySelectorAll("nav ul li");
-
-    // Add li listener
-    for(let i = 0; i < listItems.length; i++) {
-        // Close nav on li click
-        listItems[i].addEventListener("click", function(){
-            // Close nav
-            document.querySelector("nav ul").classList.remove("open")
-        }, false);
-        listItems[i].addEventListener("touchstart", function(){
-            // Close nav
-            document.querySelector("nav ul").classList.remove("open")
-        }, false);
-    }
-
-}closeNav();
