@@ -76,8 +76,12 @@ nav {
 	}
 }
 
-#home {
-	padding-bottom: 280px;
+#top {
+	// padding-bottom: 280px;
+	height: 90vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /***** HEADER ****/
@@ -221,7 +225,7 @@ header{
 
 section{
 	// padding: 50px 50px;
-	position: relative;
+	// position: relative;
 
 	.content {
 		padding: 80px 20vw;

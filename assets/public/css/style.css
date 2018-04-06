@@ -204,8 +204,11 @@ nav ul li:active {
   cursor: pointer;
 }
 
-#home {
-  padding-bottom: 280px;
+#top {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /***** HEADER ****/
@@ -329,10 +332,6 @@ header h2 {
 
 .alpha li .experience-item .item-title, .alpha li .experience-item .key-word {
   color: #ffffff;
-}
-
-section {
-  position: relative;
 }
 
 section .content {
