@@ -65,9 +65,15 @@ for(let i = 0; i < navItems.length; i++) {
     navItems[i].addEventListener("click", function(){
         scrollTo(document.documentElement , document.querySelector(navItems[i].getAttribute("ref")).offsetTop - 50, 200);
     }, false);
+    navItems[i].addEventListener("touchstart", function(){
+        scrollTo(document.documentElement , document.querySelector(navItems[i].getAttribute("ref")).offsetTop - 50, 200);
+    }, false);
 }
 
 document.querySelector("#backToTop").addEventListener("click", function(){
+    scrollTo(document.documentElement , document.querySelector("#page-width").offsetTop - 50, 200);
+}, false);
+document.querySelector("#backToTop").addEventListener("touchstart", function(){
     scrollTo(document.documentElement , document.querySelector("#page-width").offsetTop - 50, 200);
 }, false);
 
@@ -107,6 +113,10 @@ function closeNav() {
     for(let i = 0; i < listItems.length; i++) {
         // Close nav on li click
         listItems[i].addEventListener("click", function(){
+            // Close nav
+            document.querySelector("nav ul").classList.remove("open")
+        }, false);
+        listItems[i].addEventListener("touchstart", function(){
             // Close nav
             document.querySelector("nav ul").classList.remove("open")
         }, false);
