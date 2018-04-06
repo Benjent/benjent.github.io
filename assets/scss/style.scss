@@ -451,6 +451,8 @@ footer {
 	}
 }
 
+// MOBILE DEVICES
+
 @media all and (max-width: 679px){
 
 	.open {
@@ -476,12 +478,12 @@ footer {
 			top: -300px; // Height of the cumulated li roughly + safe space
 			transition: top 0.5s;
 			background: $red;
-			padding: 5px 0;
+			// padding: 5px 0;
 			li{
 				font-size: $font-size-skill;
 				letter-spacing: 1px;
 				// padding: 15px 10px 0 10px;
-				padding: 5px;
+				padding: 8px;
 				height: auto;
 				&:hover {
 					z-index: 1;
