@@ -248,7 +248,7 @@ header h2 {
 .arrow {
   background-repeat: no-repeat;
   background-position-x: right;
-  background-position-y: -1%;
+  background-position-y: -1px;
   height: 50px;
 }
 
