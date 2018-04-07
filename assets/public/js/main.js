@@ -168,47 +168,47 @@ function handleBodyLoad() {
 // Try to overcome this by using jQuery, sadly
 $(function() {
 
-    // // ********** BIND NAV ITEMS TO THEIR REF ********** //
+    // ********** BIND NAV ITEMS TO THEIR REF ********** //
     
-    // let navItems = $("nav ul li");
+    let navItems = $("nav ul li");
     
-    // for(let i = 0; i < navItems.length; i++) {
-    //     navItems[i].click(function(){
-    //         // Close nav
-    //         $("nav ul").removeClass("open");
-    //         // Scroll to ref
-    //         scrollTo(document.documentElement , $(navItems[i].getAttribute("ref")).offsetTop - 50, 200);
-    //     });
-    // }
+    $("nav ul li").click(function() {
+        // Close nav
+        $("nav ul").removeClass("open");
+        // Scroll to ref
+        console.log($($(this).attr("ref")).offset().top);
+        // scrollTo(document.documentElement , $($(this).attr("ref")).offset().top - 50, 200);
+        $('html, body').animate({scrollTop : $($(this).attr("ref")).position().top - 50}, 500);
+    });
 
-    // // ********** NAV BURGER LISTENER ********** //
+    // ********** NAV BURGER LISTENER ********** //
     
-    // $("#nav-burger").click(function(){
+    $("#nav-burger").click(function(){
     
-    //     if($("nav ul").hasClass("open")) {
-    //         // Close nav
-    //         $("nav ul").removeClass("open")
-    //     } else {
-    //         // Open nav
-    //         $("nav ul").addClass("open");
-    //     }
-    // });
+        if($("nav ul").hasClass("open")) {
+            // Close nav
+            $("nav ul").removeClass("open")
+        } else {
+            // Open nav
+            $("nav ul").addClass("open");
+        }
+    });
 
-    // // ********** BACK TO TOP LISTENER ********** //
+    // ********** BACK TO TOP LISTENER ********** //
 
-    // let backToTop = $("#backToTop");
+    let backToTop = $("#backToTop");
 
-    // // Scroll
-    // backToTop.click(function(){
-    //     scrollTo(document.documentElement , $("#page-width").offsetTop - 50, 200);
-    // });
+    // Scroll
+    backToTop.click(function(){
+        $('html, body').animate({scrollTop : $("#page-width").position().top - 50}, 500);
+    });
 
-    // // Rotate
-    // backToTop.mouseover(function(){
-    //     backToTop.addClass("rotate");
-    // });
-    // backToTop.mouseout(function(){
-    //     backToTop.removeClass("rotate");
-    // });
+    // Rotate
+    backToTop.mouseover(function(){
+        backToTop.addClass("rotate");
+    });
+    backToTop.mouseout(function(){
+        backToTop.removeClass("rotate");
+    });
 
 });
