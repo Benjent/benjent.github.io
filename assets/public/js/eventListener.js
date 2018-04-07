@@ -1,26 +1,24 @@
 
 // ********** BIND NAV ITEMS TO THEIR REF ********** //
 
-let navItems = document.querySelectorAll("nav ul li");
+// let navItems = document.querySelectorAll("nav ul li");
+let navItems = document.getElementsByClassName("nav-item");
 
 for(let i = 0; i < navItems.length; i++) {
     navItems[i].addEventListener("click", function(){
-        scrollTo(document.documentElement , document.querySelector(navItems[i].getAttribute("ref")).offsetTop - 50, 200);
-    }, false);
-    navItems[i].addEventListener("touchstart", function(){
-        scrollTo(document.documentElement , document.querySelector(navItems[i].getAttribute("ref")).offsetTop - 50, 200);
+        // scrollTo(document.documentElement , document.querySelector(navItems[i].getAttribute("ref")).offsetTop - 50, 200);
+        scrollTo(document.documentElement , document.getElementById(navItems[i].getAttribute("ref")).offsetTop - 50, 200);
     }, false);
 }
 
 // ********** BACK TO TOP LISTENER ********** //
 
-let backToTop = document.querySelector("#backToTop");
+// let backToTop = document.querySelector("#backToTop");
+let backToTop = document.getElementById("backToTop");
 
 backToTop.addEventListener("click", function(){
-    scrollTo(document.documentElement , document.querySelector("#page-width").offsetTop - 50, 200);
-}, false);
-backToTop.addEventListener("touchstart", function(){
-    scrollTo(document.documentElement , document.querySelector("#page-width").offsetTop - 50, 200);
+    // scrollTo(document.documentElement , document.querySelector("#page-width").offsetTop - 50, 200);
+    scrollTo(document.documentElement , document.getElementById("page-width").offsetTop - 50, 200);
 }, false);
 
 backToTop.addEventListener("mouseover", function(){
@@ -34,14 +32,15 @@ backToTop.addEventListener("mouseout", function(){
 
 function toggleNav() {
     // Toggle nav
-    document.querySelector("#nav-burger").addEventListener("click", function(){
+    // document.querySelector("#nav-burger").addEventListener("click", function(){
+    document.getElementById("nav-burger").addEventListener("click", function(){
 
-        if(document.querySelector("nav ul").classList.contains("open")) {
+        if(document.getElementById("nav-list").classList.contains("open")) {
             // Close nav
-            document.querySelector("nav ul").classList.remove("open")
+            document.getElementById("nav-list").classList.remove("open")
         } else {
             // Open nav
-            document.querySelector("nav ul").classList.add("open");
+            document.getElementById("nav-list").classList.add("open");
         }
     }, false);
     
@@ -52,18 +51,18 @@ toggleNav();
 function closeNav() {
 
     // TODO factorize with top file code
-    let listItems = document.querySelectorAll("nav ul li");
+    // let listItems = document.querySelectorAll("nav ul li");
 
     // Add li listener
-    for(let i = 0; i < listItems.length; i++) {
+    for(let i = 0; i < navItems.length; i++) {
         // Close nav on li click
-        listItems[i].addEventListener("click", function(){
+        navItems[i].addEventListener("click", function(){
             // Close nav
-            document.querySelector("nav ul").classList.remove("open")
+            document.getElementById("nav-list").classList.remove("open")
         }, false);
-        listItems[i].addEventListener("touchstart", function(){
+        navItems[i].addEventListener("touchstart", function(){
             // Close nav
-            document.querySelector("nav ul").classList.remove("open")
+            document.getElementById("nav-list").classList.remove("open")
         }, false);
     }
 
@@ -73,7 +72,8 @@ closeNav();
 
 // ********** SCROLL LISTENER ********** //
 
-let contentsToReveal = document.querySelectorAll(".scrollFade");
+// let contentsToReveal = document.querySelectorAll(".scrollFade");
+let contentsToReveal = document.getElementsByClassName("scrollFade");
 
 function revealContent() {
 

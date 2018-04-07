@@ -13,13 +13,13 @@ animateNav();
 function animateHeader() {
 
     // Fade
-    let fadingElements = document.querySelectorAll(".fade");
+    let fadingElements = document.getElementsByClassName("fade");
     for(let i = 0; i < fadingElements.length; i++) {
         fadingElements[i].classList.add("fadeIn");
     }
 
     // Unstable
-    let unstableElements = document.querySelectorAll(".unstable");
+    let unstableElements = document.getElementsByClassName("unstable");
     unstableElements[0].classList.add("unstabilize-left");
     unstableElements[1].classList.add("unstabilize-right");
 };
@@ -29,7 +29,7 @@ setTimeout(animateHeader, 400);
 // ********** ADD SKILLS ICONS ********** //
 
 function appendIconsToSkills() {
-    let skills = document.querySelectorAll(".skill-wrapper");
+    let skills = document.getElementsByClassName("skill-wrapper");
     for(let i = 0; i < skills.length; i++) {
         let img = document.createElement("img");
         if(skills[i].hasAttribute("skill")) {
