@@ -1,12 +1,7 @@
 
 // ********** NAV ANIMATIONS ********** //
 
-function animateNav() {
-    // Nav
-    document.querySelector("nav").classList.add("move");
-};
-
-animateNav();
+document.querySelector("nav").classList.add("move");
 
 // ********** HEADER ANIMATIONS ********** //
 
@@ -28,18 +23,14 @@ setTimeout(animateHeader, 400);
 
 // ********** ADD SKILLS ICONS ********** //
 
-function appendIconsToSkills() {
-    let skills = document.querySelectorAll(".skill-wrapper");
-    for(let i = 0; i < skills.length; i++) {
-        let img = document.createElement("img");
-        if(skills[i].hasAttribute("skill")) {
-            img.setAttribute("src", "assets/public/img/logos/" + skills[i].getAttribute("skill") + ".png");
-            skills[i].append(img);
-        }
+let skills = document.querySelectorAll(".skill-wrapper");
+for(let i = 0; i < skills.length; i++) {
+    let img = document.createElement("img");
+    if(skills[i].hasAttribute("skill")) {
+        img.setAttribute("src", "assets/public/img/logos/" + skills[i].getAttribute("skill") + ".png");
+        skills[i].append(img);
     }
 }
-
-appendIconsToSkills();
 
 // ********** SMOOTH SCROLL ********** //
 
