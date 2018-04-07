@@ -35,6 +35,21 @@ function scrollTo(element, to, duration = 600) {
     }, 10);
 }
 
+function scrollToRef(ref) {
+    // Close nav
+    document.querySelector("nav ul").classList.remove("open");
+    // Scroll to ref
+    scrollTo(document.documentElement , document.querySelector("#"+ref).offsetTop - 50, 200);
+}
+
+function rotateBackToTop() {
+    // Rotate
+    backToTop.classList.add("rotate");
+    setTimeout(function() {
+        backToTop.classList.remove("rotate")
+    }, 200);
+}
+
 function bindElementsToEvents() {
 
     // ********** BIND NAV ITEMS TO THEIR REF ********** //
@@ -139,7 +154,7 @@ function handleDOMElements() {
 
 function handleBodyLoad() {
     // Bind event listeners to DOM elements
-    bindElementsToEvents();
+    // bindElementsToEvents();
     // Apply features on DOM elements
     handleDOMElements();
     // Reveal content regarding the scroll position
@@ -148,3 +163,52 @@ function handleBodyLoad() {
     // Animate header
     setTimeout(animateHeader, 400);
 }
+
+// Ok so it seems that Safari and Samsung mobile browsers do not bind eventListeners (navItems and backToTop are broken)
+// Try to overcome this by using jQuery, sadly
+$(function() {
+
+    // // ********** BIND NAV ITEMS TO THEIR REF ********** //
+    
+    // let navItems = $("nav ul li");
+    
+    // for(let i = 0; i < navItems.length; i++) {
+    //     navItems[i].click(function(){
+    //         // Close nav
+    //         $("nav ul").removeClass("open");
+    //         // Scroll to ref
+    //         scrollTo(document.documentElement , $(navItems[i].getAttribute("ref")).offsetTop - 50, 200);
+    //     });
+    // }
+
+    // // ********** NAV BURGER LISTENER ********** //
+    
+    // $("#nav-burger").click(function(){
+    
+    //     if($("nav ul").hasClass("open")) {
+    //         // Close nav
+    //         $("nav ul").removeClass("open")
+    //     } else {
+    //         // Open nav
+    //         $("nav ul").addClass("open");
+    //     }
+    // });
+
+    // // ********** BACK TO TOP LISTENER ********** //
+
+    // let backToTop = $("#backToTop");
+
+    // // Scroll
+    // backToTop.click(function(){
+    //     scrollTo(document.documentElement , $("#page-width").offsetTop - 50, 200);
+    // });
+
+    // // Rotate
+    // backToTop.mouseover(function(){
+    //     backToTop.addClass("rotate");
+    // });
+    // backToTop.mouseout(function(){
+    //     backToTop.removeClass("rotate");
+    // });
+
+});

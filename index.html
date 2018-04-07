@@ -12,13 +12,13 @@
         <nav>
             <img src="assets/public/img/nav-burger.svg" alt="Nav burger" id="nav-burger">
             <ul>
-				<li ref="#page-width">Top</li>
-				<li ref="#profile">Profile</li>
-				<li ref="#experience">Professional experience</li>
-				<li ref="#education">Education</li>
-				<li ref="#achievements">Achievements</li>
-				<li ref="#skills">Skills</li>
-				<li ref="#contact">Contact</li>
+				<li ref="#page-width" onclick="scrollToRef('page-width')">Top</li>
+				<li ref="#profile" onclick="scrollToRef('profile')">Profile</li>
+				<li ref="#experience" onclick="scrollToRef('experience')">Professional experience</li>
+				<li ref="#education" onclick="scrollToRef('education')">Education</li>
+				<li ref="#achievements" onclick="scrollToRef('achievements')">Achievements</li>
+				<li ref="#skills" onclick="scrollToRef('skills')">Skills</li>
+				<li ref="#contact" onclick="scrollToRef('contact')">Contact</li>
             </ul>
         </nav>
         <div id="page-width">
@@ -417,12 +417,13 @@
 
                 <!-- ********** FOOTER ********** -->
                 <footer>
-                    <img id="backToTop" src="assets/public/img/top-arrow.svg">
+                    <img id="backToTop" src="assets/public/img/top-arrow.svg" onclick="scrollToRef('top')" onmouseover="rotateBackToTop()">
                     <p>Benjamin Morvan - 2018</p>
                 </footer>
             </section>
 
         </div>
+        <script src="assets/public/js/lib/jquery-3.3.1.slim.min.js"></script>
         <script src="assets/public/js/main.js"></script>
     </body>
 </html>
