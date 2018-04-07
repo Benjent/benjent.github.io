@@ -96,13 +96,9 @@ function revealContent() {
     }
 }
 
-function handleDOMElements() {
+// ********** ANIMATE HEADER ********** //
 
-    // ********** REVEAL NAV ********** //
-
-    document.querySelector("nav").classList.add("move");
-
-    // ********** ANIMATE HEADER ********** //
+function animateHeader() {
 
     // Fade
     let fadingElements = document.querySelectorAll(".fade");
@@ -114,6 +110,14 @@ function handleDOMElements() {
     let unstableElements = document.querySelectorAll(".unstable");
     unstableElements[0].classList.add("unstabilize-left");
     unstableElements[1].classList.add("unstabilize-right");
+};
+
+
+function handleDOMElements() {
+
+    // ********** REVEAL NAV ********** //
+
+    document.querySelector("nav").classList.add("move");
 
     // ********** ADD SKILLS ICONS ********** //
 
