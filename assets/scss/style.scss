@@ -581,6 +581,12 @@ footer {
 		.skill-wrapper {
 			display: flex;
 			align-items: flex-start;
+			right: 0;
+			transition: right ease-in-out 0.2s;
+			&:hover {
+				top: 0px;
+				right: -10px;
+			}
 			.skill {
 				font-size: $small-font-size-content;
 			}

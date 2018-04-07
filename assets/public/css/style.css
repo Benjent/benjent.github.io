@@ -657,6 +657,12 @@ footer #backToTop {
   #skills .skill-wrapper {
     display: flex;
     align-items: flex-start;
+    right: 0;
+    transition: right ease-in-out 0.2s;
+  }
+  #skills .skill-wrapper:hover {
+    top: 0px;
+    right: -10px;
   }
   #skills .skill-wrapper .skill {
     font-size: 14px;

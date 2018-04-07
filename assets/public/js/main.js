@@ -1,4 +1,10 @@
 
+// Browser sniffing for touch capabilities
+var eventSuitedForClientBrowser = (function() {
+    // Checkout Vladimir's answer: https://joshtronic.com/2015/04/19/handling-click-and-touch-events-on-the-same-element/
+    return 'ontouchstart' in document === true ? 'touchstart' : 'click';
+})();
+
 // ********** SMOOTH SCROLL ********** //
 
 function scrollTo(element, to, duration = 600) {
@@ -36,7 +42,7 @@ function bindElementsToEvents() {
     let navItems = document.querySelectorAll("nav ul li");
     
     for(let i = 0; i < navItems.length; i++) {
-        navItems[i].addEventListener("click", function(){
+        navItems[i].addEventListener(eventSuitedForClientBrowser, function(){
             // Close nav
             document.querySelector("nav ul").classList.remove("open");
             // Scroll to ref
@@ -46,7 +52,7 @@ function bindElementsToEvents() {
 
     // ********** NAV BURGER LISTENER ********** //
     
-    document.querySelector("#nav-burger").addEventListener("click", function(){
+    document.querySelector("#nav-burger").addEventListener(eventSuitedForClientBrowser, function(){
     
         if(document.querySelector("nav ul").classList.contains("open")) {
             // Close nav
@@ -62,7 +68,7 @@ function bindElementsToEvents() {
     let backToTop = document.querySelector("#backToTop");
 
     // Scroll
-    backToTop.addEventListener("click", function(){
+    backToTop.addEventListener(eventSuitedForClientBrowser, function(){
         scrollTo(document.documentElement , document.querySelector("#page-width").offsetTop - 50, 200);
     }, false);
 
