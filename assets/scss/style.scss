@@ -483,7 +483,7 @@ footer {
 			flex-direction: column;
 			@include box-shadow;
 			top: -300px; // Height of the cumulated li roughly + safe space
-			transition: top 0.5s;
+			transition: top 0.3s;
 			background: $red;
 			// padding: 5px 0;
 			li{
