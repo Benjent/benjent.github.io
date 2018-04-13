@@ -176,7 +176,6 @@ $(function() {
         // Close nav
         $("nav ul").removeClass("open");
         // Scroll to ref
-        console.log($($(this).attr("ref")).offset().top);
         // scrollTo(document.documentElement , $($(this).attr("ref")).offset().top - 50, 200);
         $('html, body').animate({scrollTop : $($(this).attr("ref")).position().top - 50}, 500);
     });
