@@ -20,6 +20,7 @@ body, ul, h1, h2, h3, h4, h5, h6, p {
 /***** MIXINS ****/
 .move {
   top: 0px;
+  -webkit-transition: top 0.7s ease-in-out;
   transition: top 0.7s ease-in-out;
 }
 
@@ -29,6 +30,7 @@ body, ul, h1, h2, h3, h4, h5, h6, p {
 
 .fadeIn {
   opacity: 1;
+  -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
 }
 
@@ -46,6 +48,39 @@ body, ul, h1, h2, h3, h4, h5, h6, p {
   -webkit-animation: unstabilize-right 8s infinite ease-in-out;
   /* Safari 4.0 - 8.0 */
   animation: unstabilize-right 8s infinite ease-in-out;
+}
+
+@-webkit-keyframes unstabilize-left {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  5% {
+    left: 0;
+    opacity: 0;
+  }
+  6% {
+    opacity: 0;
+  }
+  10% {
+    left: 32.5%;
+    opacity: 1;
+  }
+  50% {
+    left: 32.5%;
+    opacity: 1;
+  }
+  54% {
+    opacity: 0;
+  }
+  55% {
+    left: 65%;
+    opacity: 0;
+  }
+  100% {
+    left: 65%;
+    opacity: 0;
+  }
 }
 
 @keyframes unstabilize-left {
@@ -77,6 +112,39 @@ body, ul, h1, h2, h3, h4, h5, h6, p {
   }
   100% {
     left: 65%;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes unstabilize-right {
+  0% {
+    right: 0;
+    opacity: 0;
+  }
+  25% {
+    right: 0;
+    opacity: 0;
+  }
+  26% {
+    opacity: 0;
+  }
+  30% {
+    right: 32.5%;
+    opacity: 1;
+  }
+  50% {
+    right: 32.5%;
+    opacity: 1;
+  }
+  54% {
+    opacity: 0;
+  }
+  55% {
+    right: 65%;
+    opacity: 0;
+  }
+  100% {
+    right: 65%;
     opacity: 0;
   }
 }
@@ -119,35 +187,67 @@ body, ul, h1, h2, h3, h4, h5, h6, p {
   animation: shake 8s infinite ease-in-out;
 }
 
-@keyframes shake {
+@-webkit-keyframes shake {
   0%, 44%, 48%, 100% {
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
   45% {
-    transform: translate3d(-4px, 3px, 0);
+    -webkit-transform: translate3d(-4px, 3px, 0);
+            transform: translate3d(-4px, 3px, 0);
   }
   46% {
-    transform: translate3d(2px, -1px, 0);
+    -webkit-transform: translate3d(2px, -1px, 0);
+            transform: translate3d(2px, -1px, 0);
   }
   47% {
-    transform: translate3d(-3px, 1px, 0);
+    -webkit-transform: translate3d(-3px, 1px, 0);
+            transform: translate3d(-3px, 1px, 0);
+  }
+}
+
+@keyframes shake {
+  0%, 44%, 48%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  45% {
+    -webkit-transform: translate3d(-4px, 3px, 0);
+            transform: translate3d(-4px, 3px, 0);
+  }
+  46% {
+    -webkit-transform: translate3d(2px, -1px, 0);
+            transform: translate3d(2px, -1px, 0);
+  }
+  47% {
+    -webkit-transform: translate3d(-3px, 1px, 0);
+            transform: translate3d(-3px, 1px, 0);
   }
 }
 
 .scrollFade {
   opacity: 0;
-  transform: translate(-20px, 0);
+  -webkit-transform: translate(-20px, 0);
+          transform: translate(-20px, 0);
 }
 
 .scrollFadeIn {
   opacity: 1;
-  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: opacity 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
   transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
 }
 
 .rotate {
-  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 
 /***** MAIN ****/
@@ -159,7 +259,6 @@ body {
 #page-width {
   width: 100%;
   -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
   box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
   position: relative;
   overflow: hidden !important;
@@ -177,7 +276,6 @@ nav {
   z-index: 10;
   font-family: 'headline-font' !important;
   -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
   box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
@@ -202,29 +300,32 @@ nav ul li {
   padding-right: 20px;
   padding-top: 15px;
   -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 nav ul li:hover {
   -webkit-box-shadow: 0px 6px 30px 0 rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 0px 6px 30px 0 rgba(50, 50, 50, 0.75);
   box-shadow: 0px 6px 30px 0 rgba(50, 50, 50, 0.75);
   cursor: pointer;
 }
 
 nav ul li:active {
   -webkit-box-shadow: 0px 6px 30px 0 rgba(50, 50, 50, 0.75) inset;
-  -moz-box-shadow: 0px 6px 30px 0 rgba(50, 50, 50, 0.75) inset;
   box-shadow: 0px 6px 30px 0 rgba(50, 50, 50, 0.75) inset;
   cursor: pointer;
 }
 
 #top {
   height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /***** HEADER ****/
@@ -391,7 +492,7 @@ section .content ul li .experience-item {
 
 section .content ul li .experience-item img {
   float: right;
-  max-height: 70px;
+  max-height: 90px;
   max-width: 150px;
   margin: 0 50px 20px 20px;
 }
@@ -417,9 +518,14 @@ section .content p {
 }
 
 #achievements .achievement-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin-bottom: -100px;
 }
 
@@ -458,6 +564,7 @@ section .content p {
   margin-top: 10px;
   top: 0;
   position: relative;
+  -webkit-transition: top ease-in-out 0.2s;
   transition: top ease-in-out 0.2s;
 }
 
@@ -472,12 +579,14 @@ section .content p {
   border-radius: 3px;
   padding: 5px 10px;
   background: #f2f2f2;
+  -webkit-transition: -webkit-box-shadow ease-in-out 0.2s;
+  transition: -webkit-box-shadow ease-in-out 0.2s;
   transition: box-shadow ease-in-out 0.2s;
+  transition: box-shadow ease-in-out 0.2s, -webkit-box-shadow ease-in-out 0.2s;
 }
 
 #skills .skill-wrapper .skill:hover {
   -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
   box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
@@ -497,9 +606,16 @@ section .content p {
   background-size: 100%;
   background-position: center;
   color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #contact a {
@@ -571,12 +687,17 @@ footer #backToTop {
   }
   nav ul {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
     box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
     top: -300px;
+    -webkit-transition: top 0.3s;
     transition: top 0.3s;
     background: #AB3134;
   }
@@ -634,7 +755,9 @@ footer #backToTop {
     font-size: 14px;
   }
   #achievements .achievement-list {
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     margin-bottom: 0;
   }
   #achievements .achievement-list .achievement-item {
@@ -655,9 +778,14 @@ footer #backToTop {
     text-align: left;
   }
   #skills .skill-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     right: 0;
+    -webkit-transition: right ease-in-out 0.2s;
     transition: right ease-in-out 0.2s;
   }
   #skills .skill-wrapper:hover {
