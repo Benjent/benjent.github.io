@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: -1px; // Prevent the sort-of "aliasing"...
-    height: $arrowSize;
+    height: 50px;;
 
     &--red {
         background-image: url('~@/assets/images/arrows/arrow-red.svg');
