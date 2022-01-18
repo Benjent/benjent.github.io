@@ -541,7 +541,7 @@ export default {
             background-size: 100%;
 
             &-details {
-                margin: 0;
+                margin-top: 40px; // Keep some margin to let up to the last content fade in during scroll
             }
         }
     }
