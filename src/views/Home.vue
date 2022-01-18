@@ -396,7 +396,8 @@ export default {
         font-family: 'headline-font';
         position: fixed;
         z-index: 1;
-        top: calc(var(--nav-button-padding-vertical) * -2) - 16px; // TODO $font-size
+        // top: calc(var(--nav-button-padding-vertical) * -2) - 16px; // TODO $font-size
+        top: 0 - var(--nav-button-padding-vertical) - var(--nav-button-padding-vertical) - 16px; // TODO $font-size
 
         &-burger {
             display: none;
