@@ -170,7 +170,7 @@ export default {
     data() {
         return {
             nav: [
-                { label: 'Top', value: 'top' },
+                { label: 'Profile', value: 'profile' },
                 { label: 'Experience', value: 'experience' },
                 { label: 'Education', value: 'education' },
                 { label: 'Skills', value: 'skills' },
