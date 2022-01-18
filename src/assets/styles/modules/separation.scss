@@ -1,0 +1,17 @@
+// Directly using svg in the DOM causes top aliasing effect...
+.separation {
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: -1px; // Prevent the sort-of "aliasing"...
+    height: $arrowSize;
+
+    &--red {
+        background-image: url('~@/assets/images/arrows/arrow-red.svg');
+    }
+    &--white {
+        background-image: url('~@/assets/images/arrows/arrow-white.svg');
+    }
+    &--black {
+        background-image: url('~@/assets/images/arrows/arrow-black.svg');
+    }
+}

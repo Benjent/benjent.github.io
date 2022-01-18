@@ -1,0 +1,14 @@
+.page {
+    margin: 0 auto;
+    margin-top: -40px;
+    width: 100%;
+    max-width: var(--page-width);
+    padding: 80px 20px;
+    box-sizing: border-box;
+}
+
+@media all and (max-width: $responsive) {
+    .page {
+        padding: 40px 20px;
+    }
+}

@@ -1,0 +1,20 @@
+$colors: (
+    'purple': $purple,
+    'red': $red,
+    'orange': $orange,
+    'white': $white,
+    'cream': $cream,
+    'grey': $grey,
+    'black': $black
+);
+
+@mixin palette($property: 'background') {
+    @each $name, $color in $colors {
+        &--#{$name}, &#{&}--#{$name} {
+            #{$property}: $color;
+            @if $property == 'background' {
+                color: $white;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+:root {
+    --page-width: 1020px;
+    --nav-button-padding-vertical: 16px;
+    --nav-button-padding-horizontal: 20px;
+}
+
+@media all and (max-width: $responsive) {
+    :root {
+        --page-width: 640px;
+        --nav-button-padding-horizontal: 10px;
+    }
+}
+
+$font-size-item-title: 22px;
+$font-size-project-title: 32px;
+$font-size-item-subtitle: 17px;
+$font-size-descr: 14px;
+$font-size-skill: 15px;
+$font-size-catchphrase: 50px;
+
+// Small resolution
+$small-font-size-title: 16px;
+$small-font-size-content: 14px;
+$small-font-size-descr: 12px;
+
+$page-width: 1080px;
+$slash: 40px;
+$arrowSize: 50px;
+$barWidth: 35%;

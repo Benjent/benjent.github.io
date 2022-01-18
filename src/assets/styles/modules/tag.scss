@@ -1,0 +1,39 @@
+.tag {
+    $offset: 15px;
+
+    display: inline-block;
+    position: relative;
+    font-size: 15px;
+    background: $black;
+    border: solid 1px $cream;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: $cream;
+    margin-top: $offset;
+    margin-right: $offset;
+
+    &:hover {
+        background: $cream;
+        color: $black;
+    }
+
+    &-image {
+        max-width: 30px;
+        max-height: 30px;
+        position: absolute;
+        right: -$offset;
+        top: -$offset;
+    }
+}
+
+@media all and (max-width: $responsive) {
+    .tag {
+        font-size: 0.9em;
+
+        &-image {
+            max-width: 24px;
+            max-height: 24px;
+            right: auto;
+        }
+    }
+}

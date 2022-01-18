@@ -1,0 +1,58 @@
+.title {
+    font-family: 'headline-font';
+
+    &--1 {
+        font-size: 3.6em;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 4px;
+    }
+
+    &--2 {
+        font-size: 2.8em;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 4px;
+    }
+
+    &--3 {
+        font-size: 3em;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    &--4 {
+        font-size: 2.8em;
+    }
+
+    &--5 {
+        font-size: 1.3em;
+        font-family: 'main-font', sans-serif;
+        margin-bottom: 2px;
+    }
+}
+
+@media all and (max-width: $responsive) {
+    .title {
+        &--1 {
+            font-size: 2em;
+        }
+
+        &--2 {
+            font-size: 1.6em;
+        }
+
+        &--3 {
+            font-size: 2em;
+        }
+
+        &--4 {
+            font-size: 1.6em;
+        }
+
+        &--5 {
+            font-size: 1.2em;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.experience {
+    margin-bottom: 50px;
+
+    &-image {
+        float: right;
+        max-height: 90px;
+        max-width: 150px;
+        margin: 0 50px 20px 20px;
+    }
+
+    &-duration {}
+
+    &-localisation {
+        &::before {
+            content: ' ';
+        }
+    }
+
+    &-list {
+        margin-left: 30px;
+
+        &-item {
+            list-style-type: '- ';
+            font-style: italic;
+            font-size: 0.9em;
+
+            &::marker {
+                padding-right: 6px;
+            }
+        }
+    }
+
+    &-description {
+        font-size: 0.9em;
+    }
+}
+
+@media all and (max-width: $responsive) {
+    .experience {
+        &-image {
+            max-height: 50px;
+            max-width: 80px;
+            margin: 0 0 10px 10px;
+        }
+
+        &-list {
+            margin-left: 30px;
+
+            &-item {
+                font-size: 0.8em;
+            }
+        }
+    }
+}
