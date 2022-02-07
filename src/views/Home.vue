@@ -50,13 +50,14 @@
                         <h5 class="title title--5" v-if="$mq === 'responsive'">
                             <div class="text--red">{{ item.position }}</div>
                             <a class="link" :href="item.link" target="_blank" v-if="item.link">{{ item.company }}</a>
-                            <div class="compay" v-else>{{ item.company }}</div>
+                            <div v-else>{{ item.company }}</div>
                         </h5>
                         <h5 class="title title--5" v-else>
                             <span class="text--red">{{ item.position }} - </span>
                             <a class="link" :href="item.link" target="_blank" v-if="item.link">{{ item.company }}</a>
-                            <span class="compay" v-else>{{ item.company }}</span>
+                            <span v-else>{{ item.company }}</span>
                         </h5>
+                        <div class="experience-description" v-if="item.description">{{ item.description }}</div>
                         <div class="experience-duration">{{ item.period }}</div>
                         <div class="experience-localisation text--grey">{{ item.localisation }}</div>
                         <ul class="experience-list">
@@ -178,10 +179,11 @@ export default {
             ],
             experience: [
                 {
-                    logo: 'plum.svg',
-                    alt: 'Plüm énergie logo',
+                    logo: 'octopus.png',
+                    alt: 'Octopus Energy France logo',
                     position: 'Full-stack web developer',
-                    company: 'Plüm énergie',
+                    company: 'Octopus Energy France',
+                    description: 'Previously Plüm énergie',
                     link: 'https://plum.fr/',
                     period: 'Since Sep 2019',
                     localisation: 'Saint-Denis, France',
@@ -210,7 +212,8 @@ export default {
                     alt: 'Naval Group logo',
                     position: 'Software engineer',
                     company: 'Naval Group',
-                    link: 'https://www.naval-group.com/fr',
+                    description: 'Previously DCNS',
+                    link: 'https://www.naval-group.com',
                     period: 'Sep 2015 - Sep 2018',
                     localisation: 'Ollioules, France',
                     tasks: [
@@ -223,7 +226,7 @@ export default {
                     logo: 'parachute.png',
                     alt: 'Parachute logo',
                     position: 'Web integrator',
-                    company: 'Parachute Digital Agency',
+                    company: 'Parachute',
                     link: 'https://www.parachute.net/',
                     period: 'Jan 2015 - Mar 2015',
                     localisation: 'Glasgow, Scottland',
@@ -271,6 +274,7 @@ export default {
                     period: '2010 - 2013',
                     institution: 'Lycée International Charles de Gaulle, Dijon, France',
                     link: 'http://www.lycee-internationalcdg.fr/',
+                    description: 'Previously Lycée Européen Charles de Gaulle',
                 },
             ],
             skills: {
