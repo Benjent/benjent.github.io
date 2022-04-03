@@ -292,15 +292,19 @@ export default {
                 layer: [
                     { label: 'TS', logo: 'ts' },
                     { label: 'Handlebars', logo: 'hb' },
+                    { label: 'Day.js' },
                     { label: 'Java', logo: 'java' },
-                    { label: 'Polymer', logo: 'polymer' },
+                    { label: 'React', logo: 'react' },
                     { label: 'Angular', logo: 'angular' },
                     { label: 'SQL' },
                     { label: 'PostgreSQL', logo: 'postgresql' },
                     { label: 'Node.js', logo: 'node' },
+                    { label: 'Docker', logo: 'docker' },
                 ],
                 surface: [
+                    { label: 'Polymer', logo: 'polymer' },
                     { label: 'PostGIS', logo: 'postgis' },
+                    { label: 'MongoDB', logo: 'mongo' },
                     { label: 'J2EE', logo: 'java' },
                     { label: 'Python', logo: 'py' },
                     { label: 'Django', logo: 'django' },
@@ -356,7 +360,7 @@ export default {
         },
         revealContent() {
             const contentsToReveal = document.querySelectorAll('.scroll-fade')
-            const coeff = 0.7; // Small offset not to reveal too soon - the closer to zero the later the reveal
+            const coeff = 0.7 // Small offset not to reveal too soon - the closer to zero the later the reveal
 
             contentsToReveal.forEach((content) => {
                 if (content.getBoundingClientRect().top < window.screen.height * coeff) {
