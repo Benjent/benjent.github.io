@@ -88,8 +88,38 @@
             </ul>
         </div>
     </section>
-    <section ref="skills" id="skills" class="home-skills">
+    <section ref="projects" id="projects" class="home-projects">
         <div class="separation separation--red"></div>
+        <div class="page">
+            <h3 class="title title--3 text--white scroll-fade">Projects</h3>
+            <div class="experience scroll-fade">
+                <a v-if="$mq !== 'responsive'" href="https://benjent.github.io/prog-snack" target="_blank">
+                    <img class="home-projects-image" :src="require(`@/assets/images/projects/prog_snack.png`)" alt="Prog Snack screenshot">
+                </a>
+                <div class="home-projects-item">
+                    <h4 class="home-projects-title title title--4">Prog Snack</h4>
+                    <img v-if="$mq === 'responsive'" class="home-projects-image" :src="require(`@/assets/images/projects/prog_snack.png`)" alt="Prog Snack screenshot">
+                    <div class="home-projects-description">
+                        <p class="home-projects-text">Webapp to browse music albums from the Progressive Rock genre. Initially a Vue.js tryout and sandbox project, I mainly maintain its content from time to time.</p>
+                        <p class="home-projects-text">See the project <a class="link home-projects-link" href="https://benjent.github.io/prog-snack" target="_blank">here</a></p>
+                        <h6 class="title title--6">Conditions:</h6>
+                        <ul class="experience-list">
+                            <li class="experience-list-item">serverless</li>
+                            <li class="experience-list-item">zero-hosting-cost</li>
+                            <li class="experience-list-item">zero-deployment-cost</li>
+                            <li class="experience-list-item">databaseless (fast and easy way to edit the data through the code)</li>
+                            <li class="experience-list-item">Vue.js 2</li>
+                            <li class="experience-list-item">SCSS</li>
+                            <li class="experience-list-item">Autodeployment</li>
+                            <li class="experience-list-item">Responsive design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section ref="skills" id="skills" class="home-skills">
+        <div class="separation separation--orange"></div>
         <div class="page">
             <h3 class="title title--3 text--orange scroll-fade">Technical skills</h3>
             <ul class="list text--red">
@@ -174,6 +204,7 @@ export default {
                 { label: "Profile", value: "profile" },
                 { label: "Experience", value: "experience" },
                 { label: "Education", value: "education" },
+                { label: "Projects", value: "projects" },
                 { label: "Skills", value: "skills" },
                 { label: "Contact", value: "contact" },
             ],
@@ -476,6 +507,49 @@ export default {
         color: $white;
     }
 
+    &-projects {
+        background: $orange;
+        color: $white;
+
+        &-image {
+            @include gradient();
+            float: right;
+            margin-left: -100%;
+            position: relative;
+            z-index: -1;
+            width: 90%;
+            box-sizing: border-box;
+            border-radius: 3px;
+
+            &:hover {
+                mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
+            }
+        }
+
+        &-item {
+            max-width: 60%;
+            padding-left: 40px;
+        }
+
+        &-title {
+            margin-bottom: 20px;
+        }
+
+
+        &-description {
+            padding-left: 40px;
+        }
+
+        &-text {
+            margin-bottom: 20px;
+        }
+
+        &-link {
+            font-style: italic;
+            color: $red;
+        }
+    }
+
     &-skills {
         background: $black;
 
@@ -538,6 +612,34 @@ export default {
 
             &-subtitle {
                 margin-bottom: 18px;
+            }
+        }
+
+        &-projects {
+            &-image {
+                @include gradient(bottom);
+                float: none;
+                display: block;
+                margin: auto;
+                margin-top: 10px;
+                margin-bottom: -45%;
+                filter: opacity(0.6);
+                width: 100%;
+                border: none;
+                border-radius: 3px;
+            }
+
+            &-item {
+                max-width: 100%;
+                padding-left: 0;
+            }
+
+            &-title {
+                margin: 0;
+            }
+
+            &-description {
+                padding: 30px 40px;
             }
         }
 

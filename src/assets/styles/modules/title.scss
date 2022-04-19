@@ -31,6 +31,12 @@
         font-family: 'main-font', sans-serif;
         margin-bottom: 2px;
     }
+
+    &--6 {
+        font-size: 1.1em;
+        font-family: 'main-font', sans-serif;
+        margin-bottom: 2px;
+    }
 }
 
 @media all and (max-width: $responsive) {
@@ -53,6 +59,10 @@
 
         &--5 {
             font-size: 1.2em;
+        }
+
+        &--6 {
+            font-size: 1em;
         }
     }
 }

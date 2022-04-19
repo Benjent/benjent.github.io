@@ -5,12 +5,18 @@
     background-position-y: -1px; // Prevent the sort-of "aliasing"...
     height: 50px;;
 
+    &--orange {
+        background-image: url('~@/assets/images/arrows/arrow-orange.svg');
+    }
+
     &--red {
         background-image: url('~@/assets/images/arrows/arrow-red.svg');
     }
+
     &--white {
         background-image: url('~@/assets/images/arrows/arrow-white.svg');
     }
+
     &--black {
         background-image: url('~@/assets/images/arrows/arrow-black.svg');
     }
