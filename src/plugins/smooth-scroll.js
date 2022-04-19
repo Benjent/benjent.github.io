@@ -1,4 +1,4 @@
-import VueSmoothScroll from 'vue2-smooth-scroll'
+import VueSmoothScroll from "vue2-smooth-scroll"
 
 export default {
     install(Vue) {

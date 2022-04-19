@@ -161,173 +161,173 @@
 </template>
 
 <script>
-import Tag from '@/components/Tag.vue'
+import Tag from "@/components/Tag.vue"
 
 export default {
-    name: 'Home',
+    name: "Home",
     components: {
         Tag,
     },
     data() {
         return {
             nav: [
-                { label: 'Profile', value: 'profile' },
-                { label: 'Experience', value: 'experience' },
-                { label: 'Education', value: 'education' },
-                { label: 'Skills', value: 'skills' },
-                { label: 'Contact', value: 'contact' },
+                { label: "Profile", value: "profile" },
+                { label: "Experience", value: "experience" },
+                { label: "Education", value: "education" },
+                { label: "Skills", value: "skills" },
+                { label: "Contact", value: "contact" },
             ],
             experience: [
                 {
-                    logo: 'octopus.png',
-                    alt: 'Octopus Energy France logo',
-                    position: 'Full-stack web developer',
-                    company: 'Octopus Energy France',
-                    description: 'Previously Plüm énergie',
-                    link: 'https://plum.fr/',
-                    period: 'Since Sep 2019',
-                    localisation: 'Saint-Denis, France',
+                    logo: "octopus.png",
+                    alt: "Octopus Energy France logo",
+                    position: "Full-stack web developer",
+                    company: "Octopus Energy France",
+                    description: "Previously Plüm énergie",
+                    link: "https://plum.fr/",
+                    period: "Since Sep 2019",
+                    localisation: "Saint-Denis, France",
                     tasks: [
-                        'Software development for green electricity consumption and consumption awareness',
-                        'Front-end architecture',
-                        'Design system maintainance in collaboration with designers',
-                        'Front-end training of team members',
-                        'Automated E2E testing',
+                        "Software development for green electricity consumption and consumption awareness",
+                        "Front-end architecture",
+                        "Design system maintainance in collaboration with designers",
+                        "Front-end training of team members",
+                        "Automated E2E testing",
                     ],
                 },
                 {
-                    logo: 'forcity.png',
-                    alt: 'ForCity logo',
-                    position: 'Full-stack web developer',
-                    company: 'ForCity',
-                    period: 'Sep 2018 - Aug 2019',
-                    localisation: 'Cesson-Sévigné, France',
+                    logo: "forcity.png",
+                    alt: "ForCity logo",
+                    position: "Full-stack web developer",
+                    company: "ForCity",
+                    period: "Sep 2018 - Aug 2019",
+                    localisation: "Cesson-Sévigné, France",
                     tasks: [
-                        'Software development for geoworking decision',
-                        'UX/UI thinking in collaboration with designers',
+                        "Software development for geoworking decision",
+                        "UX/UI thinking in collaboration with designers",
                     ],
                 },
                 {
-                    logo: 'naval-group.png',
-                    alt: 'Naval Group logo',
-                    position: 'Software engineer',
-                    company: 'Naval Group',
-                    description: 'Previously DCNS',
-                    link: 'https://www.naval-group.com',
-                    period: 'Sep 2015 - Sep 2018',
-                    localisation: 'Ollioules, France',
+                    logo: "naval-group.png",
+                    alt: "Naval Group logo",
+                    position: "Software engineer",
+                    company: "Naval Group",
+                    description: "Previously DCNS",
+                    link: "https://www.naval-group.com",
+                    period: "Sep 2015 - Sep 2018",
+                    localisation: "Ollioules, France",
                     tasks: [
-                        'R&D Software development for warships',
-                        'Software architecture implementation allowing evolving guidelines integration',
-                        'UX/UI design',
+                        "R&D Software development for warships",
+                        "Software architecture implementation allowing evolving guidelines integration",
+                        "UX/UI design",
                     ],
                 },
                 {
-                    logo: 'parachute.png',
-                    alt: 'Parachute logo',
-                    position: 'Web integrator',
-                    company: 'Parachute',
-                    link: 'https://www.parachute.net/',
-                    period: 'Jan 2015 - Mar 2015',
-                    localisation: 'Glasgow, Scottland',
+                    logo: "parachute.png",
+                    alt: "Parachute logo",
+                    position: "Web integrator",
+                    company: "Parachute",
+                    link: "https://www.parachute.net/",
+                    period: "Jan 2015 - Mar 2015",
+                    localisation: "Glasgow, Scottland",
                     tasks: [
-                        'Integration and deployment of responsive websites',
+                        "Integration and deployment of responsive websites",
                     ],
                 },
                 {
-                    logo: 'fontaine.png',
-                    alt: 'Fontaine-lès-Dijon logo',
-                    position: 'Co-manager and polyvalent musician',
-                    company: 'Music Act Fontaine',
-                    period: 'Oct 2010 - June 2013',
-                    localisation: 'Fontaine-lès-Dijon, France',
+                    logo: "fontaine.png",
+                    alt: "Fontaine-lès-Dijon logo",
+                    position: "Co-manager and polyvalent musician",
+                    company: "Music Act Fontaine",
+                    period: "Oct 2010 - June 2013",
+                    localisation: "Fontaine-lès-Dijon, France",
                     tasks: [
-                        'Live concert and rehearsal organisation',
+                        "Live concert and rehearsal organisation",
                     ],
                 },
             ],
             education: [
                 {
-                    logo: 'enssat.png',
-                    alt: 'ENSSAT Lannion logo',
-                    name: 'Computer Science, Multimedia and Network',
-                    diploma: 'engineering diploma',
-                    period: '2015 - 2018',
-                    institution: 'ENSSAT Lannion, France',
-                    link: 'https://www.enssat.fr/',
-                    description: 'Apprenticeship studies with Naval Group',
+                    logo: "enssat.png",
+                    alt: "ENSSAT Lannion logo",
+                    name: "Computer Science, Multimedia and Network",
+                    diploma: "engineering diploma",
+                    period: "2015 - 2018",
+                    institution: "ENSSAT Lannion, France",
+                    link: "https://www.enssat.fr/",
+                    description: "Apprenticeship studies with Naval Group",
                 },
                 {
-                    logo: 'iut-dijon.png',
-                    alt: 'IUT Dijon logo',
-                    name: 'Multimedia and Web Professions',
-                    diploma: 'technology degree',
-                    period: '2013 - 2015',
-                    institution: 'Dijon University Institute of Technology, France',
-                    link: 'https://iutdijon.u-bourgogne.fr/www/formations/buts/but-mmi.html',
+                    logo: "iut-dijon.png",
+                    alt: "IUT Dijon logo",
+                    name: "Multimedia and Web Professions",
+                    diploma: "technology degree",
+                    period: "2013 - 2015",
+                    institution: "Dijon University Institute of Technology, France",
+                    link: "https://iutdijon.u-bourgogne.fr/www/formations/buts/but-mmi.html",
                 },
                 {
-                    logo: 'de-gaulle.png',
-                    alt: 'Lycée International Charles de Gaulle logo',
-                    name: 'Science',
-                    diploma: 'A levels',
-                    period: '2010 - 2013',
-                    institution: 'Lycée International Charles de Gaulle, Dijon, France',
-                    link: 'http://www.lycee-internationalcdg.fr/',
-                    description: 'Previously Lycée Européen Charles de Gaulle',
+                    logo: "de-gaulle.png",
+                    alt: "Lycée International Charles de Gaulle logo",
+                    name: "Science",
+                    diploma: "A levels",
+                    period: "2010 - 2013",
+                    institution: "Lycée International Charles de Gaulle, Dijon, France",
+                    link: "http://www.lycee-internationalcdg.fr/",
+                    description: "Previously Lycée Européen Charles de Gaulle",
                 },
             ],
             skills: {
                 core: [
-                    { label: 'HTML', logo: 'html' },
-                    { label: 'Pug', logo: 'pug' },
-                    { label: 'CSS', logo: 'css' },
-                    { label: 'SCSS', logo: 'sass' },
-                    { label: 'JS', logo: 'js' },
-                    { label: 'Vue.js', logo: 'vue' },
-                    { label: 'Moment.js', logo: 'moment' },
-                    { label: 'Git', logo: 'git' },
-                    { label: 'TestCafé', logo: 'testcafe' },
+                    { label: "HTML", logo: "html" },
+                    { label: "Pug", logo: "pug" },
+                    { label: "CSS", logo: "css" },
+                    { label: "SCSS", logo: "sass" },
+                    { label: "JS", logo: "js" },
+                    { label: "Vue.js", logo: "vue" },
+                    { label: "Moment.js", logo: "moment" },
+                    { label: "Git", logo: "git" },
+                    { label: "TestCafé", logo: "testcafe" },
                 ],
                 layer: [
-                    { label: 'TS', logo: 'ts' },
-                    { label: 'Handlebars', logo: 'hb' },
-                    { label: 'Day.js' },
-                    { label: 'Java', logo: 'java' },
-                    { label: 'React', logo: 'react' },
-                    { label: 'Angular', logo: 'angular' },
-                    { label: 'SQL' },
-                    { label: 'PostgreSQL', logo: 'postgresql' },
-                    { label: 'Node.js', logo: 'node' },
-                    { label: 'Docker', logo: 'docker' },
+                    { label: "TS", logo: "ts" },
+                    { label: "Handlebars", logo: "hb" },
+                    { label: "Day.js" },
+                    { label: "Java", logo: "java" },
+                    { label: "React", logo: "react" },
+                    { label: "Angular", logo: "angular" },
+                    { label: "SQL" },
+                    { label: "PostgreSQL", logo: "postgresql" },
+                    { label: "Node.js", logo: "node" },
+                    { label: "Docker", logo: "docker" },
                 ],
                 surface: [
-                    { label: 'Polymer', logo: 'polymer' },
-                    { label: 'PostGIS', logo: 'postgis' },
-                    { label: 'MongoDB', logo: 'mongo' },
-                    { label: 'J2EE', logo: 'java' },
-                    { label: 'Python', logo: 'py' },
-                    { label: 'Django', logo: 'django' },
-                    { label: 'PHP', logo: 'php' },
-                    { label: 'Grunt', logo: 'grunt' },
-                    { label: 'Jasmine', logo: 'jasmine' },
-                    { label: 'Mocha', logo: 'mocha' },
-                    { label: 'Chai', logo: 'chai' },
-                    { label: 'WordPress', logo: 'wp' },
-                    { label: 'CesiumJS', logo: 'cesium' },
+                    { label: "Polymer", logo: "polymer" },
+                    { label: "PostGIS", logo: "postgis" },
+                    { label: "MongoDB", logo: "mongo" },
+                    { label: "J2EE", logo: "java" },
+                    { label: "Python", logo: "py" },
+                    { label: "Django", logo: "django" },
+                    { label: "PHP", logo: "php" },
+                    { label: "Grunt", logo: "grunt" },
+                    { label: "Jasmine", logo: "jasmine" },
+                    { label: "Mocha", logo: "mocha" },
+                    { label: "Chai", logo: "chai" },
+                    { label: "WordPress", logo: "wp" },
+                    { label: "CesiumJS", logo: "cesium" },
                 ],
                 misc: [
-                    { label: 'Audacity', logo: 'audacity' },
-                    { label: 'Illustrator', logo: 'ai' },
-                    { label: 'Photoshop', logo: 'ps' },
-                    { label: 'InDesign', logo: 'id' },
-                    { label: 'Premiere Pro', logo: 'premiere' },
-                    { label: 'After Effects', logo: 'ae' },
+                    { label: "Audacity", logo: "audacity" },
+                    { label: "Illustrator", logo: "ai" },
+                    { label: "Photoshop", logo: "ps" },
+                    { label: "InDesign", logo: "id" },
+                    { label: "Premiere Pro", logo: "premiere" },
+                    { label: "After Effects", logo: "ae" },
                 ],
                 languages: [
-                    { label: 'French (mother tongue)', logo: 'fr' },
-                    { label: 'English (fluent, C1 level)', logo: 'en' },
-                    { label: 'German (basic knowledge)', logo: 'de' },
+                    { label: "French (mother tongue)", logo: "fr" },
+                    { label: "English (fluent, C1 level)", logo: "en" },
+                    { label: "German (basic knowledge)", logo: "de" },
                 ],
             },
             copyright: new Date().getFullYear(),
@@ -339,40 +339,40 @@ export default {
 
         // Reveal content regarding the scroll position
         this.revealContent() // Run it once if client refreshes in the middle of the page without scrolling afterwards
-        window.addEventListener('scroll', this.revealContent)
+        window.addEventListener("scroll", this.revealContent)
     },
     methods: {
         animateHeader() {
             // Fade
-            const fadingElements = document.querySelectorAll('.fade')
+            const fadingElements = document.querySelectorAll(".fade")
             fadingElements.forEach((el) => {
-                el.classList.add('fade-in')
+                el.classList.add("fade-in")
             })
 
             // Unstable
-            const unstableElements = document.querySelectorAll('.unstable')
-            unstableElements[0].classList.add('unstablize-left')
-            unstableElements[1].classList.add('unstablize-right')
+            const unstableElements = document.querySelectorAll(".unstable")
+            unstableElements[0].classList.add("unstablize-left")
+            unstableElements[1].classList.add("unstablize-right")
         },
         animateNav() {
             // Slide
-            this.$refs.nav.classList.add('move')
+            this.$refs.nav.classList.add("move")
         },
         revealContent() {
-            const contentsToReveal = document.querySelectorAll('.scroll-fade')
+            const contentsToReveal = document.querySelectorAll(".scroll-fade")
             const coeff = 0.7 // Small offset not to reveal too soon - the closer to zero the later the reveal
 
             contentsToReveal.forEach((content) => {
                 if (content.getBoundingClientRect().top < window.screen.height * coeff) {
-                    if (!content.classList.contains('scroll-fade-in')) {
-                        content.classList.add('scroll-fade-in')
+                    if (!content.classList.contains("scroll-fade-in")) {
+                        content.classList.add("scroll-fade-in")
                     }
                 }
             })
         },
         rotateBackToTop(el) {
             const backToTop = el.target
-            backToTop.classList.add('rotate')
+            backToTop.classList.add("rotate")
             setTimeout(() => {
                 backToTop.classList.remove("rotate")
             }, 200)

@@ -1,4 +1,4 @@
-import VueMq from 'vue-mq'
+import VueMq from "vue-mq"
 
 export default {
     install(Vue) {
