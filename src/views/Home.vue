@@ -191,7 +191,7 @@
 </template>
 
 <script>
-import Tag from "@/components/Tag.vue"
+import Tag from "@/components/ui/Tag.vue"
 
 export default {
     name: "Home",
