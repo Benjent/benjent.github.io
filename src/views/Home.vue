@@ -171,7 +171,6 @@
                 <div class="spacing" v-if="$mq !== 'responsive'"></div>
                 <div>
                     <h4 class="title title--4 scroll-fade"><span class="unwrappable">benjaminjeanmorvan</span>@gmail.com</h4>
-                    <h4 class="title title--4 scroll-fade unwrappable">+33 6 43 41 40 65</h4>
                     <h4 class="title title--4 scroll-fade"><a class="link" href="https://www.linkedin.com/in/benjamin-morvan/" target="_blank">LinkedIn</a></h4>
                 </div>
             </div>
