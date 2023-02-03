@@ -1,23 +1,19 @@
-// Directly using svg in the DOM causes top aliasing effect...
 .separation {
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: -1px; // Prevent the sort-of "aliasing"...
-    height: 50px;;
+    margin: auto;
+    left: 0;
+    right: 0;
+    float: left;
+    clip-path: polygon(20% 0, 100% 0, 77% 100%);
+    width: 100%;
+    height: 4vh;
+    position: absolute;
 
-    &--orange {
-        background-image: url('~@/assets/images/arrows/arrow-orange.svg');
-    }
+    @include palette();
+}
 
-    &--red {
-        background-image: url('~@/assets/images/arrows/arrow-red.svg');
-    }
-
-    &--white {
-        background-image: url('~@/assets/images/arrows/arrow-white.svg');
-    }
-
-    &--black {
-        background-image: url('~@/assets/images/arrows/arrow-black.svg');
+@media all and (max-width: $responsive) {
+    .separation {
+        clip-path: polygon(2% 0, 100% 0, 70% 100%);
     }
 }
+

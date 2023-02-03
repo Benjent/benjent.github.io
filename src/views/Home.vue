@@ -18,8 +18,8 @@
             <div class="move-left unstable red-bar-bottom"></div>
         </div>
     </header>
+    <div class="separation separation--white"></div>
     <section ref="profile" id="profile" class="home-profile">
-        <div class="separation separation--white"></div>
         <div class="page">
             <h3 class="title title--3 scroll-fade">Profile</h3>
             <p class="paragraph scroll-fade">
@@ -38,9 +38,9 @@
                 My favorite front-end framework is <a class="link" href="https://vuejs.org/">Vue.js</a> and I like having a JS-written back-end.
             </p>
         </div>
+        <div class="separation separation--red"></div>
     </section>
     <section ref="experience" id="experience" class="home-experience">
-        <div class="separation separation--red"></div>
         <div class="page">
             <h3 class="title title--3 scroll-fade">Professional experience</h3>
             <ul class="list text--red">
@@ -67,9 +67,9 @@
                 </li>
             </ul>
         </div>
+        <div class="separation separation--white"></div>
     </section>
     <section ref="education" id="education" class="home-education">
-        <div class="separation separation--white"></div>
         <div class="page">
             <h3 class="title title--3 scroll-fade">Education</h3>
             <ul class="list">
@@ -87,9 +87,9 @@
                 </li>
             </ul>
         </div>
+        <div class="separation separation--red"></div>
     </section>
     <section ref="projects" id="projects" class="home-projects">
-        <div class="separation separation--red"></div>
         <div class="page">
             <h3 class="title title--3 text--white scroll-fade">Projects</h3>
             <div class="experience scroll-fade">
@@ -117,9 +117,9 @@
                 </div>
             </div>
         </div>
+        <div class="separation separation--orange"></div>
     </section>
     <section ref="skills" id="skills" class="home-skills">
-        <div class="separation separation--orange"></div>
         <div class="page">
             <h3 class="title title--3 text--orange scroll-fade">Technical skills</h3>
             <ul class="list text--red">
@@ -161,9 +161,9 @@
                 </li>
             </ul>
         </div>
+        <div class="separation separation--black"></div>
     </section>
     <section ref="contact" id="contact" class="home-contact">
-        <div class="separation separation--black"></div>
         <div class="page">
             <h3 class="title title--3 scroll-fade">Contact</h3>
             
