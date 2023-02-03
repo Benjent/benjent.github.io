@@ -1,11 +1,13 @@
 $colors: (
-    'purple': $purple,
-    'red': $red,
-    'orange': $orange,
-    'white': $white,
+    'black': $black,
+    'code': $code,
     'cream': $cream,
     'grey': $grey,
-    'black': $black
+    'marine': $marine,
+    'orange': $orange,
+    'purple': $purple,
+    'red': $red,
+    'white': $white
 );
 
 @mixin palette($property: 'background') {
