@@ -644,7 +644,8 @@ export default {
             }
 
             &-description {
-                padding: 30px 40px;
+                padding: 30px 20px;
+                padding-top: 50px; // Let background image be visible
             }
         }
 
