@@ -1,22 +1,20 @@
 $colors: (
-    'black': $black,
-    'code': $code,
-    'cream': $cream,
-    'grey': $grey,
-    'marine': $marine,
-    'orange': $orange,
-    'purple': $purple,
-    'red': $red,
-    'white': $white
+    'primary': $primary,
+    'secondary': $secondary,
+    'tertiary': $tertiary,
+    'quaternary': $quaternary,
+    'dark': $dark,
+    'light': $light
 );
 
 @mixin palette($property: 'background') {
     @each $name, $color in $colors {
         &--#{$name}, &#{&}--#{$name} {
             #{$property}: $color;
-            @if $property == 'background' {
-                color: $white;
-            }
+
+            // @if $property == 'background' {
+            //     color: $white;
+            // }
         }
     }
 }

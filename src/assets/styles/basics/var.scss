@@ -2,6 +2,7 @@
     --page-width: 1020px;
     --nav-button-padding-vertical: 16px;
     --nav-button-padding-horizontal: 20px;
+    --border-radius: 2rem;
 }
 
 @media all and (max-width: $responsive) {
@@ -12,3 +13,6 @@
 }
 
 $barWidth: 35%;
+$zIndexSeparator: 1;
+$zIndexPhoto: $zIndexSeparator + 1;
+$zIndexNav: $zIndexPhoto + 1;

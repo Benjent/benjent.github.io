@@ -1,14 +1,15 @@
 .page {
+    @include palette();
     margin: 0 auto;
     width: 100%;
     max-width: var(--page-width);
-    padding: 80px 20px;
+    padding: 120px 20px;
     box-sizing: border-box;
 }
 
 @media all and (max-width: $responsive) {
     .page {
         padding: 40px 20px;
-        padding-top: 60px;
+        padding-top: 80px;
     }
 }

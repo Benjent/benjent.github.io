@@ -4,17 +4,24 @@
     display: inline-block;
     position: relative;
     font-size: 15px;
-    background: $black;
-    border: solid 1px $cream;
-    border-radius: 3px;
+    border-radius: var(--border-radius);
+    background: $light;
     padding: 5px 10px;
-    color: $cream;
+    color: $primary;
     margin-top: $offset;
     margin-right: $offset;
 
     &:hover {
-        background: $cream;
-        color: $black;
+        background: $secondary;
+        color: $light;
+
+        .tag-image {
+            transition: right, top, opacity, 0.2s;
+            z-index: -1;
+            right: 0px;
+            top: 0px;
+            opacity: 0;
+        }
     }
 
     &-image {

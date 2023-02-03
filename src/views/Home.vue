@@ -7,171 +7,151 @@
     <header ref="top" id="top" class="home-header">
         <div class="home-header-titles">
             <div class="move-right unstable red-bar-top"></div>
-                <h1 class="title title--1 fade shake home-header-title">Benjamin Morvan</h1>
+                <h1 class="title title--1 fade shake home-header-title text--dark">Benjamin Morvan</h1>
                 <h2 class="title title--2 fade home-header-subtitle">
-                    Software engineer
-                    <br>
-                    Front-end architect
-                    <br>
-                    Full-stack web developer
+                    <div class="tinsel">Software engineer</div>
+                    <div class="tinsel">Front-end architect</div>
+                    <div class="tinsel">Full-stack web developer</div>
                 </h2>
             <div class="move-left unstable red-bar-bottom"></div>
         </div>
     </header>
-    <div class="separation separation--white"></div>
-    <section ref="profile" id="profile" class="home-profile">
-        <div class="page">
-            <h3 class="title title--3 scroll-fade">Profile</h3>
-            <p class="paragraph scroll-fade">
-                I love web technologies as well as designing user-friendly interfaces to present data.
-            </p>
-            <p class="paragraph scroll-fade">
-                I prefer developing webapps with a software approach rather than websites; if possible, intervening in the whole stack.
-            </p>
-            <p class="paragraph scroll-fade">
-                I enjoy designing the front-end architecture to make sure a corporate identity and style guide is correctly implemented. While not being a pixel-perfect enthusiast, I would rather focus on storybooks, UI kits or design systems.
-            </p>
-            <p class="paragraph scroll-fade">
-                I am heavily influenced by <a class="link" href="http://smacss.com/"><abbr title="Scalable and Modular Architecture for Cascading Style Sheets">SMACSS</abbr></a> and <a class="link" href="http://getbem.com/"><abbr title="Block Element Modifier">BEM</abbr></a> frameworks (with a less strict approach fueled by UI components) and generally speaking have a preference for business classes topped with utility classes over the other way around.
-            </p>
-            <p class="paragraph scroll-fade">
-                My favorite front-end framework is <a class="link" href="https://vuejs.org/">Vue.js</a> and I like having a JS-written back-end.
-            </p>
-        </div>
-        <div class="separation separation--red"></div>
-    </section>
-    <section ref="experience" id="experience" class="home-experience">
-        <div class="page">
-            <h3 class="title title--3 scroll-fade">Professional experience</h3>
-            <ul class="list text--red">
-                <li class="list-item scroll-fade" v-for="item in experience" :key="item.company">
-                    <div class="experience text--black">
-                        <img class="experience-image" :src="require(`@/assets/images/logos/${item.logo}`)" :alt="`${item.alt} logo`">
-                        <h5 class="title title--5" v-if="$mq === 'responsive'">
-                            <div class="text--red">{{ item.position }}</div>
-                            <a class="link" :href="item.link" target="_blank" v-if="item.link">{{ item.company }}</a>
-                            <div v-else>{{ item.company }}</div>
-                        </h5>
-                        <h5 class="title title--5" v-else>
-                            <span class="text--red">{{ item.position }} - </span>
-                            <a class="link" :href="item.link" target="_blank" v-if="item.link">{{ item.company }}</a>
-                            <span v-else>{{ item.company }}</span>
-                        </h5>
-                        <div class="experience-description" v-if="item.description">{{ item.description }}</div>
-                        <div class="experience-duration">{{ item.period }}</div>
-                        <div class="experience-localisation text--grey">{{ item.localisation }}</div>
-                        <ul class="experience-list">
-                            <li class="experience-list-item" v-for="task, index in item.tasks" :key="index">{{ task }}</li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="separation separation--white"></div>
-    </section>
-    <section ref="education" id="education" class="home-education">
-        <div class="page">
-            <h3 class="title title--3 scroll-fade">Education</h3>
-            <ul class="list">
-                <li class="list-item scroll-fade" v-for="item in education" :key="item.institution">
-                    <div class="experience">
-                        <img class="experience-image" :src="require(`@/assets/images/logos/${item.logo}`)" :alt="`${item.alt} logo`">
-                        <h5 class="title title--5">
-                            <span class="text--orange">{{ item.name }}</span> {{ item.diploma }}
-                        </h5>
-                        <div class="experience-duration">{{ item.period }}</div>
-                        <a class="experience-localisation link" :href="item.link" target="_blank" v-if="item.link">{{ item.institution }}</a>
-                        <div class="experience-localisation" v-else>{{ item.institution }}</div>
-                        <p class="experience-description text--orange" v-if="item.description">{{ item.description }}</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="separation separation--red"></div>
-    </section>
-    <section ref="projects" id="projects" class="home-projects">
-        <div class="page">
-            <h3 class="title title--3 text--white scroll-fade">Projects</h3>
-            <div class="experience scroll-fade">
-                <a v-if="$mq !== 'responsive'" href="https://benjent.github.io/prog-snack" target="_blank">
-                    <img class="home-projects-image" :src="require(`@/assets/images/projects/prog_snack.png`)" alt="Prog Snack screenshot">
-                </a>
-                <div class="home-projects-item">
-                    <h4 class="home-projects-title title title--4">Prog Snack</h4>
-                    <img v-if="$mq === 'responsive'" class="home-projects-image" :src="require(`@/assets/images/projects/prog_snack.png`)" alt="Prog Snack screenshot">
-                    <div class="home-projects-description">
-                        <p class="home-projects-text">Webapp to browse music albums from the Progressive Rock genre. Initially a Vue.js tryout and sandbox project, I mainly maintain its content from time to time.</p>
-                        <p class="home-projects-text">See the project <a class="link home-projects-link" href="https://benjent.github.io/prog-snack" target="_blank">here</a></p>
-                        <h6 class="title title--6">Conditions:</h6>
-                        <ul class="experience-list">
-                            <li class="experience-list-item">serverless</li>
-                            <li class="experience-list-item">zero-hosting-cost</li>
-                            <li class="experience-list-item">zero-deployment-cost</li>
-                            <li class="experience-list-item">databaseless (fast and easy way to edit the data through the code)</li>
-                            <li class="experience-list-item">Vue.js 2</li>
-                            <li class="experience-list-item">SCSS</li>
-                            <li class="experience-list-item">Autodeployment</li>
-                            <li class="experience-list-item">Responsive design</li>
-                        </ul>
-                    </div>
+    <Separation color="light" />
+    <PageSection ref="profile" id="profile" class="home-profile" title="Profile" titleColor="light" color="primary" >
+        <p class="paragraph paragraph--big text--light scroll-fade home-profile-opener">
+            <span class="home-profile-opener-quote">“</span>
+            <span>I love web technologies as well as designing user-friendly interfaces to present data.</span>
+        </p>
+        <p class="paragraph paragraph--big text--light scroll-fade">
+            I prefer developing webapps with a software approach rather than websites; if possible, intervening in the whole stack.
+        </p>
+        <p class="paragraph paragraph--big text--light scroll-fade">
+            I enjoy designing the front-end architecture to make sure a corporate identity and style guide is correctly implemented. While not being a pixel-perfect enthusiast, I would rather focus on storybooks, UI kits or design systems.
+        </p>
+        <p class="paragraph paragraph--big text--light scroll-fade">
+            I am heavily influenced by <a class="link text--secondary" href="http://smacss.com/"><abbr title="Scalable and Modular Architecture for Cascading Style Sheets">SMACSS</abbr></a> and <a class="link text--secondary" href="http://getbem.com/"><abbr title="Block Element Modifier">BEM</abbr></a> frameworks (with a less strict approach fueled by UI components) and generally speaking have a preference for business classes topped with utility classes over the other way around.
+        </p>
+        <p class="paragraph paragraph--big text--light scroll-fade">
+            My favorite front-end framework is <a class="link text--secondary" href="https://vuejs.org/">Vue.js</a> and I like having a JS-written back-end.
+        </p>
+        <img class="home-profile-photo" src="../assets/images/photos/square-briac.jpg" alt="Profile photo" />
+    </PageSection>
+    <PageSection ref="experience" id="experience" class="home-experience" title="Professional experience" titleColor="primary" color="light">
+        <ul class="list text--dark">
+            <li class="list-item scroll-fade" v-for="item in experience" :key="item.company">
+                <div class="experience text--dark">
+                    <img class="experience-image" :src="require(`@/assets/images/logos/${item.logo}`)" :alt="`${item.alt} logo`">
+                    <h5 class="title title--5" v-if="$mq === 'responsive'">
+                        <div class="text--primary">{{ item.position }}</div>
+                        <a class="link text--secondary" :href="item.link" target="_blank" v-if="item.link">{{ item.company }}</a>
+                        <div v-else>{{ item.company }}</div>
+                    </h5>
+                    <h5 class="title title--5" v-else>
+                        <span class="text--primary">{{ item.position }} - </span>
+                        <a class="link text--secondary" :href="item.link" target="_blank" v-if="item.link">{{ item.company }}</a>
+                        <span v-else>{{ item.company }}</span>
+                    </h5>
+                    <div class="experience-description" v-if="item.description">{{ item.description }}</div>
+                    <div class="experience-duration">{{ item.period }}</div>
+                    <div class="experience-localisation text--secondary">{{ item.localisation }}</div>
+                    <ul class="experience-list">
+                        <li class="experience-list-item" v-for="task, index in item.tasks" :key="index">{{ task }}</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </PageSection>
+    <PageSection ref="education" id="education" class="home-education" title="Education" titleColor="secondary" color="tertiary">
+        <ul class="list">
+            <li class="list-item scroll-fade" v-for="item in education" :key="item.institution">
+                <div class="experience">
+                    <img class="experience-image" :src="require(`@/assets/images/logos/${item.logo}`)" :alt="`${item.alt} logo`">
+                    <h5 class="title title--5">
+                        <span class="text--secondary">{{ item.name }}</span> {{ item.diploma }}
+                    </h5>
+                    <div class="experience-duration">{{ item.period }}</div>
+                    <a class="experience-localisation link" :href="item.link" target="_blank" v-if="item.link">{{ item.institution }}</a>
+                    <div class="experience-localisation" v-else>{{ item.institution }}</div>
+                    <p class="experience-description text--light" v-if="item.description">{{ item.description }}</p>
+                </div>
+            </li>
+        </ul>
+    </PageSection>
+    <PageSection ref="projects" id="projects" class="home-projects" title="Projects" titleColor="tertiary" color="secondary">
+        <div class="experience scroll-fade">
+            <a v-if="$mq !== 'responsive'" href="https://benjent.github.io/prog-snack" target="_blank">
+                <img class="home-projects-image" :src="require(`@/assets/images/projects/prog_snack.png`)" alt="Prog Snack screenshot">
+            </a>
+            <div class="home-projects-item">
+                <h4 class="home-projects-title title title--4 text--quaternary">Prog Snack</h4>
+                <img v-if="$mq === 'responsive'" class="home-projects-image" :src="require(`@/assets/images/projects/prog_snack.png`)" alt="Prog Snack screenshot">
+                <div class="home-projects-description text--light">
+                    <p class="home-projects-text">Webapp to browse music albums from the Progressive Rock genre. Initially a Vue.js tryout and sandbox project, I mainly maintain its content from time to time.</p>
+                    <p class="home-projects-text">See the project <a class="link home-projects-link text--tertiary" href="https://benjent.github.io/prog-snack" target="_blank">here</a>.</p>
+                    <h6 class="title title--6">Conditions:</h6>
+                    <ul class="experience-list">
+                        <li class="experience-list-item">serverless</li>
+                        <li class="experience-list-item">zero-hosting-cost</li>
+                        <li class="experience-list-item">zero-deployment-cost</li>
+                        <li class="experience-list-item">databaseless (fast and easy way to edit the data through the code)</li>
+                        <li class="experience-list-item">Vue.js 2</li>
+                        <li class="experience-list-item">SCSS</li>
+                        <li class="experience-list-item">Autodeployment</li>
+                        <li class="experience-list-item">Responsive design</li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="separation separation--code"></div>
-    </section>
-    <section ref="skills" id="skills" class="home-skills">
-        <div class="page">
-            <h3 class="title title--3 text--orange scroll-fade">Technical skills</h3>
-            <ul class="list text--red">
-                <li class="list-item scroll-fade">
-                    <h5 class="title title--5">Technologies I use everyday</h5>
-                    <ul class="home-skills-list">
-                        <Tag class="home-skills-list-item" v-for="item in skills.core" :key="item.label" :label="item.label" :image="item.logo && require(`@/assets/images/logos/${item.logo}.png`)"></Tag>
-                    </ul>
-                </li>
-                <li class="list-item scroll-fade">
-                    <h5 class="title title--5">Technologies I use less often</h5>
-                    <ul class="home-skills-list">
-                        <Tag class="home-skills-list-item" v-for="item in skills.layer" :key="item.label" :label="item.label" :image="item.logo && require(`@/assets/images/logos/${item.logo}.png`)"></Tag>
-                    </ul>
-                </li>
-                <li class="list-item scroll-fade">
-                    <h5 class="title title--5">Technologies I have used in the past</h5>
-                    <ul class="home-skills-list">
-                        <Tag class="home-skills-list-item" v-for="item in skills.surface" :key="item.label" :label="item.label" :image="item.logo && require(`@/assets/images/logos/${item.logo}.png`)"></Tag>
-                    </ul>
-                </li>
-                <li class="list-item scroll-fade">
-                    <h5 class="title title--5">Other skills</h5>
-                    <ul class="home-skills-list">
-                        <li class="tag home-skills-list-item" v-for="item in skills.misc" :key="item.logo">
-                            <span class="skill">{{ item.label }}</span>
-                            <img class="tag-image" v-if="item.logo" :src="require(`@/assets/images/logos/${item.logo}.png`)" :alt="`${item.label} logo`">
-                        </li>
-                    </ul>
-                </li>
-                <li class="list-item scroll-fade">
-                    <h5 class="title title--5">Languages</h5>
-                    <ul class="home-skills-list">
-                        <li class="tag home-skills-list-item" v-for="item in skills.languages" :key="item.logo">
-                            <span class="skill">{{ item.label }}</span>
-                            <img class="tag-image" v-if="item.logo" :src="require(`@/assets/images/flags/${item.logo}.png`)" :alt="`${item.label} logo`">
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="separation separation--black"></div>
-    </section>
+    </PageSection>
+    <PageSection ref="skills" id="skills" class="home-skills" title="Technical skills" titleColor="secondary" color="quaternary">
+        <ul class="list text--primary">
+            <li class="list-item scroll-fade">
+                <h5 class="title title--5">Technologies I use everyday</h5>
+                <ul class="home-skills-list">
+                    <Tag class="home-skills-list-item" v-for="item in skills.core" :key="item.label" :label="item.label" :image="item.logo && require(`@/assets/images/logos/${item.logo}.png`)"></Tag>
+                </ul>
+            </li>
+            <li class="list-item scroll-fade">
+                <h5 class="title title--5">Technologies I use less often</h5>
+                <ul class="home-skills-list">
+                    <Tag class="home-skills-list-item" v-for="item in skills.layer" :key="item.label" :label="item.label" :image="item.logo && require(`@/assets/images/logos/${item.logo}.png`)"></Tag>
+                </ul>
+            </li>
+            <li class="list-item scroll-fade">
+                <h5 class="title title--5">Technologies I have used in the past</h5>
+                <ul class="home-skills-list">
+                    <Tag class="home-skills-list-item" v-for="item in skills.surface" :key="item.label" :label="item.label" :image="item.logo && require(`@/assets/images/logos/${item.logo}.png`)"></Tag>
+                </ul>
+            </li>
+            <li class="list-item scroll-fade">
+                <h5 class="title title--5">Other skills</h5>
+                <ul class="home-skills-list">
+                    <li class="tag home-skills-list-item" v-for="item in skills.misc" :key="item.logo">
+                        <span class="skill">{{ item.label }}</span>
+                        <img class="tag-image" v-if="item.logo" :src="require(`@/assets/images/logos/${item.logo}.png`)" :alt="`${item.label} logo`">
+                    </li>
+                </ul>
+            </li>
+            <li class="list-item scroll-fade">
+                <h5 class="title title--5">Languages</h5>
+                <ul class="home-skills-list">
+                    <li class="tag home-skills-list-item" v-for="item in skills.languages" :key="item.logo">
+                        <span class="skill">{{ item.label }}</span>
+                        <img class="tag-image" v-if="item.logo" :src="require(`@/assets/images/flags/${item.logo}.png`)" :alt="`${item.label} logo`">
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </PageSection>
     <section ref="contact" id="contact" class="home-contact">
         <div class="page">
-            <h3 class="title title--3 scroll-fade">Contact</h3>
+            <h3 class="title title--3 scroll-fade text--light">Contact</h3>
             
             <div class="home-contact-details">
                 <div class="spacing" v-if="$mq !== 'responsive'"></div>
                 <div>
-                    <h4 class="title title--4 scroll-fade"><span class="unwrappable">benjaminjeanmorvan</span>@gmail.com</h4>
-                    <h4 class="title title--4 scroll-fade"><a class="link" href="https://www.linkedin.com/in/benjamin-morvan/" target="_blank">LinkedIn</a></h4>
+                    <h4 class="title title--4 text--light scroll-fade"><span class="unwrappable">benjaminjeanmorvan</span>@gmail.com</h4>
+                    <h4 class="title title--4 text--light scroll-fade"><a class="link" href="https://www.linkedin.com/in/benjamin-morvan/" target="_blank">LinkedIn</a></h4>
                 </div>
             </div>
         </div>
@@ -183,18 +163,22 @@
                 alt="Back to top"
                 @click="scrollToRef('top')"
                 @mouseover="rotateBackToTop">
-            <p>Benjamin Morvan - <time :datetime="copyright">{{ copyright }}</time></p>
+            <p class="text--light">Benjamin Morvan - <time :datetime="copyright">{{ copyright }}</time></p>
         </footer>
     </section>
 </div>
 </template>
 
 <script>
+import PageSection from "@/components/ui/PageSection.vue"
+import Separation from "@/components/ui/Separation.vue"
 import Tag from "@/components/ui/Tag.vue"
 
 export default {
     name: "Home",
     components: {
+        PageSection,
+        Separation,
         Tag,
     },
     data() {
@@ -389,6 +373,42 @@ export default {
             const unstableElements = document.querySelectorAll(".unstable")
             unstableElements[0].classList.add("unstablize-left")
             unstableElements[1].classList.add("unstablize-right")
+            
+            // Tinsel
+            const colors = ["primary", "secondary", "tertiary", "quaternary", "dark"]
+            const tinselElements = document.querySelectorAll(".tinsel")
+            tinselElements.forEach((item) => {
+                // Replace character with itself wrapped in a span
+                const text = item.innerHTML
+                item.innerHTML = ""
+
+                const characters = text.split("")
+                characters.forEach((c) => {
+                    const span = document.createElement("span")
+                    span.innerHTML = c
+                    item.appendChild(span)
+                })
+            })
+
+            // Randomize colored character
+            const characters = [...tinselElements].map((item) => [...item.childNodes]).flat()
+            window.setInterval(() => {
+                const randomCharacterIndex = Math.floor(Math.random() * characters.length)
+                const randomColorIndex = Math.floor(Math.random() * colors.length)
+
+                const randomCharacter = characters[randomCharacterIndex]
+                
+                if (randomCharacter.classList.length > 0) {
+                    // Character has already been colorized, reset
+                    randomCharacter.className = ""
+                } else {
+                    // Colorize character
+                    const randomColor = colors[randomColorIndex]
+                    randomCharacter.className = ""
+                    randomCharacter.classList.add(`text--${randomColor}`)
+                }
+            }, 1000)
+
         },
         animateNav() {
             // Slide
@@ -414,7 +434,7 @@ export default {
             }, 200)
         },
         scrollToRef(ref) {
-            const element = this.$refs[ref]
+            const element = this.$refs[ref].$el || this.$refs[ref]
             this.$smoothScroll({ scrollTo: element })
         },
     },
@@ -436,12 +456,12 @@ export default {
         justify-content: center;
         letter-spacing: 3px;
         width: 100%;
-        background: $red;
-        color: $white;
+        background: $primary;
+        color: $light;
         text-transform: uppercase;
         font-family: 'headline-font';
         position: fixed;
-        z-index: 1;
+        z-index: $zIndexNav;
         // top: calc(var(--nav-button-padding-vertical) * -2) - 16px; // TODO $font-size
         top: 0 - var(--nav-button-padding-vertical) - var(--nav-button-padding-vertical) - 16px; // TODO $font-size
 
@@ -453,10 +473,10 @@ export default {
             @include cta;
 
             padding: var(--nav-button-padding-vertical) var(--nav-button-padding-horizontal);
-            border-bottom: solid 2px $red;
+            border-bottom: solid 2px $primary;
 
             &:hover {
-                border-color: $white;
+                border-color: $light;
             }
         }
     }
@@ -467,6 +487,7 @@ export default {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background: $light;
 
         .red-bar-top, .red-bar-bottom {
             width: $barWidth;
@@ -475,12 +496,12 @@ export default {
         }
 
         .red-bar-top {
-            border-bottom: solid $red 5px;
+            border-bottom: solid $primary 5px;
             left: 0;
         }
 
         .red-bar-bottom {
-            border-top: solid $red 5px;
+            border-top: solid $primary 5px;
             right: 0;
         }
 
@@ -499,23 +520,35 @@ export default {
     }
 
     &-profile {
-        background: $red;
-        color: $white;
-    }
+        position: relative;
 
-    &-experience {
-        background: $white;
-    }
+        &-opener {
+            padding-top: 40px;
 
-    &-education {
-        background: $red;
-        color: $white;
+            &-quote {
+                color: $secondary;
+                float: left;
+                padding-top: 0.6rem;
+                font-size: 6rem;
+                line-height: 1rem;
+            }
+        }
+
+        &-photo {
+            width: 240px;
+            border-radius: 50%;
+            border: solid 6px $light;
+            // float: right;
+            // position: relative;
+            // top: 140px;
+            position: absolute;
+            right: 8%;
+            bottom: -140px;
+            z-index: $zIndexPhoto;
+        }
     }
 
     &-projects {
-        background: $code;
-        color: $orange;
-
         &-image {
             @include gradient();
             float: right;
@@ -524,7 +557,7 @@ export default {
             z-index: -1;
             width: 90%;
             box-sizing: border-box;
-            border-radius: 3px;
+            border-radius: var(--border-radius);
 
             &:hover {
                 mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
@@ -551,13 +584,10 @@ export default {
 
         &-link {
             font-style: italic;
-            color: $white;
         }
     }
 
     &-skills {
-        background: $black;
-
         &-list {
             margin-bottom: 20px;
             text-align: right;
@@ -569,12 +599,11 @@ export default {
     }
 
     &-contact {
-        background-color: $black;
+        background-color: $dark;
         background-image: url('~@/assets/images/photos/skate.jpg');
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: center;
-        color: $white;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -588,7 +617,6 @@ export default {
 
     &-footer {
         padding: 0 20px 20px 20px;
-        color: $white;
         text-align: center;
 
         .back-to-top {
@@ -620,6 +648,13 @@ export default {
             }
         }
 
+        &-profile {
+            &-photo {
+                width: 100px;
+                bottom: -80px;
+            }
+        }
+
         &-projects {
             &-image {
                 @include gradient(bottom);
@@ -631,7 +666,7 @@ export default {
                 filter: opacity(0.6);
                 width: 100%;
                 border: none;
-                border-radius: 3px;
+                border-radius: var(--border-radius);
             }
 
             &-item {
