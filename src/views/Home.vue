@@ -117,7 +117,7 @@
                 </div>
             </div>
         </div>
-        <div class="separation separation--orange"></div>
+        <div class="separation separation--code"></div>
     </section>
     <section ref="skills" id="skills" class="home-skills">
         <div class="page">
@@ -513,8 +513,8 @@ export default {
     }
 
     &-projects {
-        background: $orange;
-        color: $white;
+        background: $code;
+        color: $orange;
 
         &-image {
             @include gradient();
@@ -551,7 +551,7 @@ export default {
 
         &-link {
             font-style: italic;
-            color: $red;
+            color: $white;
         }
     }
 
