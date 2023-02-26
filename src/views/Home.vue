@@ -310,6 +310,7 @@ export default {
                     { label: "TS", logo: "ts" },
                     { label: "Handlebars", logo: "hb" },
                     { label: "Storyblok", logo: "storyblok" },
+                    { label: "Sendinblue", logo: "sendinblue" },
                     { label: "GraphQL", logo: "gql" },
                     { label: "Day.js" },
                     { label: "Date-fns", logo: "datefns" },
