@@ -302,6 +302,7 @@ export default {
                     { label: "React", logo: "react" },
                     { label: "Moment.js", logo: "moment" },
                     { label: "Git", logo: "git" },
+                    { label: "Jest", logo: "jest" },
                     { label: "TestCafé", logo: "testcafe" },
                 ],
                 layer: [
