@@ -16,7 +16,6 @@
         color: $light;
 
         .tag-image {
-            transition: right, top, opacity, 0.2s;
             z-index: -1;
             right: 0px;
             top: 0px;
@@ -25,11 +24,13 @@
     }
 
     &-image {
+        transition: right, top, opacity, 0.2s;
         max-width: 30px;
         max-height: 30px;
         position: absolute;
         right: -$offset;
         top: -$offset;
+        pointer-events: none;
     }
 }
 
