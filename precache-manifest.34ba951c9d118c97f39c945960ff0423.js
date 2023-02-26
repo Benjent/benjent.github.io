@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8e76abf4bee41ddf2d86",
-    "url": "/css/app.0eeca032.css"
+    "revision": "eed3d815a38b6300fbd4",
+    "url": "/css/app.01f7c486.css"
   },
   {
     "revision": "09f6b2ba02572f19a7d7dd2b5f6494ad",
@@ -116,6 +116,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/java.f5cda923.png"
   },
   {
+    "revision": "cfa3a32613483a1ee48fac169aeb6359",
+    "url": "/img/jest.cfa3a326.png"
+  },
+  {
     "revision": "8aa4013217d2318adabbe7b44f53f0c5",
     "url": "/img/jq.8aa40132.png"
   },
@@ -200,6 +204,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/sass.225cbf31.png"
   },
   {
+    "revision": "d22c32cfea356da8e875a58bdfc111e5",
+    "url": "/img/sendinblue.d22c32cf.png"
+  },
+  {
     "revision": "1f15dbafb090e0bc8b897af64b188662",
     "url": "/img/skate.1f15dbaf.jpg"
   },
@@ -224,12 +232,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/wp.f3d0f62f.png"
   },
   {
-    "revision": "b6f05c1380bae3467f40e0c54ef39ae9",
+    "revision": "da1bc71900b8c5c06f52a6e2f79e71f5",
     "url": "/index.html"
   },
   {
-    "revision": "8e76abf4bee41ddf2d86",
-    "url": "/js/app.00e93faf.js"
+    "revision": "eed3d815a38b6300fbd4",
+    "url": "/js/app.9576c626.js"
   },
   {
     "revision": "715cc6d1dbae717ac7ac",
