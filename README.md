@@ -1,5 +1,5 @@
 # benjent.github.io
-My personal web page.
+My personal web page. [See it live](https://benjent.github.io/).
 
 ## Project setup
 ```
