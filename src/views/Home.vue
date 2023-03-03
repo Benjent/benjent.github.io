@@ -2,7 +2,7 @@
 <div class="home">
     <nav ref="nav" class="home-nav">
         <!-- <img class="home-nav-burger" src="@/assets/images/icons/nav-burger.svg" alt="Nav burger"> -->
-        <div class="home-nav-item" v-for="item in nav" :key="item.value" @click="scrollToRef(item.value)">{{ item.label }}</div>
+        <button class="home-nav-item" v-for="item in nav" :key="item.value" @click="scrollToRef(item.value)">{{ item.label }}</button>
     </nav>
     <header ref="top" id="top" class="home-header">
         <div class="home-header-titles">
@@ -129,13 +129,9 @@
             </div>
         </div>
         <footer class="home-footer">
-            <img
-                id="backToTop"
-                class="back-to-top"
-                :src="require(`@/assets/images/icons/top-arrow.svg`)"
-                alt="Back to top"
-                @click="scrollToRef('top')"
-                @mouseover="rotateBackToTop">
+            <button id="backToTop" class="back-to-top" @click="scrollToRef('top')" @mouseover="rotateBackToTop" aria-label="Back to top">
+                <img :src="require(`@/assets/images/icons/top-arrow.svg`)" alt="Back to top" aria-hidden="true" focusable="false" />
+            </button>
             <p class="text--light home-contact-copyright">Benjamin Morvan - <time :datetime="copyright">{{ copyright }}</time></p>
         </footer>
     </section>
@@ -455,12 +451,9 @@ export default {
 
         display: flex;
         justify-content: center;
-        letter-spacing: 3px;
         width: 100%;
         background: $primary;
         color: $light;
-        text-transform: uppercase;
-        font-family: 'headline-font';
         position: fixed;
         z-index: $zIndexNav;
         // top: calc(var(--nav-button-padding-vertical) * -2) - 16px; // TODO $font-size
@@ -472,6 +465,10 @@ export default {
 
         &-item {
             @include cta;
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-family: 'headline-font';
 
             padding: var(--nav-button-padding-vertical) var(--nav-button-padding-horizontal);
             border-bottom: solid 2px $primary;
