@@ -8,7 +8,7 @@
         <img v-if="$mq === 'responsive'" class="l-project-image" :src="require(`@/assets/images/projects/${image}`)" :alt="imageAlt">
         <div class="l-project-description text--light">
             <p class="paragraph">{{ description }}</p>
-            <p class="paragraph">See the project <a class="link l-project-link text--tertiary" :href="href" target="_blank">here</a>.</p>
+            <p class="paragraph"><a class="link l-project-link text--tertiary" :href="href" target="_blank">See the project live</a></p>
             <h6 class="l-project-conditions title title--6" v-if="conditions.length > 0">Conditions:</h6>
             <ul class="experience-list">
                 <li class="experience-list-item" v-for="condition, index in conditions" :key="index">{{ condition }}</li>
