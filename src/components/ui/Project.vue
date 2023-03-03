@@ -9,7 +9,7 @@
         <div class="l-project-description text--light">
             <p class="paragraph">{{ description }}</p>
             <p class="paragraph"><a class="link l-project-link text--tertiary" :href="href" target="_blank">See the project live</a></p>
-            <h6 class="l-project-conditions title title--6" v-if="conditions.length > 0">Conditions:</h6>
+            <h5 class="l-project-conditions title title--6" v-if="conditions.length > 0">Conditions:</h5>
             <ul class="experience-list">
                 <li class="experience-list-item" v-for="condition, index in conditions" :key="index">{{ condition }}</li>
             </ul>

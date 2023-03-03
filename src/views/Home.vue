@@ -79,25 +79,25 @@
     <PageSection ref="skills" id="skills" class="home-skills" title="Technical skills" titleColor="secondary" color="quaternary">
         <ul class="list text--primary">
             <li class="list-item scroll-fade">
-                <h5 class="title title--5">Technologies I use everyday</h5>
+                <h4 class="title title--5">Technologies I use everyday</h4>
                 <ul class="home-skills-list">
                     <Tag class="home-skills-list-item" v-for="item in skills.core" :key="item.label" :label="item.label" :image="item.logo && require(`@/assets/images/logos/${item.logo}.png`)"></Tag>
                 </ul>
             </li>
             <li class="list-item scroll-fade">
-                <h5 class="title title--5">Technologies I use less often</h5>
+                <h4 class="title title--5">Technologies I use less often</h4>
                 <ul class="home-skills-list">
                     <Tag class="home-skills-list-item" v-for="item in skills.layer" :key="item.label" :label="item.label" :image="item.logo && require(`@/assets/images/logos/${item.logo}.png`)"></Tag>
                 </ul>
             </li>
             <li class="list-item scroll-fade">
-                <h5 class="title title--5">Technologies I have used in the past</h5>
+                <h4 class="title title--5">Technologies I have used in the past</h4>
                 <ul class="home-skills-list">
                     <Tag class="home-skills-list-item" v-for="item in skills.surface" :key="item.label" :label="item.label" :image="item.logo && require(`@/assets/images/logos/${item.logo}.png`)"></Tag>
                 </ul>
             </li>
             <li class="list-item scroll-fade">
-                <h5 class="title title--5">Other skills</h5>
+                <h4 class="title title--5">Other skills</h4>
                 <ul class="home-skills-list">
                     <li class="tag home-skills-list-item" v-for="item in skills.misc" :key="item.logo">
                         <span class="skill">{{ item.label }}</span>
@@ -106,7 +106,7 @@
                 </ul>
             </li>
             <li class="list-item scroll-fade">
-                <h5 class="title title--5">Languages</h5>
+                <h4 class="title title--5">Languages</h4>
                 <ul class="home-skills-list">
                     <li class="tag home-skills-list-item" v-for="item in skills.languages" :key="item.logo">
                         <span class="skill">{{ item.label }}</span>
