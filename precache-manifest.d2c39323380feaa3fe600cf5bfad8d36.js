@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eed3d815a38b6300fbd4",
-    "url": "/css/app.01f7c486.css"
+    "revision": "c5eacbedbfe5cd44ef7a",
+    "url": "/css/app.47be6593.css"
   },
   {
     "revision": "09f6b2ba02572f19a7d7dd2b5f6494ad",
@@ -177,7 +177,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "3c0ea6091f5bac9284a05cf49b73d588",
-    "url": "/img/prog_snack.3c0ea609.png"
+    "url": "/img/prog-snack.3c0ea609.png"
   },
   {
     "revision": "2bf8c36acc460fe434553c6ce59f77c7",
@@ -232,12 +232,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/wp.f3d0f62f.png"
   },
   {
-    "revision": "da1bc71900b8c5c06f52a6e2f79e71f5",
+    "revision": "526eb9a30e836085457042b17387a502",
     "url": "/index.html"
   },
   {
-    "revision": "eed3d815a38b6300fbd4",
-    "url": "/js/app.9576c626.js"
+    "revision": "c5eacbedbfe5cd44ef7a",
+    "url": "/js/app.c6e46a5a.js"
   },
   {
     "revision": "715cc6d1dbae717ac7ac",
