@@ -1,6 +1,4 @@
 .paragraph {
-    text-align: justify;
-
     &--big {
         font-size: 1.2rem;
     }
@@ -12,8 +10,6 @@
 
 @media all and (max-width: $responsive) {
     .paragraph {
-        text-align: left;
-
         &--big {
             font-size: 1rem;
         }
