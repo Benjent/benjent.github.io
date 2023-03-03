@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.d2c39323380feaa3fe600cf5bfad8d36.js"
+  "/precache-manifest.f2257a10aa02e0a33cda7b8839993efc.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "benjent.github.io"});
