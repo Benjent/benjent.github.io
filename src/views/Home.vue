@@ -136,7 +136,7 @@
                 alt="Back to top"
                 @click="scrollToRef('top')"
                 @mouseover="rotateBackToTop">
-            <p class="text--light">Benjamin Morvan - <time :datetime="copyright">{{ copyright }}</time></p>
+            <p class="text--light home-contact-copyright">Benjamin Morvan - <time :datetime="copyright">{{ copyright }}</time></p>
         </footer>
     </section>
 </div>
@@ -561,6 +561,7 @@ export default {
     }
 
     &-contact {
+        text-shadow: 0 0 20px $liquorice;
         background-color: $dark;
         background-image: url('~@/assets/images/photos/skate.jpg');
         background-repeat: no-repeat;
@@ -574,6 +575,10 @@ export default {
             display: flex;
             margin-top: 140px;
             margin-bottom: 10px; // Display background landscape image bigger
+        }
+
+        &-copyright {
+            text-shadow: 0 0 3px $liquorice;
         }
     }
 
