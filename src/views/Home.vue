@@ -39,69 +39,42 @@
     <PageSection ref="experience" id="experience" class="home-experience" title="Professional experience" titleColor="primary" color="light">
         <ul class="list text--dark">
             <li class="list-item scroll-fade" v-for="item in experience" :key="item.company">
-                <div class="experience text--dark">
-                    <img class="experience-image" :src="require(`@/assets/images/logos/${item.logo}`)" :alt="`${item.alt} logo`">
-                    <h5 class="title title--5" v-if="$mq === 'responsive'">
-                        <div class="text--primary">{{ item.position }}</div>
-                        <a class="link text--secondary" :href="item.link" target="_blank" v-if="item.link">{{ item.company }}</a>
-                        <div v-else>{{ item.company }}</div>
-                    </h5>
-                    <h5 class="title title--5" v-else>
-                        <span class="text--primary">{{ item.position }} - </span>
-                        <a class="link text--secondary" :href="item.link" target="_blank" v-if="item.link">{{ item.company }}</a>
-                        <span v-else>{{ item.company }}</span>
-                    </h5>
-                    <div class="experience-description" v-if="item.description">{{ item.description }}</div>
-                    <div class="experience-duration">{{ item.period }}</div>
-                    <div class="experience-localisation text--secondary">{{ item.localisation }}</div>
-                    <ul class="experience-list">
-                        <li class="experience-list-item" v-for="task, index in item.tasks" :key="index">{{ task }}</li>
-                    </ul>
-                </div>
+                <Experience
+                    :position="item.position"
+                    :company="item.company"
+                    :href="item.link"
+                    :description="item.description"
+                    :period="item.period"
+                    :localisation="item.localisation"
+                    :tasks="item.tasks"
+                    :logo="item.logo"
+                    :logoAlt="item.alt"
+                />
             </li>
         </ul>
     </PageSection>
     <PageSection ref="education" id="education" class="home-education" title="Education" titleColor="secondary" color="tertiary">
         <ul class="list">
             <li class="list-item scroll-fade" v-for="item in education" :key="item.institution">
-                <div class="experience">
-                    <img class="experience-image" :src="require(`@/assets/images/logos/${item.logo}`)" :alt="`${item.alt} logo`">
-                    <h5 class="title title--5">
-                        <span class="text--secondary">{{ item.name }}</span> {{ item.diploma }}
-                    </h5>
-                    <div class="experience-duration">{{ item.period }}</div>
-                    <a class="experience-localisation link" :href="item.link" target="_blank" v-if="item.link">{{ item.institution }}</a>
-                    <div class="experience-localisation" v-else>{{ item.institution }}</div>
-                    <p class="experience-description text--light" v-if="item.description">{{ item.description }}</p>
-                </div>
+                <Education
+                    :title="item.title"
+                    :diploma="item.diploma"
+                    :href="item.link"
+                    :period="item.period"
+                    :institution="item.institution"
+                    :description="item.description"
+                    :logo="item.logo"
+                    :logoAlt="item.alt"
+                />
             </li>
         </ul>
     </PageSection>
     <PageSection ref="projects" id="projects" class="home-projects" title="Projects" titleColor="tertiary" color="secondary">
-        <div class="experience scroll-fade">
-            <a v-if="$mq !== 'responsive'" href="https://benjent.github.io/prog-snack" target="_blank">
-                <img class="home-projects-image" :src="require(`@/assets/images/projects/prog_snack.png`)" alt="Prog Snack screenshot">
-            </a>
-            <div class="home-projects-item">
-                <h4 class="home-projects-title title title--4 text--quaternary">Prog Snack</h4>
-                <img v-if="$mq === 'responsive'" class="home-projects-image" :src="require(`@/assets/images/projects/prog_snack.png`)" alt="Prog Snack screenshot">
-                <div class="home-projects-description text--light">
-                    <p class="home-projects-text">Webapp to browse music albums from the Progressive Rock genre. Initially a Vue.js tryout and sandbox project, I mainly maintain its content from time to time.</p>
-                    <p class="home-projects-text">See the project <a class="link home-projects-link text--tertiary" href="https://benjent.github.io/prog-snack" target="_blank">here</a>.</p>
-                    <h6 class="title title--6">Conditions:</h6>
-                    <ul class="experience-list">
-                        <li class="experience-list-item">serverless</li>
-                        <li class="experience-list-item">zero-hosting-cost</li>
-                        <li class="experience-list-item">zero-deployment-cost</li>
-                        <li class="experience-list-item">databaseless (fast and easy way to edit the data through the code)</li>
-                        <li class="experience-list-item">Vue.js 2</li>
-                        <li class="experience-list-item">SCSS</li>
-                        <li class="experience-list-item">Autodeployment</li>
-                        <li class="experience-list-item">Responsive design</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <ul class="list">
+            <li class="scroll-fade" v-for="item in projects" :key="item.title">
+                <Project :title="item.title" :href="item.link" :description="item.description" :conditions="item.conditions" :image="item.image" :imageAlt="item.alt"/>
+            </li>
+        </ul>
     </PageSection>
     <PageSection ref="skills" id="skills" class="home-skills" title="Technical skills" titleColor="secondary" color="quaternary">
         <ul class="list text--primary">
@@ -170,14 +143,20 @@
 </template>
 
 <script>
+import Education from "@/components/ui/Education.vue"
+import Experience from "@/components/ui/Experience.vue"
 import PageSection from "@/components/ui/PageSection.vue"
+import Project from "@/components/ui/Project.vue"
 import Separation from "@/components/ui/Separation.vue"
 import Tag from "@/components/ui/Tag.vue"
 
 export default {
     name: "Home",
     components: {
+        Education,
+        Experience,
         PageSection,
+        Project,
         Separation,
         Tag,
     },
@@ -264,7 +243,7 @@ export default {
                 {
                     logo: "enssat.png",
                     alt: "ENSSAT Lannion logo",
-                    name: "Computer Science, Multimedia and Network",
+                    title: "Computer Science, Multimedia and Network",
                     diploma: "engineering diploma",
                     period: "2015 - 2018",
                     institution: "ENSSAT Lannion, France",
@@ -274,7 +253,7 @@ export default {
                 {
                     logo: "iut-dijon.png",
                     alt: "IUT Dijon logo",
-                    name: "Multimedia and Web Professions",
+                    title: "Multimedia and Web Professions",
                     diploma: "technology degree",
                     period: "2013 - 2015",
                     institution: "Dijon University Institute of Technology, France",
@@ -283,12 +262,31 @@ export default {
                 {
                     logo: "de-gaulle.png",
                     alt: "Lycée International Charles de Gaulle logo",
-                    name: "Science",
+                    title: "Science",
                     diploma: "A levels",
                     period: "2010 - 2013",
                     institution: "Lycée International Charles de Gaulle, Dijon, France",
                     link: "http://www.lycee-internationalcdg.fr/",
                     description: "Previously Lycée Européen Charles de Gaulle",
+                },
+            ],
+            projects: [
+                {
+                    image: "prog-snack.png",
+                    alt: "Prog Snack screenshot",
+                    title: "Prog Snack",
+                    description: "Webapp to browse music albums from the Progressive Rock genre. Initially a Vue.js tryout and sandbox project, I mainly maintain its content from time to time.",
+                    link: "https://benjent.github.io/prog-snack",
+                    conditions: [
+                        "Serverless",
+                        "Zero-hosting-cost",
+                        "Zero-deployment-cost",
+                        "Databaseless (fast and easy way to edit the data through the code)",
+                        "Vue.js 2",
+                        "SCSS",
+                        "Autodeployment",
+                        "Responsive design",
+                    ],
                 },
             ],
             skills: {
@@ -551,45 +549,6 @@ export default {
         }
     }
 
-    &-projects {
-        &-image {
-            @include gradient();
-            float: right;
-            margin-left: -100%;
-            position: relative;
-            z-index: -1;
-            width: 90%;
-            box-sizing: border-box;
-            border-radius: var(--border-radius);
-
-            &:hover {
-                mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
-            }
-        }
-
-        &-item {
-            max-width: 60%;
-            padding-left: 40px;
-        }
-
-        &-title {
-            margin-bottom: 20px;
-        }
-
-
-        &-description {
-            padding-left: 40px;
-        }
-
-        &-text {
-            margin-bottom: 20px;
-        }
-
-        &-link {
-            font-style: italic;
-        }
-    }
-
     &-skills {
         &-list {
             margin-bottom: 20px;
@@ -655,35 +614,6 @@ export default {
             &-photo {
                 width: 100px;
                 bottom: -80px;
-            }
-        }
-
-        &-projects {
-            &-image {
-                @include gradient(bottom);
-                float: none;
-                display: block;
-                margin: auto;
-                margin-top: 10px;
-                margin-bottom: -45%;
-                filter: opacity(0.6);
-                width: 100%;
-                border: none;
-                border-radius: var(--border-radius);
-            }
-
-            &-item {
-                max-width: 100%;
-                padding-left: 0;
-            }
-
-            &-title {
-                margin: 0;
-            }
-
-            &-description {
-                padding: 30px 20px;
-                padding-top: 50px; // Let background image be visible
             }
         }
 
