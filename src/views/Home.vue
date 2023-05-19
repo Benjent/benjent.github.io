@@ -121,7 +121,7 @@
             <h3 class="title title--3 scroll-fade text--light">Contact</h3>
             
             <div class="home-contact-details">
-                <div class="spacing" v-if="$mq !== 'responsive'"></div>
+                <!-- <div class="spacing" v-if="$mq !== 'responsive'"></div> Uncomment if use skate photo -->
                 <div>
                     <h4 class="title title--4 text--light scroll-fade"><span class="unwrappable">benjaminjeanmorvan</span>@gmail.com</h4>
                     <h4 class="title title--4 text--light scroll-fade"><a class="link" href="https://www.linkedin.com/in/benjamin-morvan/" target="_blank">LinkedIn</a></h4>
@@ -560,7 +560,8 @@ export default {
     &-contact {
         text-shadow: 0 0 20px $liquorice;
         background-color: $dark;
-        background-image: url('~@/assets/images/photos/skate.jpg');
+        // background-image: url('~@/assets/images/photos/skate.jpg');
+        background-image: url('~@/assets/images/photos/bono.jpeg');
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: center;
