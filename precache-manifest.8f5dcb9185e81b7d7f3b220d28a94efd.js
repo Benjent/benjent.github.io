@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "73115a8f37c5e20aff01",
-    "url": "/css/app.9eadc8a8.css"
+    "revision": "0152f4d2c82f13298be8",
+    "url": "/css/app.7141a4a7.css"
   },
   {
     "revision": "09f6b2ba02572f19a7d7dd2b5f6494ad",
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c4e01da9c77222b5538fed3e2a60abb3",
     "url": "/img/audacity.c4e01da9.png"
+  },
+  {
+    "revision": "b568f092952eed5e212d683adefad2c2",
+    "url": "/img/bono.b568f092.jpeg"
   },
   {
     "revision": "94bda8dc4e8a8612b491dc36c2617c67",
@@ -208,10 +212,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/sendinblue.d22c32cf.png"
   },
   {
-    "revision": "1f15dbafb090e0bc8b897af64b188662",
-    "url": "/img/skate.1f15dbaf.jpg"
-  },
-  {
     "revision": "27521d13c92f40b2c262991c04ea56a7",
     "url": "/img/square-briac.27521d13.jpg"
   },
@@ -232,12 +232,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/wp.f3d0f62f.png"
   },
   {
-    "revision": "6bf4ec0d12e2eb3a80f27a3d2eb0ecbd",
+    "revision": "4a686de8cc88cf7d3b1666f2c9a7474c",
     "url": "/index.html"
   },
   {
-    "revision": "73115a8f37c5e20aff01",
-    "url": "/js/app.b197832c.js"
+    "revision": "0152f4d2c82f13298be8",
+    "url": "/js/app.217dd180.js"
   },
   {
     "revision": "715cc6d1dbae717ac7ac",
