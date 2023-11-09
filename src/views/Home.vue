@@ -76,45 +76,33 @@
             </li>
         </ul>
     </PageSection>
-    <PageSection ref="skills" id="skills" class="home-skills" title="Technical skills" titleColor="secondary" color="quaternary">
-        <ul class="list text--primary">
-            <li class="list-item scroll-fade">
-                <h4 class="title title--5">Technologies I use everyday</h4>
-                <ul class="home-skills-list">
-                    <Tag class="home-skills-list-item" v-for="item in skills.core" :key="item.label" :label="item.label" :image="item.logo && require(`@/assets/images/logos/${item.logo}.png`)"></Tag>
-                </ul>
-            </li>
-            <li class="list-item scroll-fade">
-                <h4 class="title title--5">Technologies I use less often</h4>
-                <ul class="home-skills-list">
-                    <Tag class="home-skills-list-item" v-for="item in skills.layer" :key="item.label" :label="item.label" :image="item.logo && require(`@/assets/images/logos/${item.logo}.png`)"></Tag>
-                </ul>
-            </li>
-            <li class="list-item scroll-fade">
-                <h4 class="title title--5">Technologies I have used in the past</h4>
-                <ul class="home-skills-list">
-                    <Tag class="home-skills-list-item" v-for="item in skills.surface" :key="item.label" :label="item.label" :image="item.logo && require(`@/assets/images/logos/${item.logo}.png`)"></Tag>
-                </ul>
-            </li>
-            <li class="list-item scroll-fade">
-                <h4 class="title title--5">Other skills</h4>
-                <ul class="home-skills-list">
-                    <li class="tag home-skills-list-item" v-for="item in skills.misc" :key="item.logo">
+    <PageSection ref="skills" id="skills" class="home-skills" title="Tools" titleColor="secondary" color="quaternary">
+        <div class="home-skills-stack">
+            <div>
+                <h3 class="title title--4 text--primary scroll-fade">Software and web development</h3>
+                <div class="home-skills-list scroll-fade">
+                    <Tag class="home-skills-list-item" v-for="item in skills.dev" :key="item.label" :label="item.label" :image="item.logo && require(`@/assets/images/logos/${item.logo}.png`)"></Tag>
+                </div>
+            </div>
+            <div>
+                <h3 class="title title--4 text--primary scroll-fade">Audiovisual</h3>
+                <ul class="home-skills-list scroll-fade">
+                    <li class="tag home-skills-list-item" v-for="item in skills.media" :key="item.logo">
                         <span class="skill">{{ item.label }}</span>
                         <img class="tag-image" v-if="item.logo" :src="require(`@/assets/images/logos/${item.logo}.png`)" :alt="`${item.label} logo`">
                     </li>
                 </ul>
-            </li>
-            <li class="list-item scroll-fade">
-                <h4 class="title title--5">Languages</h4>
-                <ul class="home-skills-list">
+            </div>
+            <div>
+                <h3 class="title title--4 text--primary scroll-fade">Languages</h3>
+                <ul class="home-skills-list scroll-fade">
                     <li class="tag home-skills-list-item" v-for="item in skills.languages" :key="item.logo">
                         <span class="skill">{{ item.label }}</span>
                         <img class="tag-image" v-if="item.logo" :src="require(`@/assets/images/flags/${item.logo}.png`)" :alt="`${item.label} logo`">
                     </li>
                 </ul>
-            </li>
-        </ul>
+            </div>
+        </div>
     </PageSection>
     <section ref="contact" id="contact" class="home-contact">
         <div class="page">
@@ -163,7 +151,7 @@ export default {
                 { label: "Experience", value: "experience" },
                 { label: "Education", value: "education" },
                 { label: "Projects", value: "projects" },
-                { label: "Skills", value: "skills" },
+                { label: "Tools", value: "skills" },
                 { label: "Contact", value: "contact" },
             ],
             experience: [
@@ -286,54 +274,65 @@ export default {
                 },
             ],
             skills: {
-                core: [
+                dev: [
                     { label: "HTML", logo: "html" },
                     { label: "Pug", logo: "pug" },
+
                     { label: "CSS", logo: "css" },
                     { label: "SCSS", logo: "sass" },
+
                     { label: "JS", logo: "js" },
+                    { label: "TS", logo: "ts" },
+
                     { label: "Vue.js", logo: "vue" },
                     { label: "React", logo: "react" },
-                    { label: "Moment.js", logo: "moment" },
-                    { label: "Git", logo: "git" },
-                    { label: "Axios", logo: "axios" },
-                    { label: "Jest", logo: "jest" },
-                    { label: "TestCafé", logo: "testcafe" },
-                ],
-                layer: [
-                    { label: "TS", logo: "ts" },
-                    { label: "Handlebars", logo: "hb" },
-                    { label: "Storyblok", logo: "storyblok" },
-                    { label: "Sendinblue", logo: "sendinblue" },
-                    { label: "GraphQL", logo: "gql" },
-                    { label: "Day.js" },
-                    { label: "Date-fns", logo: "datefns" },
-                    { label: "SQL" },
-                    { label: "PostgreSQL", logo: "postgresql" },
-                    { label: "Node.js", logo: "node" },
-                    { label: "Docker", logo: "docker" },
-                    { label: "Vercel", logo: "vercel" },
-                    { label: "Cypress", logo: "cypress" },
-                    { label: "Husky" },
-                ],
-                surface: [
+                    { label: "Next.js", logo: "next" },
                     { label: "Polymer", logo: "polymer" },
                     { label: "Angular", logo: "angular" },
+
+                    { label: "Axios", logo: "axios" },
+                    { label: "GraphQL", logo: "gql" },
+
+                    { label: "Moment.js", logo: "moment" },
+                    { label: "Day.js" },
+                    { label: "Date-fns", logo: "datefns" },
+
+                    { label: "CesiumJS", logo: "cesium" },
                     { label: "PostGIS", logo: "postgis" },
+
+                    { label: "Git", logo: "git" },
+                    { label: "GitHub", logo: "github" },
+                    { label: "Vercel", logo: "vercel" },
+                    { label: "Docker", logo: "docker" },
+
+                    { label: "Jest", logo: "jest" },
+                    { label: "TestCafé", logo: "testcafe" },
+                    { label: "Cypress", logo: "cypress" },
+                    { label: "Jasmine", logo: "jasmine" },
+                    { label: "Mocha", logo: "mocha" },
+                    { label: "Chai", logo: "chai" },
+
+                    { label: "Storyblok", logo: "storyblok" },
+                    { label: "WordPress", logo: "wp" },
+                    { label: "Handlebars", logo: "hb" },
+                    { label: "Sendinblue", logo: "sendinblue" },
+
+                    { label: "SQL" },
+                    { label: "PostgreSQL", logo: "postgresql" },
+                    { label: "Supabase", logo: "supabase" },
                     { label: "MongoDB", logo: "mongo" },
+
+                    { label: "Node.js", logo: "node" },
                     { label: "Java", logo: "java" },
                     { label: "J2EE", logo: "java" },
                     { label: "Python", logo: "py" },
                     { label: "Django", logo: "django" },
                     { label: "PHP", logo: "php" },
+
+                    { label: "Husky" },
                     { label: "Grunt", logo: "grunt" },
-                    { label: "Jasmine", logo: "jasmine" },
-                    { label: "Mocha", logo: "mocha" },
-                    { label: "Chai", logo: "chai" },
-                    { label: "WordPress", logo: "wp" },
-                    { label: "CesiumJS", logo: "cesium" },
                 ],
-                misc: [
+                media: [
                     { label: "Audacity", logo: "audacity" },
                     { label: "Illustrator", logo: "ai" },
                     { label: "Photoshop", logo: "ps" },
@@ -547,13 +546,16 @@ export default {
     }
 
     &-skills {
-        &-list {
-            margin-bottom: 20px;
-            text-align: right;
+        &-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
 
-            &-item {
-                margin-bottom: 10px;
-            }
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
     }
 
