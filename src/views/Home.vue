@@ -300,6 +300,8 @@ export default {
                     { label: "CesiumJS", logo: "cesium" },
                     { label: "PostGIS", logo: "postgis" },
 
+                    { label: "D3", logo: "d3" },
+
                     { label: "Git", logo: "git" },
                     { label: "GitHub", logo: "github" },
                     { label: "Vercel", logo: "vercel" },
