@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d884a8756e1ffbaa035a",
-    "url": "/css/app.7141a4a7.css"
+    "revision": "dfcca3150d1e7289ace5",
+    "url": "/css/app.257fe152.css"
   },
   {
     "revision": "09f6b2ba02572f19a7d7dd2b5f6494ad",
@@ -48,6 +48,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/cypress.8655d121.png"
   },
   {
+    "revision": "043ff19740577c2444280e958eadf210",
+    "url": "/img/d3.043ff197.png"
+  },
+  {
     "revision": "622377e0744625115ee8fc07bc5a7df3",
     "url": "/img/datefns.622377e0.png"
   },
@@ -86,6 +90,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ab40d02f0aa8bf85de12fd45bda5b0c0",
     "url": "/img/git.ab40d02f.png"
+  },
+  {
+    "revision": "43ce87609eb221d09d4832a9c0e709d0",
+    "url": "/img/github.43ce8760.png"
   },
   {
     "revision": "8c00598757ea750382f4a211331f8ae0",
@@ -146,6 +154,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0cc2d9897900dae8ac82a04f72d84704",
     "url": "/img/naval-group.0cc2d989.png"
+  },
+  {
+    "revision": "ac38a73ecb20a904d52ebc9b28aa171f",
+    "url": "/img/next.ac38a73e.png"
   },
   {
     "revision": "772175ff1df43fd3c0bd3b594574cd68",
@@ -216,6 +228,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/square-briac.27521d13.jpg"
   },
   {
+    "revision": "8e6477a71c0ec4ab5ee01de766296af7",
+    "url": "/img/supabase.8e6477a7.png"
+  },
+  {
     "revision": "2f9ed351cfe002368dd3c4cfdcff11ae",
     "url": "/img/testcafe.2f9ed351.png"
   },
@@ -224,16 +240,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/top-arrow.2bb6a067.svg"
   },
   {
+    "revision": "7701ddeea7a203a4057569cdee5d51d4",
+    "url": "/img/vercel.7701ddee.png"
+  },
+  {
     "revision": "f3d0f62f327d5fed945de7ff8aa45bf7",
     "url": "/img/wp.f3d0f62f.png"
   },
   {
-    "revision": "d9a100c395f4248cd36bdbca9f75f612",
+    "revision": "4c8506b7210ee5066a9377166a21ce20",
     "url": "/index.html"
   },
   {
-    "revision": "d884a8756e1ffbaa035a",
-    "url": "/js/app.d6afd88c.js"
+    "revision": "dfcca3150d1e7289ace5",
+    "url": "/js/app.8423680c.js"
   },
   {
     "revision": "715cc6d1dbae717ac7ac",
