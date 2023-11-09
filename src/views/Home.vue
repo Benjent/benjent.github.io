@@ -81,7 +81,7 @@
             <div>
                 <h3 class="title title--4 text--primary scroll-fade">Software and web development</h3>
                 <div class="home-skills-list scroll-fade">
-                    <Tag class="home-skills-list-item" v-for="item in skills.dev" :key="item.label" :label="item.label" :image="item.logo && require(`@/assets/images/logos/${item.logo}.png`)"></Tag>
+                    <Tag class="home-skills-list-item" v-for="item in skills.dev" :key="item.label" :label="item.label" :image="$getImageUrl(item.logo)"></Tag>
                 </div>
             </div>
             <div>
@@ -89,7 +89,7 @@
                 <ul class="home-skills-list scroll-fade">
                     <li class="tag home-skills-list-item" v-for="item in skills.media" :key="item.logo">
                         <span class="skill">{{ item.label }}</span>
-                        <img class="tag-image" v-if="item.logo" :src="require(`@/assets/images/logos/${item.logo}.png`)" :alt="`${item.label} logo`">
+                        <img class="tag-image" v-if="item.logo" :src="$getImageUrl(item.logo)" :alt="`${item.label} logo`">
                     </li>
                 </ul>
             </div>
@@ -98,7 +98,7 @@
                 <ul class="home-skills-list scroll-fade">
                     <li class="tag home-skills-list-item" v-for="item in skills.languages" :key="item.logo">
                         <span class="skill">{{ item.label }}</span>
-                        <img class="tag-image" v-if="item.logo" :src="require(`@/assets/images/flags/${item.logo}.png`)" :alt="`${item.label} logo`">
+                        <img class="tag-image" v-if="item.logo" :src="$getImageUrl(item.logo, 'flags')" :alt="`${item.label} logo`">
                     </li>
                 </ul>
             </div>
@@ -118,7 +118,7 @@
         </div>
         <footer class="home-footer">
             <button id="backToTop" class="back-to-top" @click="scrollToRef('top')" @mouseover="rotateBackToTop" aria-label="Back to top">
-                <img :src="require(`@/assets/images/icons/top-arrow.svg`)" alt="Back to top" aria-hidden="true" focusable="false" />
+                <img src="../assets/images/icons/top-arrow.svg" alt="Back to top" aria-hidden="true" focusable="false" />
             </button>
             <p class="text--light home-contact-copyright">Benjamin Morvan - <time :datetime="copyright">{{ copyright }}</time></p>
         </footer>
@@ -275,77 +275,77 @@ export default {
             ],
             skills: {
                 dev: [
-                    { label: "HTML", logo: "html" },
-                    { label: "Pug", logo: "pug" },
+                    { label: "HTML", logo: "html.png" },
+                    { label: "Pug", logo: "pug.png" },
 
-                    { label: "CSS", logo: "css" },
-                    { label: "SCSS", logo: "sass" },
+                    { label: "CSS", logo: "css.png" },
+                    { label: "SCSS", logo: "sass.png" },
 
-                    { label: "JS", logo: "js" },
-                    { label: "TS", logo: "ts" },
+                    { label: "JS", logo: "js.png" },
+                    { label: "TS", logo: "ts.png" },
 
-                    { label: "Vue.js", logo: "vue" },
-                    { label: "React", logo: "react" },
-                    { label: "Next.js", logo: "next" },
-                    { label: "Polymer", logo: "polymer" },
-                    { label: "Angular", logo: "angular" },
+                    { label: "Vue.js", logo: "vue.png" },
+                    { label: "React", logo: "react.png" },
+                    { label: "Next.js", logo: "next.png" },
+                    { label: "Polymer", logo: "polymer.png" },
+                    { label: "Angular", logo: "angular.png" },
 
-                    { label: "Axios", logo: "axios" },
-                    { label: "GraphQL", logo: "gql" },
+                    { label: "Axios", logo: "axios.png" },
+                    { label: "GraphQL", logo: "gql.png" },
 
-                    { label: "Moment.js", logo: "moment" },
+                    { label: "Moment.js", logo: "moment.png" },
                     { label: "Day.js" },
-                    { label: "Date-fns", logo: "datefns" },
+                    { label: "Date-fns", logo: "datefns.png" },
 
-                    { label: "CesiumJS", logo: "cesium" },
-                    { label: "PostGIS", logo: "postgis" },
+                    { label: "CesiumJS", logo: "cesium.png" },
+                    { label: "PostGIS", logo: "postgis.png" },
 
-                    { label: "D3", logo: "d3" },
+                    { label: "D3", logo: "d3.png" },
 
-                    { label: "Git", logo: "git" },
-                    { label: "GitHub", logo: "github" },
-                    { label: "Vercel", logo: "vercel" },
-                    { label: "Docker", logo: "docker" },
+                    { label: "Git", logo: "git.png" },
+                    { label: "GitHub", logo: "github.png" },
+                    { label: "Vercel", logo: "vercel.png" },
+                    { label: "Docker", logo: "docker.png" },
 
-                    { label: "Jest", logo: "jest" },
-                    { label: "TestCafé", logo: "testcafe" },
-                    { label: "Cypress", logo: "cypress" },
-                    { label: "Jasmine", logo: "jasmine" },
-                    { label: "Mocha", logo: "mocha" },
-                    { label: "Chai", logo: "chai" },
+                    { label: "Jest", logo: "jest.png" },
+                    { label: "TestCafé", logo: "testcafe.png" },
+                    { label: "Cypress", logo: "cypress.png" },
+                    { label: "Jasmine", logo: "jasmine.png" },
+                    { label: "Mocha", logo: "mocha.png" },
+                    { label: "Chai", logo: "chai.png" },
 
-                    { label: "Storyblok", logo: "storyblok" },
-                    { label: "WordPress", logo: "wp" },
-                    { label: "Handlebars", logo: "hb" },
-                    { label: "Sendinblue", logo: "sendinblue" },
+                    { label: "Storyblok", logo: "storyblok.png" },
+                    { label: "WordPress", logo: "wp.png" },
+                    { label: "Handlebars", logo: "hb.png" },
+                    { label: "Sendinblue", logo: "sendinblue.png" },
 
                     { label: "SQL" },
-                    { label: "PostgreSQL", logo: "postgresql" },
-                    { label: "Supabase", logo: "supabase" },
-                    { label: "MongoDB", logo: "mongo" },
+                    { label: "PostgreSQL", logo: "postgresql.png" },
+                    { label: "Supabase", logo: "supabase.png" },
+                    { label: "MongoDB", logo: "mongo.png" },
 
-                    { label: "Node.js", logo: "node" },
-                    { label: "Java", logo: "java" },
-                    { label: "J2EE", logo: "java" },
-                    { label: "Python", logo: "py" },
-                    { label: "Django", logo: "django" },
-                    { label: "PHP", logo: "php" },
+                    { label: "Node.js", logo: "node.png" },
+                    { label: "Java", logo: "java.png" },
+                    { label: "J2EE", logo: "java.png" },
+                    { label: "Python", logo: "py.png" },
+                    { label: "Django", logo: "django.png" },
+                    { label: "PHP", logo: "php.png" },
 
                     { label: "Husky" },
-                    { label: "Grunt", logo: "grunt" },
+                    { label: "Grunt", logo: "grunt.png" },
                 ],
                 media: [
-                    { label: "Audacity", logo: "audacity" },
-                    { label: "Illustrator", logo: "ai" },
-                    { label: "Photoshop", logo: "ps" },
-                    { label: "InDesign", logo: "id" },
-                    { label: "Premiere Pro", logo: "premiere" },
-                    { label: "After Effects", logo: "ae" },
+                    { label: "Audacity", logo: "audacity.png" },
+                    { label: "Illustrator", logo: "ai.png" },
+                    { label: "Photoshop", logo: "ps.png" },
+                    { label: "InDesign", logo: "id.png" },
+                    { label: "Premiere Pro", logo: "premiere.png" },
+                    { label: "After Effects", logo: "ae.png" },
                 ],
                 languages: [
-                    { label: "French (mother tongue)", logo: "fr" },
-                    { label: "English (fluent, C1 level)", logo: "en" },
-                    { label: "German (basic knowledge)", logo: "de" },
+                    { label: "French (mother tongue)", logo: "fr.png" },
+                    { label: "English (fluent, C1 level)", logo: "en.png" },
+                    { label: "German (basic knowledge)", logo: "de.png" },
                 ],
             },
             copyright: new Date().getFullYear(),
@@ -564,8 +564,8 @@ export default {
     &-contact {
         text-shadow: 0 0 20px $liquorice;
         background-color: $dark;
-        // background-image: url('~@/assets/images/photos/skate.jpg');
-        background-image: url('~@/assets/images/photos/bono.jpeg');
+        // background-image: url('@/assets/images/photos/skate.jpg');
+        background-image: url('@/assets/images/photos/bono.jpeg');
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: center;
