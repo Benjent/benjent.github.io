@@ -26,5 +26,6 @@ export default {
     filter: drop-shadow(0px 10px 5px $shadow);
     position: relative;
     z-index: $zIndexSeparator;
+    top: -1px; // Avoid visual glitch
 }
 </style>
