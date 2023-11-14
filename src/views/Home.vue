@@ -161,7 +161,7 @@ export default {
                     position: "Full-stack web developer",
                     company: "Octopus Energy France",
                     description: "Previously Plüm énergie",
-                    link: "https://plum.fr/",
+                    link: "https://octopusenergy.fr/",
                     period: "Since Sep 2019",
                     localisation: "Saint-Denis, France",
                     tasks: [
