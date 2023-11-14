@@ -280,8 +280,12 @@ export default {
 
                     { label: "CSS", logo: "css.png" },
                     { label: "SCSS", logo: "sass.png" },
+                    { label: "BEM", logo: "bem.png" },
+                    { label: "SMACSS", logo: "smacss.png" },
+                    { label: "Styled-components", logo: "styled-components.png" },
 
                     { label: "JS", logo: "js.png" },
+                    { label: "JSDoc" },
                     { label: "TS", logo: "ts.png" },
 
                     { label: "Vue.js", logo: "vue.png" },
@@ -290,19 +294,32 @@ export default {
                     { label: "Polymer", logo: "polymer.png" },
                     { label: "Angular", logo: "angular.png" },
 
-                    { label: "Axios", logo: "axios.png" },
-                    { label: "GraphQL", logo: "gql.png" },
-
                     { label: "Moment.js", logo: "moment.png" },
                     { label: "Day.js" },
                     { label: "Date-fns", logo: "datefns.png" },
 
+                    { label: "Yup" },
+
+                    { label: "Formik", logo: "formik.png" },
+
                     { label: "CesiumJS", logo: "cesium.png" },
-                    { label: "PostGIS", logo: "postgis.png" },
 
                     { label: "D3", logo: "d3.png" },
+                    { label: "Recharts" },
+
+                    { label: "Storybook", logo: "storybook.png" },
+
+                    { label: "Axios", logo: "axios.png" },
+                    { label: "GraphQL", logo: "gql.png" },
+                    
+                    { label: "Vite", logo: "vite.png" },
+                    { label: "Webpack", logo: "webpack.png" },
+                    
+                    { label: "Husky" },
+                    { label: "Grunt", logo: "grunt.png" },
 
                     { label: "Git", logo: "git.png" },
+                    { label: "Conventional commits", logo: "conventional-commits.png" },
                     { label: "GitHub", logo: "github.png" },
                     { label: "Vercel", logo: "vercel.png" },
                     { label: "Docker", logo: "docker.png" },
@@ -321,6 +338,7 @@ export default {
 
                     { label: "SQL" },
                     { label: "PostgreSQL", logo: "postgresql.png" },
+                    { label: "PostGIS", logo: "postgis.png" },
                     { label: "Supabase", logo: "supabase.png" },
                     { label: "MongoDB", logo: "mongo.png" },
 
@@ -330,9 +348,16 @@ export default {
                     { label: "Python", logo: "py.png" },
                     { label: "Django", logo: "django.png" },
                     { label: "PHP", logo: "php.png" },
-
-                    { label: "Husky" },
-                    { label: "Grunt", logo: "grunt.png" },
+                    /*
+                        Leftovers:
+                        - Markup: md, xml, yml
+                        - CSS: tailwind
+                        - JS: jquery, lodash, knockout
+                        - Infra: turborepo, ansible, jenkins
+                        - SSR: nuxt, astro
+                        - CMS: strapi, drupal
+                        - Programming: C
+                    */
                 ],
                 media: [
                     { label: "Audacity", logo: "audacity.png" },
