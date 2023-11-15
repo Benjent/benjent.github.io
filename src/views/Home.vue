@@ -341,6 +341,7 @@ export default {
                     { label: "PostGIS", logo: "postgis.png" },
                     { label: "Supabase", logo: "supabase.png" },
                     { label: "MongoDB", logo: "mongo.png" },
+                    { label: "Metabase", logo: "metabase.png" },
 
                     { label: "Node.js", logo: "node.png" },
                     { label: "Java", logo: "java.png" },
