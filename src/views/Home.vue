@@ -348,6 +348,7 @@ export default {
                     { label: "J2EE", logo: "java.png" },
                     { label: "Python", logo: "py.png" },
                     { label: "Django", logo: "django.png" },
+                    { label: "Flask", logo: "flask.webp" },
                     { label: "PHP", logo: "php.png" },
                     /*
                         Leftovers:
