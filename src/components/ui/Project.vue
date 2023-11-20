@@ -4,7 +4,7 @@
         <img class="l-project-image" :src="$getImageUrl(image, 'projects')" :alt="imageAlt">
     </a>
     <div class="l-project-main">
-        <h4 class="l-project-title title title--4 text--quaternary">Prog Snack</h4>
+        <h4 class="l-project-title title title--4 text--quaternary">{{ title }}</h4>
         <img v-if="$mq === 'responsive'" class="l-project-image" :src="$getImageUrl(image, 'projects')" :alt="imageAlt">
         <div class="l-project-description text--light">
             <p class="paragraph">{{ description }}</p>
