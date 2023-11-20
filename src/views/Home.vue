@@ -272,6 +272,23 @@ export default {
                         "Responsive design",
                     ],
                 },
+                {
+                    image: "nanovizer.png",
+                    alt: "NanoViZer screenshot",
+                    title: "NanoViZer",
+                    description: "Interactive data-visualisation and chart-saver tool assisting researchers in their work. This is a front-end solution to be used with a locally-running server written in Python.",
+                    link: "https://benjent.github.io/nanovizer",
+                    conditions: [
+                        "Interactive charts",
+                        "Fewest impacts on the existing back-end solution",
+                        "Zero-hosting-cost",
+                        "Zero-deployment-cost",
+                        "Vue.js 3",
+                        "SCSS",
+                        "D3.js",
+                        "Autodeployment",
+                    ],
+                },
             ],
             skills: {
                 dev: [
