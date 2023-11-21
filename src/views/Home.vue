@@ -372,7 +372,7 @@ export default {
                         - JS: jquery, lodash, knockout
                         - Infra: turborepo, ansible, jenkins
                         - SSR: nuxt, astro
-                        - CMS: strapi, drupal
+                        - CMS: strapi, drupal, wagtail
                         - Programming: C
                     */
                 ],
