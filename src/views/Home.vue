@@ -328,6 +328,8 @@ export default {
                     { label: "Vite", logo: "vite.png" },
                     { label: "Webpack", logo: "webpack.png" },
                     
+                    { label: "ESLint", logo: "eslint.png" },
+                    { label: "Prettier", logo: "prettier.png" },
                     { label: "Husky" },
                     { label: "Grunt", logo: "grunt.png" },
 
