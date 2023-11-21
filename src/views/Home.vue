@@ -70,7 +70,19 @@
         </ul>
     </PageSection>
     <PageSection ref="projects" id="projects" class="home-projects" title="Projects" titleColor="tertiary" color="secondary">
-        <Project class="scroll-fade" v-for="item in projects" :key="item.title" :title="item.title" :href="item.link" :description="item.description" :conditions="item.conditions" :image="$getImageUrl(item.image, 'projects')" :imageAlt="item.alt"/>
+        <Project
+            class="scroll-fade"
+            v-for="item in projects"
+            :key="item.title"
+            :title="item.title"
+            :href="item.link"
+            :description="item.description"
+            :conditions="item.conditions"
+            :image="$getImageUrl(item.image, 'projects')"
+            :imageAlt="item.alt"
+            :logo="$getImageUrl(item.image, 'logos')"
+            :logoAlt="`${item.title} logo`"
+        />
     </PageSection>
     <PageSection ref="skills" id="skills" class="home-skills" title="Tools" titleColor="secondary" color="quaternary">
         <div class="home-skills-stack">

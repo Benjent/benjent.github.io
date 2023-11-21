@@ -1,6 +1,6 @@
 <template>
 <div class="experience l-project">
-    <Card :image="image" :alt="imageAlt" >
+    <Card :image="image" :alt="imageAlt" :logo="logo" :logoAlt="logoAlt" :href=href>
         <h4 class="l-project-title title title--4 text--secondary">{{ title }}</h4>
         <div class="l-project-description">
             <p class="paragraph">{{ description }}</p>
@@ -46,6 +46,14 @@ export default {
             required: true,
         },
         imageAlt: {
+            type: String,
+            required: true,
+        },
+        logo: {
+            type: String,
+            required: true,
+        },
+        logoAlt: {
             type: String,
             required: true,
         },
