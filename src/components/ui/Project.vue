@@ -5,10 +5,12 @@
         <div class="l-project-description">
             <p class="paragraph">{{ description }}</p>
             <Button color="secondary" class="l-project-link" :href="href" target="_blank">See the project live</Button>
-            <h5 class="l-project-conditions title title--6" v-if="conditions.length > 0">Conditions:</h5>
-            <ul class="experience-list">
-                <li class="experience-list-item" v-for="condition, index in conditions" :key="index">{{ condition }}</li>
-            </ul>
+            <div>
+                <h5 class="l-project-conditions title title--6" v-if="conditions.length > 0">Conditions:</h5>
+                <ul class="experience-list">
+                    <li class="experience-list-item" v-for="condition, index in conditions" :key="index">{{ condition }}</li>
+                </ul>
+            </div>
         </div>
     </Card>
 </div>
