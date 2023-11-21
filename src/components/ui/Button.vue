@@ -1,5 +1,5 @@
 <template>
-<component :is="href ? 'a' : 'button'" class="button" :class="`button--${color}`">
+<component :is="href ? 'a' : 'button'" class="button" :class="`button--${color}`" :href="href" :target="target">
     <slot />
 </component>
 </template>
