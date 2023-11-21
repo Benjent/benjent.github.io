@@ -1,6 +1,6 @@
 <template>
 <div class="experience l-project">
-    <Card :image="image" :alt="imageAlt" :logo="logo" :logoAlt="logoAlt" :href=href>
+    <Card :image="image" :alt="imageAlt" :logo="logo" :logoAlt="logoAlt" :href="href" :tools="tools">
         <h4 class="l-project-title title title--4 text--secondary">{{ title }}</h4>
         <div class="l-project-description">
             <p class="paragraph">{{ description }}</p>
@@ -56,6 +56,10 @@ export default {
         logoAlt: {
             type: String,
             required: true,
+        },
+        tools: {
+            type: Array,
+            default: () => [],
         },
     },
 }

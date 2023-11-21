@@ -8,6 +8,11 @@
             <img class="l-card-image-overlay-logo" v-if="logo" :src="logo" :alt="logoAlt" />
         </div>
     </a>
+    <footer class="l-card-footer">
+        <div class="l-card-footer-tool" v-for="tool, index in tools" :key="index">
+            <img class="l-card-footer-tool-image" :src="$getImageUrl(tool.logo, 'logos')" :alt="`${tool.label} logo`" />
+        </div>
+    </footer>
 </div>
 </template>
 
@@ -35,6 +40,10 @@ export default {
             type: String,
             default: undefined,
         },
+        tools: {
+            type: Array,
+            default: () => [],
+        },
     },
 }
 </script>
@@ -46,15 +55,15 @@ export default {
     @include shadow();
     display: flex;
     position: relative;
-    border-radius: 20px;
-    overflow: hidden;
     background: $tertiary;
+    border-radius: 20px;
 
     &-main {
         padding: 28px;
         padding-right: 0; // Clip-path serves as padding
         background: $tertiary;
         width: 50%;
+        border-radius: 20px;
     }
     
     &-image {
@@ -63,6 +72,7 @@ export default {
         background-size: cover;
         background-position: center;
         position: relative;
+        border-radius: 0 20px 20px 0;
 
         &-overlay {
             display: flex;
@@ -74,6 +84,7 @@ export default {
             opacity: 0;
             transition: all 0.2s;
             cursor: pointer;
+            border-radius: 0 20px 20px 0;
 
             &:hover {
                 opacity: 1;
@@ -81,6 +92,30 @@ export default {
 
             &-logo {
                 width: 33%;
+            }
+        }
+    }
+
+    &-footer {
+        position: absolute;
+        bottom: -18px;
+        right: 10px;
+        display: flex;
+        gap: 10px;
+
+        &-tool {
+            border-radius: 50%;
+            border: solid 4px $light;
+            background: rgba(255, 255, 255, 0.6);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &-image {
+                max-width: 30px;
+                max-height: 30px;
             }
         }
     }
@@ -93,6 +128,7 @@ export default {
         &-main {
             width: auto;
             padding: 20px;
+            border-radius: 0 0 20px 20px;
         }
 
         &-image {
@@ -100,11 +136,26 @@ export default {
             width: 100%;
             clip-path: none;
             background-position: top;
-
+            border-radius: 20px 20px 0 0;
+            
             &-overlay {
+                border-radius: 20px 20px 0 0;
+
                 &-logo {
                     width: auto;
                     height: 66%;
+                }
+            }
+        }
+
+        &-footer {
+            &-tool {
+                width: 30px;
+                height: 30px;
+
+                &-image {
+                    max-width: 20px;
+                    max-height: 20px;
                 }
             }
         }

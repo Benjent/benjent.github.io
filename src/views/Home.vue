@@ -82,6 +82,7 @@
             :imageAlt="item.alt"
             :logo="$getImageUrl(item.image, 'logos')"
             :logoAlt="`${item.title} logo`"
+            :tools="item.tools"
         />
     </PageSection>
     <PageSection ref="skills" id="skills" class="home-skills" title="Tools" titleColor="secondary" color="quaternary">
@@ -279,6 +280,7 @@ export default {
                         "Autodeployment",
                         "Responsive design",
                     ],
+                    tools: [{ label: "Vue.js", logo: "vue.png" }, { label: "SCSS", logo: "sass.png" }, { label: "GitHub", logo: "github.png" }],
                 },
                 {
                     image: "nanovizer.png",
@@ -296,6 +298,7 @@ export default {
                         "D3.js",
                         "Autodeployment",
                     ],
+                    tools: [{ label: "Vue.js", logo: "vue.png" }, { label: "SCSS", logo: "sass.png" }, { label: "D3", logo: "d3.png" }, { label: "GitHub", logo: "github.png" }],
                 },
             ],
             skills: {
