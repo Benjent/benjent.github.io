@@ -4,7 +4,7 @@
         <h4 class="l-project-title title title--4 text--secondary">{{ title }}</h4>
         <div class="l-project-description">
             <p class="paragraph">{{ description }}</p>
-            <p class="paragraph"><a class="link l-project-link text--secondary" :href="href" target="_blank">See the project live</a></p>
+            <Button color="secondary" class="l-project-link" :href="href" target="_blank">See the project live</Button>
             <h5 class="l-project-conditions title title--6" v-if="conditions.length > 0">Conditions:</h5>
             <ul class="experience-list">
                 <li class="experience-list-item" v-for="condition, index in conditions" :key="index">{{ condition }}</li>
@@ -15,11 +15,13 @@
 </template>
 
 <script>
+import Button from "./Button.vue"
 import Card from "./Card.vue"
 
 export default {
     name: "Project",
     components: {
+        Button,
         Card,
     },
     props: {
@@ -63,12 +65,11 @@ export default {
         margin-bottom: 20px;
     }
 
-    &-conditions {
-        margin-top: 20px;
-    }
-
-    &-link {
-        font-style: italic;
+    &-description {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
     }
 }
 

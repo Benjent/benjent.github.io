@@ -1,0 +1,31 @@
+.button {
+    @include palette();
+    @include palette("border-color");
+    padding: var(--button-padding-vertical) var(--button-padding-horizontal);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    border-width: 2px;
+    border-style: solid;
+    transition: all 0.2s;
+    display: inline-block; // For a tags disguised as buttons
+
+    &--primary {
+        color: $light;
+
+        &:hover {
+            border-color: $light;
+            background: $light;
+            color: $primary;
+        }
+    }
+
+    &--secondary {
+        color: $light;
+
+        &:hover {
+            border-color: $light;
+            background: $light;
+            color: $secondary;
+        }
+    }
+}

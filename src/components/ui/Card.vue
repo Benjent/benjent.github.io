@@ -31,6 +31,7 @@ export default {
 @import '@/assets/styles/main.scss';
 
 .l-card {
+    @include shadow();
     display: flex;
     position: relative;
     border-radius: 20px;
