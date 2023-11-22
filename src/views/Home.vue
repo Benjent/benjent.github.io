@@ -386,6 +386,7 @@ export default {
                         - Markup: md, xml, yml
                         - CSS: tailwind
                         - JS: jquery, lodash, knockout
+                        - Doc: vuepress
                         - Infra: turborepo, ansible, jenkins
                         - SSR: nuxt, astro
                         - CMS: strapi, drupal, wagtail
