@@ -336,6 +336,7 @@ export default {
                     { label: "Recharts" },
 
                     { label: "Storybook", logo: "storybook.png" },
+                    { label: "Docusaurus", logo: "docusaurus.png" },
 
                     { label: "Axios", logo: "axios.png" },
                     { label: "GraphQL", logo: "gql.png" },
