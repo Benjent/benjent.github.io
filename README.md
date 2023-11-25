@@ -9,22 +9,26 @@ My personal web page. [See it live](https://benjent.github.io/).
 This is a [Vue.js v3](https://vuejs.org/) project bootstrapped with [Create Vue](https://github.com/vuejs/create-vue).
 
 ## Project setup
-```
+
+```bash
 npm install
 ```
 
 ### Compiles and hot-reloads for development
-```
-npm run serve
+
+```bash
+npm run dev
 ```
 
 ### Compiles and minifies for production
-```
+
+```bash
 npm run build
 ```
 
 ### Lints and fixes files
-```
+
+```bash
 npm run lint
 ```
 
