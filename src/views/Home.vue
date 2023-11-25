@@ -311,6 +311,7 @@ export default {
                     { label: "BEM", logo: "bem.png" },
                     { label: "SMACSS", logo: "smacss.png" },
                     { label: "Styled-components", logo: "styled-components.png" },
+                    { label: "Tailwind CSS", logo: "tailwind.png" },
 
                     { label: "JS", logo: "js.png" },
                     { label: "JSDoc" },
