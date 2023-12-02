@@ -386,10 +386,10 @@ export default {
                     /*
                         Leftovers:
                         - Markup: md, xml, yml
-                        - CSS: tailwind
                         - JS: jquery, lodash, knockout
+                        - Form: Tally, Google form
                         - Doc: vuepress
-                        - Infra: turborepo, ansible, jenkins
+                        - Infra: turborepo, ansible, jenkins, Vue Storefront
                         - SSR: nuxt, astro
                         - CMS: strapi, drupal, wagtail
                         - Programming: C
@@ -402,6 +402,7 @@ export default {
                     { label: "InDesign", logo: "id.png" },
                     { label: "Premiere Pro", logo: "premiere.png" },
                     { label: "After Effects", logo: "ae.png" },
+                    // Leftovers: Inkscape, Gimp
                 ],
                 languages: [
                     { label: "French (mother tongue)", logo: "fr.png" },
