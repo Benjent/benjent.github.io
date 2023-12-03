@@ -3,7 +3,8 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: ["plugin:vue/essential", "eslint:recommended"],
+  plugins: ["jsx-a11y"],
+  extends: ["eslint:recommended", "plugin:jsx-a11y/recommended", "plugin:vue/essential"],
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
