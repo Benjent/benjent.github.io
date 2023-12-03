@@ -229,7 +229,7 @@ export default {
                         "CMS integration based on boilerplates",
                         "Adaptive and responsive design integration",
                     ],
-                    tools: [{ label: "WordPress", logo: "wp.png" }, { label: "SCSS", logo: "sass.png" }],
+                    tools: [{ label: "WordPress", logo: "wp.png" }, { label: "SCSS", logo: "sass.png" }, { label: "Grunt", logo: "grunt.png" }],
                 },
                 {
                     logo: "fontaine.png",
