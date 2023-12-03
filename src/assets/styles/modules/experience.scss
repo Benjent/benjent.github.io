@@ -7,13 +7,15 @@
         max-width: 150px;
         margin: 0 50px 20px 20px;
     }
-
-    &-duration {}
-
+    
     &-localisation {
         &::before {
             content: ' ';
         }
+    }
+
+    &-about {
+        margin-top: 0.6rem;
     }
 
     &-list {
