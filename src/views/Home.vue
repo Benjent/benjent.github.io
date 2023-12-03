@@ -183,7 +183,7 @@ export default {
                         "Front-end training of team members",
                         "Automated E2E testing",
                     ],
-                    tools: [{ label: "Typescript", logo: "ts.png" }, { label: "SCSS", logo: "sass.png" }, { label: "Vue.js", logo: "vue.png" }, { label: "React", logo: "react.png" }, { label: "Next", logo: "next.png" }, { label: "WordPress", logo: "wp.png" }, { label: "D3.js", logo: "d3.png" }, { label: "Storyblok", logo: "storyblok.png" }, { label: "Storybook", logo: "storybook.png" }, { label: "node", logo: "node.png" }, { label: "Testcafé", logo: "testcafe.png" },],
+                    tools: [{ label: "Vue.js", logo: "vue.png" }, { label: "React", logo: "react.png" }, { label: "Next", logo: "next.png" }, { label: "Typescript", logo: "ts.png" }, { label: "SCSS", logo: "sass.png" }, { label: "WordPress", logo: "wp.png" }, { label: "D3.js", logo: "d3.png" }, { label: "Storyblok", logo: "storyblok.png" }, { label: "Storybook", logo: "storybook.png" }, { label: "node", logo: "node.png" }, { label: "Testcafé", logo: "testcafe.png" },],
                 },
                 {
                     logo: "forcity.png",
@@ -198,7 +198,7 @@ export default {
                         "Design and technical specification",
                         "UX/UI thinking in collaboration with designers",
                     ],
-                    tools: [{ label: "Vue.js", logo: "vue.png" }],
+                    tools: [{ label: "Vue.js", logo: "vue.png" }, { label: "SCSS", logo: "sass.png" }],
                 },
                 {
                     logo: "naval-group.png",
