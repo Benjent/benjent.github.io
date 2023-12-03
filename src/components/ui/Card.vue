@@ -10,7 +10,7 @@
     </a>
     <footer class="l-card-footer">
         <div class="l-card-footer-tool" v-for="tool, index in tools" :key="index">
-            <img class="l-card-footer-tool-image" :src="$getImageUrl(tool.logo, 'logos')" :alt="`${tool.label} logo`" />
+            <img class="l-card-footer-tool-image" :src="$getImageUrl(tool.logo, 'logos')" :alt="`${tool.label} logo`" :title="tool.label" />
         </div>
     </footer>
 </div>
