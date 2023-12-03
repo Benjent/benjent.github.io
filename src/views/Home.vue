@@ -198,7 +198,7 @@ export default {
                         "Design and technical specification",
                         "UX/UI thinking in collaboration with designers",
                     ],
-                    tools: [{ label: "Vue.js", logo: "vue.png" }, { label: "SCSS", logo: "sass.png" }],
+                    tools: [{ label: "Vue.js", logo: "vue.png" }, { label: "SCSS", logo: "sass.png" }, { label: "Jasmine", logo: "jasmine.png" }],
                 },
                 {
                     logo: "naval-group.png",
