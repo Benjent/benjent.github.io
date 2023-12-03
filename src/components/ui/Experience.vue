@@ -18,6 +18,12 @@
     <ul class="experience-list">
         <li class="experience-list-item" v-for="task, index in tasks" :key="index">{{ task }}</li>
     </ul>
+    <div class="experience-tools" v-if="tools && tools.length">
+        <div>Tools used</div>
+        <div class="experience-tools-item" v-for="tool, index in tools" :key="index">
+            <img class="experience-tools-item-image" :src="$getImageUrl(tool.logo, 'logos')" :alt="`${tool.label} logo`" :title="tool.label" />
+        </div>
+    </div>
 </div>
 </template>
 
@@ -54,6 +60,10 @@ export default {
             required: true,
         },
         tasks: {
+            type: Array,
+            default: () => [],
+        },
+        tools: {
             type: Array,
             default: () => [],
         },
