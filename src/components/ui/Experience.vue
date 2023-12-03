@@ -11,9 +11,10 @@
         <a class="link text--secondary" :href="href" target="_blank" v-if="href">{{ company }}</a>
         <span v-else>{{ company }}</span>
     </h4>
-    <div class="experience-description" v-if="description">{{ description }}</div>
+    <div class="experience-note" v-if="note">{{ note }}</div>
     <div class="experience-duration">{{ period }}</div>
     <div class="experience-localisation text--secondary">{{ localisation }}</div>
+    <div class="experience-about">{{ about }}</div>
     <ul class="experience-list">
         <li class="experience-list-item" v-for="task, index in tasks" :key="index">{{ task }}</li>
     </ul>
@@ -36,9 +37,13 @@ export default {
             type: String,
             default: null,
         },
-        description: {
+        note: {
             type: String,
             default: null,
+        },
+        about: {
+            type: String,
+            required: true,
         },
         period: {
             type: String,

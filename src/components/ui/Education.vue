@@ -7,7 +7,7 @@
     <div class="experience-duration">{{ period }}</div>
     <a class="experience-localisation link" :href="href" target="_blank" v-if="href">{{ institution }}</a>
     <div class="experience-localisation" v-else>{{ institution }}</div>
-    <p class="experience-description text--light" v-if="description">{{ description }}</p>
+    <p class="experience-note text--light" v-if="note">{{ note }}</p>
 </div>
 </template>
 
@@ -35,7 +35,7 @@ export default {
             type: String,
             required: true,
         },
-        description: {
+        note: {
             type: String,
             default: null,
         },

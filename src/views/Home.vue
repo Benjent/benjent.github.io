@@ -43,9 +43,10 @@
                     :position="item.position"
                     :company="item.company"
                     :href="item.link"
-                    :description="item.description"
+                    :note="item.note"
                     :period="item.period"
                     :localisation="item.localisation"
+                    :about="item.about"
                     :tasks="item.tasks"
                     :logo="item.logo"
                     :logoAlt="item.alt"
@@ -62,7 +63,7 @@
                     :href="item.link"
                     :period="item.period"
                     :institution="item.institution"
-                    :description="item.description"
+                    :note="item.note"
                     :logo="item.logo"
                     :logoAlt="item.alt"
                 />
@@ -169,12 +170,13 @@ export default {
                     alt: "Octopus Energy France logo",
                     position: "Full-stack web developer",
                     company: "Octopus Energy France",
-                    description: "(Previously Plüm énergie)",
+                    note: "(Previously Plüm énergie)",
                     link: "https://octopusenergy.fr/",
                     period: "Since Sep 2019",
                     localisation: "Saint-Denis, France",
+                    about: "Software development for green electricity consumption and consumption awareness.",
                     tasks: [
-                        "Software development for green electricity consumption and consumption awareness",
+                        "Website, journey, and application development for clients",
                         "Front-end architecture",
                         "Design system maintainance in collaboration with designers",
                         "Front-end training of team members",
@@ -188,8 +190,10 @@ export default {
                     company: "ForCity",
                     period: "Sep 2018 - Aug 2019",
                     localisation: "Cesson-Sévigné, France",
+                    about: "Software development for geoworking decision.",
                     tasks: [
-                        "Software development for geoworking decision",
+                        "Front-end development",
+                        "Design and technical specification",
                         "UX/UI thinking in collaboration with designers",
                     ],
                 },
@@ -198,12 +202,13 @@ export default {
                     alt: "Naval Group logo",
                     position: "Software engineer",
                     company: "Naval Group",
-                    description: "(Previously DCNS)",
+                    note: "(Previously DCNS)",
                     link: "https://www.naval-group.com",
                     period: "Sep 2015 - Sep 2018",
                     localisation: "Ollioules, France",
+                    about: "R&D Software development for warships.",
                     tasks: [
-                        "R&D Software development for warships",
+                        "Full-stack development and database management",
                         "Software architecture implementation allowing evolving guidelines integration",
                         "UX/UI design",
                     ],
@@ -216,8 +221,10 @@ export default {
                     link: "https://www.parachute.net/",
                     period: "Jan 2015 - Mar 2015",
                     localisation: "Glasgow, Scottland",
+                    about: "Integration and deployment of responsive websites.",
                     tasks: [
-                        "Integration and deployment of responsive websites",
+                        "CMS integration based on boilerplates",
+                        "Adaptive and responsive design integration",
                     ],
                 },
                 {
@@ -227,9 +234,7 @@ export default {
                     company: "Music Act Fontaine",
                     period: "Oct 2010 - June 2013",
                     localisation: "Fontaine-lès-Dijon, France",
-                    tasks: [
-                        "Live concert and rehearsal organisation",
-                    ],
+                    about: "Live concert and rehearsal organisation.",
                 },
             ],
             education: [
@@ -241,7 +246,7 @@ export default {
                     period: "2015 - 2018",
                     institution: "ENSSAT Lannion, France",
                     link: "https://www.enssat.fr/",
-                    description: "Apprenticeship studies with Naval Group",
+                    note: "Apprenticeship studies with Naval Group",
                 },
                 {
                     logo: "iut-dijon.png",
@@ -260,7 +265,7 @@ export default {
                     period: "2010 - 2013",
                     institution: "Lycée International Charles de Gaulle, Dijon, France",
                     link: "http://www.lycee-internationalcdg.fr/",
-                    description: "(Previously Lycée Européen Charles de Gaulle)",
+                    note: "(Previously Lycée Européen Charles de Gaulle)",
                 },
             ],
             projects: [
