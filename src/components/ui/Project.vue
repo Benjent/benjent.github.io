@@ -4,7 +4,10 @@
         <h4 class="l-project-title title title--4 text--secondary">{{ title }}</h4>
         <div class="l-project-description">
             <p class="paragraph">{{ description }}</p>
-            <Button color="secondary" class="l-project-link" :href="href" target="_blank">See the project live</Button>
+            <Button color="secondary" class="l-project-link" :href="href" target="_blank">
+                See the project live
+                <!-- <img class="l-project-link-icon" src="../../assets/images/icons/external-link.svg" alt="External link" aria-hidden="true" focusable="false" /> -->
+            </Button>
             <div>
                 <h5 class="l-project-conditions title title--6" v-if="conditions.length > 0">Conditions:</h5>
                 <ul class="experience-list">
@@ -79,6 +82,14 @@ export default {
         margin-bottom: 20px;
     }
 
+    &-link {
+        display: flex;
+        &-icon {
+            margin-left: 1em;
+            width: 20px;
+        }
+    }
+
     &-description {
         display: flex;
         flex-direction: column;
@@ -91,6 +102,13 @@ export default {
     .l-project {
         &-main {
             max-width: 100%;
+        }
+
+        &-link {
+            display: flex;
+            &-icon {
+                width: 16px;
+            }
         }
     }
 }
