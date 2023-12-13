@@ -1,6 +1,53 @@
 @font-face {
     font-family: 'main-font';
-    src: url('@/assets/fonts/CenturyGothic.ttf');
+    src: url('@/assets/fonts/Mulish-Regular.ttf');
+}
+@font-face {
+    font-family: 'main-font';
+    font-weight: 200;
+    src: url('@/assets/fonts/Mulish-ExtraLight.ttf');
+}
+@font-face {
+    font-family: 'main-font';
+    font-weight: 300;
+    src: url('@/assets/fonts/Mulish-Light.ttf');
+}
+@font-face {
+    font-family: 'main-font';
+    font-weight: 500;
+    src: url('@/assets/fonts/Mulish-Medium.ttf');
+}
+@font-face {
+    font-family: 'main-font';
+    font-weight: 600;
+    src: url('@/assets/fonts/Mulish-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'main-font';
+    font-weight: 700;
+    src: url('@/assets/fonts/Mulish-Bold.ttf');
+}
+@font-face {
+    font-family: 'main-font';
+    font-weight: 800;
+    src: url('@/assets/fonts/Mulish-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'main-font';
+    font-weight: 900;
+    src: url('@/assets/fonts/Mulish-Black.ttf');
+}
+
+@font-face {
+    font-family: 'main-font';
+    font-style: italic;
+    src: url('@/assets/fonts/Mulish-Italic.ttf');
+}
+@font-face {
+    font-family: 'main-font';
+    font-weight: 500;
+    font-style: italic;
+    src: url('@/assets/fonts/Mulish-BoldItalic.ttf');
 }
 
 @font-face {
