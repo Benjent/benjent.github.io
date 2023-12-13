@@ -1,19 +1,13 @@
 <template>
 <div class="experience">
     <img class="experience-logo" :src="$getImageUrl(logo)" :alt="logoAlt">
-    <h4 class="title title--5" v-if="$mq === 'responsive'">
+    <h4 class="experience-title title title--4">
         <div class="text--primary">{{ position }}</div>
-        <a class="link text--secondary" :href="href" target="_blank" v-if="href">{{ company }}</a>
-        <div v-else>{{ company }}</div>
-    </h4>
-    <h4 class="title title--5" v-else>
-        <span class="text--primary">{{ position }} - </span>
-        <a class="link text--secondary" :href="href" target="_blank" v-if="href">{{ company }}</a>
-        <span v-else>{{ company }}</span>
+        <a class="link text--secondary experience-company" :href="href" target="_blank" v-if="href">{{ company }}</a>
+        <div class="experience-company" v-else>{{ company }}</div>
     </h4>
     <div class="experience-note" v-if="note">{{ note }}</div>
-    <div class="experience-duration">{{ period }}</div>
-    <div class="experience-localisation text--secondary">{{ localisation }}</div>
+    <div class="experience-duration">{{ period }} <span class="experience-localisation text--secondary">{{ localisation }}</span></div>
     <div class="experience-about">{{ about }}</div>
     <ul class="experience-list">
         <li class="experience-list-item" v-for="task, index in tasks" :key="index">{{ task }}</li>

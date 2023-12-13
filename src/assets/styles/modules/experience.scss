@@ -7,10 +7,20 @@
         max-width: 150px;
         margin: 0 50px 20px 20px;
     }
+
+    &-title {
+        display: flex;
+        gap: 0.2em;
+        align-items: baseline;
+    }
+
+    &-company {
+        font-size: 0.8em;
+    }
     
     &-localisation {
         &::before {
-            content: ' ';
+            content: ' - ';
         }
     }
 
@@ -55,6 +65,15 @@
             max-height: 50px;
             max-width: 80px;
             margin: 0 0 10px 10px;
+        }
+
+        &-title {
+            flex-direction: column;
+            gap: initial;
+        }
+
+        &-company {
+            font-size: inherit;
         }
 
         &-list {
