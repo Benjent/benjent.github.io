@@ -1,6 +1,6 @@
 <template>
 <div class="experience">
-    <img class="experience-image" :src="$getImageUrl(logo)" :alt="logoAlt">
+    <img class="experience-logo" :src="$getImageUrl(logo)" :alt="logoAlt">
     <h4 class="title title--5" v-if="$mq === 'responsive'">
         <div class="text--primary">{{ position }}</div>
         <a class="link text--secondary" :href="href" target="_blank" v-if="href">{{ company }}</a>

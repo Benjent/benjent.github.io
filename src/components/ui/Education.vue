@@ -1,6 +1,6 @@
 <template>
 <div class="experience">
-    <img class="experience-image" :src="$getImageUrl(logo)" :alt="logoAlt">
+    <img class="experience-logo" :src="$getImageUrl(logo)" :alt="logoAlt">
     <h4 class="title title--5">
         <span class="text--secondary">{{ title }}</span> {{ diploma }}
     </h4>

@@ -1,7 +1,7 @@
 .experience {
     margin-bottom: 50px;
 
-    &-image {
+    &-logo {
         float: right;
         max-height: 90px;
         max-width: 150px;
@@ -51,7 +51,7 @@
 
 @media all and (max-width: $responsive) {
     .experience {
-        &-image {
+        &-logo {
             max-height: 50px;
             max-width: 80px;
             margin: 0 0 10px 10px;
