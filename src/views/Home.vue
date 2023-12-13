@@ -37,39 +37,35 @@
         <img class="home-profile-photo" src="../assets/images/photos/square-briac.jpg" alt="Profile photo" />
     </PageSection>
     <PageSection ref="experience" id="experience" class="home-experience" title="Professional experience" titleColor="primary" color="light">
-        <ul class="list text--dark">
-            <li class="list-item scroll-fade" v-for="item in experience" :key="item.company">
-                <Experience
-                    :position="item.position"
-                    :company="item.company"
-                    :href="item.link"
-                    :note="item.note"
-                    :period="item.period"
-                    :localisation="item.localisation"
-                    :about="item.about"
-                    :tasks="item.tasks"
-                    :tools="item.tools"
-                    :logo="item.logo"
-                    :logoAlt="item.alt"
-                />
-            </li>
-        </ul>
+        <Experience
+            class="text--dark scroll-fade"
+            v-for="item in experience" :key="item.company"
+            :position="item.position"
+            :company="item.company"
+            :href="item.link"
+            :note="item.note"
+            :period="item.period"
+            :localisation="item.localisation"
+            :about="item.about"
+            :tasks="item.tasks"
+            :tools="item.tools"
+            :logo="item.logo"
+            :logoAlt="item.alt"
+        />
     </PageSection>
     <PageSection ref="education" id="education" class="home-education" title="Education" titleColor="secondary" color="tertiary">
-        <ul class="list">
-            <li class="list-item scroll-fade" v-for="item in education" :key="item.institution">
-                <Education
-                    :title="item.title"
-                    :diploma="item.diploma"
-                    :href="item.link"
-                    :period="item.period"
-                    :institution="item.institution"
-                    :note="item.note"
-                    :logo="item.logo"
-                    :logoAlt="item.alt"
-                />
-            </li>
-        </ul>
+        <Education
+            class="scroll-fade"
+            v-for="item in education" :key="item.institution"
+            :title="item.title"
+            :diploma="item.diploma"
+            :href="item.link"
+            :period="item.period"
+            :institution="item.institution"
+            :note="item.note"
+            :logo="item.logo"
+            :logoAlt="item.alt"
+        />
     </PageSection>
     <PageSection ref="projects" id="projects" class="home-projects" title="Projects" titleColor="tertiary" color="secondary">
         <Project
