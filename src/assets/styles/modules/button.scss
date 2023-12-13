@@ -8,6 +8,8 @@
     border-style: solid;
     transition: all 0.2s;
     display: inline-block; // For a tags disguised as buttons
+    font-size: 1em;
+    font-weight: 700;
 
     &--primary {
         color: $light;
