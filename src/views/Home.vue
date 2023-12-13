@@ -174,7 +174,7 @@ export default {
                     note: "(Previously Plüm énergie)",
                     link: "https://octopusenergy.fr/",
                     period: "Since Sep 2019",
-                    localisation: "Saint-Denis, France",
+                    localisation: "Paris, France",
                     about: "Software development for green electricity consumption and consumption awareness.",
                     tasks: [
                         "Website, journey, and application development for clients (company website, account site and consumption dashboard, subscription journey, blog, FAQ, ...)",
