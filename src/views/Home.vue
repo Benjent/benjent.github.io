@@ -171,7 +171,6 @@ export default {
                     alt: "Octopus Energy France logo",
                     position: "Full-stack web developer",
                     company: "Octopus Energy France",
-                    note: "(Previously Plüm énergie)",
                     link: "https://octopusenergy.fr/",
                     period: "Since Sep 2019",
                     localisation: "Paris, France",
@@ -205,7 +204,6 @@ export default {
                     alt: "Naval Group logo",
                     position: "Software engineer",
                     company: "Naval Group",
-                    note: "(Previously DCNS)",
                     link: "https://www.naval-group.com",
                     period: "Sep 2015 - Sep 2018",
                     localisation: "Ollioules, France",
@@ -269,7 +267,6 @@ export default {
                     period: "2010 - 2013",
                     institution: "Lycée International Charles de Gaulle, Dijon, France",
                     link: "http://www.lycee-internationalcdg.fr/",
-                    note: "(Previously Lycée Européen Charles de Gaulle)",
                 },
             ],
             projects: [
