@@ -401,8 +401,8 @@ export default {
                     { label: "Audacity", logo: "audacity.png" },
                     { label: "Illustrator", logo: "ai.png" },
                     { label: "Photoshop", logo: "ps.png" },
-                    { label: "InDesign", logo: "id.png" },
-                    { label: "Premiere Pro", logo: "premiere.png" },
+                    // { label: "InDesign", logo: "id.png" },
+                    // { label: "Premiere Pro", logo: "premiere.png" },
                     { label: "After Effects", logo: "ae.png" },
                     // Leftovers: Inkscape, Gimp
                 ],
