@@ -1,11 +1,19 @@
 .experience {
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 
     &-logo {
         float: right;
         max-height: 90px;
         max-width: 150px;
         margin: 0 50px 20px 20px;
+    }
+
+    &-illustration {
+        display: block;
+        max-height: 400px;
+        max-width: 600px;
+        z-index: -1;
+        margin: auto;
     }
 
     &-title {
@@ -26,6 +34,7 @@
 
     &-about {
         margin-top: 0.6rem;
+        font-size: 1.1em;
     }
 
     &-list {
@@ -48,9 +57,10 @@
 
     &-tools {
         display: flex;
-        gap: 4px;
-        font-size: 0.9em;
+        align-items: center;
+        gap: 10px;
         margin-top: 1rem;
+        flex-wrap: wrap;
 
         &-item {
             max-width: 20px;
@@ -61,6 +71,8 @@
 
 @media all and (max-width: $responsive) {
     .experience {
+        margin-bottom: 40px;
+
         &-logo {
             max-height: 50px;
             max-width: 80px;

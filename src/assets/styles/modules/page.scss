@@ -5,6 +5,10 @@
     max-width: var(--page-width);
     padding: 120px 20px;
     box-sizing: border-box;
+
+    &--breakout {
+        max-width: var(--page-breakout-width);
+    }
 }
 
 @media all and (max-width: $responsive) {

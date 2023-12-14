@@ -1,5 +1,6 @@
 :root {
     --page-width: 1020px;
+    --page-breakout-width: 1240px;
     --nav-button-padding-vertical: 16px;
     --nav-button-padding-horizontal: 20px;
     --button-padding-vertical: 10px;
@@ -10,6 +11,7 @@
 @media all and (max-width: $responsive) {
     :root {
         --page-width: 640px;
+        --page-breakout-width: 640px;
         --nav-button-padding-horizontal: 8px;
     }
 }

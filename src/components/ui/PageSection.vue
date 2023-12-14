@@ -1,6 +1,6 @@
 <template>
 <section :id="id" class="l-page-section" :class="`l-page-section--${color}`">
-    <div class="page">
+    <div class="page" :class="{ [`page--breakout`]: breakout }">
         <h3 class="title title--3 scroll-fade" :class="`text--${titleColor}`">{{title}}</h3>
         <slot></slot>
     </div>
@@ -40,6 +40,10 @@ export default {
             required: true,
         },
         separatorless: {
+            type: Boolean,
+            default: false,
+        },
+        breakout: {
             type: Boolean,
             default: false,
         },

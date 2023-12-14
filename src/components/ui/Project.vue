@@ -1,34 +1,46 @@
 <template>
 <div class="experience l-project">
-    <Card :image="image" :alt="imageAlt" :logo="logo" :logoAlt="logoAlt" :href="href" :tools="tools">
-        <h4 class="l-project-title title title--4 text--secondary">{{ title }}</h4>
-        <div class="l-project-description">
-            <p class="paragraph">{{ description }}</p>
-            <Button color="secondary" class="l-project-link" :href="href" target="_blank">
-                See the project live
-                <!-- <img class="l-project-link-icon" src="../../assets/images/icons/external-link.svg" alt="External link" aria-hidden="true" focusable="false" /> -->
-            </Button>
-            <div>
-                <h5 class="l-project-conditions title title--6" v-if="conditions.length > 0">Conditions:</h5>
-                <ul class="experience-list">
-                    <li class="experience-list-item" v-for="condition, index in conditions" :key="index">{{ condition }}</li>
-                </ul>
+    <div class="l-project-grid">
+        <div class="l-project-grid-main">
+            <h4 class="l-project-title title title--4">{{ title }}</h4>
+            <aside v-if="$mq === 'responsive'" class="l-project-grid-aside">
+                <a :href="href" target="_blank" class="l-project-image" :style="{ backgroundImage: `url(${image})` }" />
+            </aside>
+            <div class="l-project-description">
+                <p class="paragraph title title--6">{{ description }}</p>
+                <div>
+                    <p class="l-project-conditions" v-if="conditions.length > 0">Conditions:</p>
+                    <ul class="experience-list">
+                        <li class="experience-list-item" v-for="condition, index in conditions" :key="index">{{ condition }}</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </Card>
+        <aside v-if="$mq !== 'responsive'" class="l-project-grid-aside">
+            <a :href="href" target="_blank" class="l-project-image" :style="{ backgroundImage: `url(${image})` }">
+                <div class="l-project-image-overlay">
+                    <img class="l-project-image-overlay-logo" v-if="logo" :src="logo" :alt="logoAlt" />
+                </div>
+            </a>
+        </aside>
+    </div>
+    <footer class="l-project-footer">
+        <a class="l-project-link link link--underline" :href="href" target="_blank">
+            See the project live
+        </a>
+        <div class="l-project-tools">
+            <div>Tools used:</div>
+            <div class="l-project-tools-item" v-for="tool, index in tools" :key="index">
+                <img class="l-project-tools-item-image" :src="$getImageUrl(tool.logo, 'logos')" :alt="`${tool.label} logo`" :title="tool.label" />
+            </div>
+        </div>
+    </footer>
 </div>
 </template>
 
 <script>
-import Button from "./Button.vue"
-import Card from "./Card.vue"
-
 export default {
     name: "Project",
-    components: {
-        Button,
-        Card,
-    },
     props: {
         title: {
             type: String,
@@ -74,8 +86,59 @@ export default {
 @import '@/assets/styles/main.scss';
 
 .l-project {
-    &-main {
-        max-width: 40%;
+    margin-bottom: 120px;
+
+    &:nth-child(2n) {
+        .l-project-grid {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &-grid {
+        display: flex;
+        position: relative;
+        width: 100%;
+        gap: 60px;
+    
+        &-main {
+            width: 40%;
+        }
+
+        &-aside {
+            flex: 1;
+        }
+    }
+
+    &-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        border-radius: 20px;
+        @include shadow($color: $shadowStrong);
+
+        &-overlay {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.6);
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: all 0.2s;
+            cursor: pointer;
+            border-radius: 20px;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &-logo {
+                width: 33%;
+            }
+        }
     }
 
     &-title {
@@ -96,18 +159,87 @@ export default {
         align-items: flex-start;
         gap: 20px;
     }
+
+    &-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    &-tools {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        &-item {
+            @include shadow();
+            border-radius: 50%;
+            background: $shadow;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &-image {
+                max-width: 30px;
+                max-height: 30px;
+            }
+        }
+    }
 }
 
 @media all and (max-width: $responsive) {
     .l-project {
-        &-main {
-            max-width: 100%;
+        margin-bottom: 80px;
+
+        &-grid {
+            &-main {
+                width: 100%;
+            }
+
+            &-aside {
+                width: 100%;
+                height: 200px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &-image {
+            background-position: top;
+            border-radius: 10px;
+            
+            &-overlay {
+                border-radius: 10px;
+            }
         }
 
         &-link {
             display: flex;
             &-icon {
                 width: 16px;
+            }
+        }
+
+        &-footer {
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        &-tools {
+            &-item {
+                width: 30px;
+                height: 30px;
+
+                &-image {
+                    max-width: 20px;
+                    max-height: 20px;
+                }
             }
         }
     }

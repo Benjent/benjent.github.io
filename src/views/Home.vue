@@ -67,9 +67,9 @@
             :logoAlt="item.alt"
         />
     </PageSection>
-    <PageSection ref="projects" id="projects" class="home-projects" title="Projects" titleColor="tertiary" color="secondary">
+    <PageSection ref="projects" id="projects" class="home-projects" title="Projects" titleColor="tertiary" color="secondary" breakout>
         <Project
-            class="scroll-fade"
+            class="text--quaternary scroll-fade"
             v-for="item in projects"
             :key="item.title"
             :title="item.title"
