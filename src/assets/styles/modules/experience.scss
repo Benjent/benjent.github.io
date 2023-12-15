@@ -27,9 +27,9 @@
     }
     
     &-localisation {
-        &::before {
-            content: ' - ';
-        }
+        // &::before {
+        //     content: ' - ';
+        // }
     }
 
     &-about {
