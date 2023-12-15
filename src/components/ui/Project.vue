@@ -116,7 +116,7 @@ export default {
         background-size: cover;
         background-position: center;
         position: relative;
-        border-radius: 20px;
+        border-radius: 10px;
         @include shadow($color: $shadowStrong);
 
         &-overlay {
@@ -129,7 +129,7 @@ export default {
             opacity: 0;
             transition: all 0.2s;
             cursor: pointer;
-            border-radius: 20px;
+            border-radius: 10px;
 
             &:hover {
                 opacity: 1;
@@ -211,11 +211,6 @@ export default {
 
         &-image {
             background-position: top;
-            border-radius: 10px;
-            
-            &-overlay {
-                border-radius: 10px;
-            }
         }
 
         &-link {
