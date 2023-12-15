@@ -178,7 +178,7 @@ export default {
         &-item {
             @include shadow();
             border-radius: 50%;
-            background: $shadow;
+            background: $secondaryStrong;
             width: 50px;
             height: 50px;
             display: flex;
