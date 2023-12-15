@@ -29,7 +29,7 @@
             See the project live
         </a>
         <div class="l-project-tools">
-            <div>Tools used:</div>
+            <div>Made with</div>
             <div class="l-project-tools-item" v-for="tool, index in tools" :key="index">
                 <img class="l-project-tools-item-image" :src="$getImageUrl(tool.logo, 'logos')" :alt="`${tool.label} logo`" :title="tool.label" />
             </div>
