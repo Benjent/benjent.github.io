@@ -141,10 +141,6 @@ export default {
         }
     }
 
-    &-title {
-        margin-bottom: 20px;
-    }
-
     &-link {
         display: flex;
         &-icon {

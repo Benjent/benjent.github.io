@@ -619,6 +619,7 @@ export default {
         }
 
         &-list {
+            margin-top: 2.2rem;
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
