@@ -632,7 +632,8 @@ export default {
         // background-image: url('@/assets/images/photos/skate.jpg');
         background-image: url('@/assets/images/photos/bono.jpeg');
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: cover;
+        background-attachment: fixed;
         background-position: center;
         display: flex;
         flex-direction: column;
@@ -696,6 +697,7 @@ export default {
         }
 
         &-contact {
+            background-attachment: scroll;
             background-size: 100%;
 
             &-details {
@@ -708,6 +710,7 @@ export default {
 @media all and (max-width: 600px) {
     .home {
         &-contact {
+            background-attachment: scroll;
             background-size: 180%;
         }
     }
