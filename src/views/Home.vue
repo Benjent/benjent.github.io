@@ -321,6 +321,23 @@ export default {
                     ],
                     tools: [{ label: "Vue.js", logo: "vue.png" }, { label: "SCSS", logo: "sass.png" }, { label: "D3", logo: "d3.png" }, { label: "GitHub", logo: "github.png" }],
                 },
+                {
+                    image: "attendance-sheet.png",
+                    alt: "Attendance Sheet screenshot",
+                    title: "Attendance Sheet",
+                    description: "Attendance sheet auto-filler based on ICOOPA's template. Initially a Tailwind CSS tryout project, I let Les Octets Libres team use it to save them the burden of printing then scanning back their attendance sheet.",
+                    link: "https://benjent.github.io/attendance-sheet",
+                    conditions: [
+                        "Pre-fill sheet with default values (name, hours, public holidays)",
+                        "Comply with ICOOPA's own template",
+                        "Zero-hosting-cost",
+                        "Zero-deployment-cost",
+                        "Vue.js 3",
+                        "Tailwind CSS",
+                        "Autodeployment",
+                    ],
+                    tools: [{ label: "Vue.js", logo: "vue.png" }, { label: "Tailwind CSS", logo: "tailwind.png" }, { label: "GitHub", logo: "github.png" }],
+                },
             ],
             skills: {
                 dev: [
