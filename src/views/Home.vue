@@ -26,10 +26,12 @@
             I prefer developing webapps with a software approach rather than websites; if possible, intervening in the whole stack.
         </p>
         <p class="paragraph paragraph--big text--light scroll-fade">
-            I enjoy designing the front-end architecture to make sure a corporate identity and style guide is correctly implemented. While not being a pixel-perfect enthusiast, I would rather focus on storybooks, UI kits or design systems.
+            I enjoy designing the front-end architecture to make sure a corporate identity and style guide is correctly implemented.
+            While not being a pixel-perfect enthusiast, I would rather focus on storybooks, UI kits or design systems.
         </p>
         <p class="paragraph paragraph--big text--light scroll-fade">
-            I am heavily influenced by <a class="link text--secondary" href="http://smacss.com/"><abbr title="Scalable and Modular Architecture for Cascading Style Sheets">SMACSS</abbr></a> and <a class="link text--secondary" href="http://getbem.com/"><abbr title="Block Element Modifier">BEM</abbr></a> frameworks (with a less strict approach fueled by UI components) and generally speaking have a preference for business classes topped with utility classes over the other way around.
+            When it comes to building large applications for a brand, I am heavily influenced by <a class="link text--secondary" href="http://smacss.com/"><abbr title="Scalable and Modular Architecture for Cascading Style Sheets">SMACSS</abbr></a> and <a class="link text--secondary" href="http://getbem.com/"><abbr title="Block Element Modifier">BEM</abbr></a> frameworks (with a less strict approach fueled by UI components) and generally speaking have a preference for business classes topped with utility classes over the other way around.
+            I do love using <a class="link text--secondary" href="https://tailwindcss.com/">Tailwind CSS</a> when integrating smaller-sized web applications.
         </p>
         <p class="paragraph paragraph--big text--light scroll-fade">
             My favorite front-end framework is <a class="link text--secondary" href="https://vuejs.org/">Vue.js</a> and I like having a JS/TS-written back-end.
