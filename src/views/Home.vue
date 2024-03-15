@@ -32,7 +32,7 @@
             I am heavily influenced by <a class="link text--secondary" href="http://smacss.com/"><abbr title="Scalable and Modular Architecture for Cascading Style Sheets">SMACSS</abbr></a> and <a class="link text--secondary" href="http://getbem.com/"><abbr title="Block Element Modifier">BEM</abbr></a> frameworks (with a less strict approach fueled by UI components) and generally speaking have a preference for business classes topped with utility classes over the other way around.
         </p>
         <p class="paragraph paragraph--big text--light scroll-fade">
-            My favorite front-end framework is <a class="link text--secondary" href="https://vuejs.org/">Vue.js</a> and I like having a JS-written back-end.
+            My favorite front-end framework is <a class="link text--secondary" href="https://vuejs.org/">Vue.js</a> and I like having a JS/TS-written back-end.
         </p>
         <img class="home-profile-photo" src="../assets/images/photos/square-briac.jpg" alt="Profile photo" />
     </PageSection>
