@@ -163,12 +163,31 @@ export default {
             ],
             experience: [
                 {
+                    logo: "les-octets-libres.png",
+                    alt: "Les Octets Libres logo",
+                    position: "Full-stack web developer",
+                    company: "Les Octets Libres",
+                    link: "https://www.lesoctetslibres.com/",
+                    period: "Since Nov 2023",
+                    localisation: "Quimperlé, France",
+                    about: "Software development and website generation with digital carbon footprint reduction.",
+                    tasks: [
+                        "Software development",
+                        "CMS-embedded static website generation",
+                        "UI design",
+                        "Continuous integration and delivery automation",
+                        "Technical debt analysis and removal",
+                        "Documentation setup"
+                    ],
+                    tools: [{ label: "React", logo: "react.png" }, { label: "Wagtail", logo: "wagtail.png" }, { label: "Django", logo: "django.png" }, { label: "PostgreSQL", logo: "postgresql.png" }, { label: "Strapi", logo: "strapi.png" }, { label: "Astro", logo: "astro.png" }, { label: "Tailwind CSS", logo: "tailwind.png" }, { label: "Docusaurus", logo: "docusaurus.png" }, { label: "VitePress", logo: "vitepress.webp" }, { label: "GitHub", logo: "github.png" }, { label: "Docker", logo: "docker.png" }],
+                },
+                {
                     logo: "octopus.png",
                     alt: "Octopus Energy France logo",
                     position: "Full-stack web developer",
                     company: "Octopus Energy France",
                     link: "https://octopusenergy.fr/",
-                    period: "Since Sep 2019",
+                    period: "Sep 2019 - Oct 2023",
                     localisation: "Paris, France",
                     about: "Software development for green electricity consumption and consumption awareness.",
                     tasks: [
