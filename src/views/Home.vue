@@ -53,6 +53,7 @@
             :tools="item.tools"
             :logo="item.logo"
             :logoAlt="item.alt"
+            :projects="item.projects"
         />
     </PageSection>
     <PageSection ref="education" id="education" class="home-education" title="Education" titleColor="secondary" color="tertiary">
@@ -142,6 +143,12 @@ import PageSection from "@/components/ui/PageSection.vue"
 import Project from "@/components/ui/Project.vue"
 import Separation from "@/components/ui/Separation.vue"
 import Tag from "@/components/ui/Tag.vue"
+import education from "@/assets/data/education"
+import experience from "@/assets/data/experience"
+import projects from "@/assets/data/projects"
+import skills from "@/assets/data/skills"
+
+// TODO setup prettier + eslint + a11y + conventional commits
 
 export default {
     name: "Home",
@@ -163,293 +170,10 @@ export default {
                 { label: "Tools", value: "skills" },
                 { label: "Contact", value: "contact" },
             ],
-            experience: [
-                {
-                    logo: "les-octets-libres.png",
-                    alt: "Les Octets Libres logo",
-                    position: "Full-stack web developer",
-                    company: "Les Octets Libres",
-                    link: "https://www.lesoctetslibres.com/",
-                    period: "Since Nov 2023",
-                    localisation: "Quimperlé, France",
-                    about: "Software development and website generation with digital carbon footprint reduction.",
-                    tasks: [
-                        "Software development",
-                        "CMS-embedded static website generation",
-                        "UI design",
-                        "Continuous integration and delivery automation",
-                        "Technical debt analysis and removal",
-                        "Documentation setup"
-                    ],
-                    tools: [{ label: "React", logo: "react.png" }, { label: "Wagtail", logo: "wagtail.png" }, { label: "Django", logo: "django.png" }, { label: "PostgreSQL", logo: "postgresql.png" }, { label: "Strapi", logo: "strapi.png" }, { label: "Astro", logo: "astro.png" }, { label: "Tailwind CSS", logo: "tailwind.png" }, { label: "Docusaurus", logo: "docusaurus.png" }, { label: "VitePress", logo: "vitepress.webp" }, { label: "GitHub", logo: "github.png" }, { label: "Docker", logo: "docker.png" }],
-                },
-                {
-                    logo: "octopus.png",
-                    alt: "Octopus Energy France logo",
-                    position: "Full-stack web developer",
-                    company: "Octopus Energy France",
-                    link: "https://octopusenergy.fr/",
-                    period: "Sep 2019 - Oct 2023",
-                    localisation: "Paris, France",
-                    about: "Software development for green electricity consumption and consumption awareness.",
-                    tasks: [
-                        "Website, journey, and application development for clients (company website, account site and consumption dashboard, subscription journey, blog, FAQ, ...)",
-                        "Front-end architecture",
-                        "Design system maintainance in collaboration with designers",
-                        "Front-end training of team members",
-                        "Automated E2E testing",
-                    ],
-                    tools: [{ label: "Vue.js", logo: "vue.png" }, { label: "React", logo: "react.png" }, { label: "Next", logo: "next.png" }, { label: "Typescript", logo: "ts.png" }, { label: "SCSS", logo: "sass.png" }, { label: "WordPress", logo: "wp.png" }, { label: "D3.js", logo: "d3.png" }, { label: "Storyblok", logo: "storyblok.png" }, { label: "Storybook", logo: "storybook.png" }, { label: "node", logo: "node.png" }, { label: "Testcafé", logo: "testcafe.png" },],
-                },
-                {
-                    logo: "forcity.png",
-                    alt: "ForCity logo",
-                    position: "Full-stack web developer",
-                    company: "ForCity",
-                    period: "Sep 2018 - Aug 2019",
-                    localisation: "Cesson-Sévigné, France",
-                    about: "Software development for geoworking decision.",
-                    tasks: [
-                        "Front-end development",
-                        "Design and technical specification",
-                        "UX/UI thinking in collaboration with designers",
-                    ],
-                    tools: [{ label: "Vue.js", logo: "vue.png" }, { label: "SCSS", logo: "sass.png" }, { label: "Jasmine", logo: "jasmine.png" }],
-                },
-                {
-                    logo: "naval-group.png",
-                    alt: "Naval Group logo",
-                    position: "Software engineer",
-                    company: "Naval Group",
-                    link: "https://www.naval-group.com",
-                    period: "Sep 2015 - Sep 2018",
-                    localisation: "Ollioules, France",
-                    about: "R&D Software development for warships.",
-                    tasks: [
-                        "Full-stack development and database management",
-                        "Software architecture implementation allowing evolving guidelines integration",
-                        "UX/UI design",
-                    ],
-                },
-                {
-                    logo: "parachute.png",
-                    alt: "Parachute logo",
-                    position: "Web integrator",
-                    company: "Parachute",
-                    link: "https://www.parachute.net/",
-                    period: "Jan 2015 - Mar 2015",
-                    localisation: "Glasgow, Scottland",
-                    about: "Integration and deployment of responsive websites.",
-                    tasks: [
-                        "CMS integration based on boilerplates",
-                        "Adaptive and responsive design integration",
-                    ],
-                    tools: [{ label: "WordPress", logo: "wp.png" }, { label: "SCSS", logo: "sass.png" }, { label: "Grunt", logo: "grunt.png" }],
-                },
-                {
-                    logo: "fontaine.png",
-                    alt: "Fontaine-lès-Dijon logo",
-                    position: "Co-manager and polyvalent musician",
-                    company: "Music Act Fontaine",
-                    period: "Oct 2010 - June 2013",
-                    localisation: "Fontaine-lès-Dijon, France",
-                    about: "Live concert and rehearsal organisation.",
-                },
-            ],
-            education: [
-                {
-                    logo: "enssat.png",
-                    alt: "ENSSAT Lannion logo",
-                    title: "Computer Science, Multimedia and Network",
-                    diploma: "engineering diploma",
-                    period: "2015 - 2018",
-                    institution: "ENSSAT Lannion, France",
-                    link: "https://www.enssat.fr/",
-                    note: "Apprenticeship studies with Naval Group",
-                },
-                {
-                    logo: "iut-dijon.png",
-                    alt: "IUT Dijon logo",
-                    title: "Multimedia and Web Professions",
-                    diploma: "technology degree",
-                    period: "2013 - 2015",
-                    institution: "Dijon University Institute of Technology, France",
-                    link: "https://iutdijon.u-bourgogne.fr/www/formations/buts/but-mmi.html",
-                },
-                {
-                    logo: "de-gaulle.png",
-                    alt: "Lycée International Charles de Gaulle logo",
-                    title: "Science",
-                    diploma: "A levels",
-                    period: "2010 - 2013",
-                    institution: "Lycée International Charles de Gaulle, Dijon, France",
-                    link: "http://www.lycee-internationalcdg.fr/",
-                },
-            ],
-            projects: [
-                {
-                    image: "prog-snack.png",
-                    alt: "Prog Snack screenshot",
-                    title: "Prog Snack",
-                    description: "Webapp to browse music albums from the Progressive Rock genre. Initially a Vue.js tryout and sandbox project, I mainly maintain its content from time to time.",
-                    link: "https://benjent.github.io/prog-snack",
-                    conditions: [
-                        "Serverless",
-                        "Zero-hosting-cost",
-                        "Zero-deployment-cost",
-                        "Databaseless (fast and easy way to edit the data through the code)",
-                        "Vue.js 2",
-                        "SCSS",
-                        "Autodeployment",
-                        "Responsive design",
-                    ],
-                    tools: [{ label: "Vue.js", logo: "vue.png" }, { label: "SCSS", logo: "sass.png" }, { label: "GitHub", logo: "github.png" }],
-                },
-                {
-                    image: "nanovizer.png",
-                    alt: "NanoViZer screenshot",
-                    title: "NanoViZer",
-                    description: "Interactive data-visualisation and chart-saver tool assisting researchers in their work. This is a front-end solution to be used with a locally-running server written in Python.",
-                    link: "https://benjent.github.io/nanovizer",
-                    conditions: [
-                        "Interactive charts",
-                        "Fewest impacts on the existing back-end solution",
-                        "Zero-hosting-cost",
-                        "Zero-deployment-cost",
-                        "Vue.js 3",
-                        "SCSS",
-                        "D3.js",
-                        "Autodeployment",
-                    ],
-                    tools: [{ label: "Vue.js", logo: "vue.png" }, { label: "SCSS", logo: "sass.png" }, { label: "D3", logo: "d3.png" }, { label: "GitHub", logo: "github.png" }],
-                },
-                {
-                    image: "attendance-sheet.png",
-                    alt: "Attendance Sheet screenshot",
-                    title: "Attendance Sheet",
-                    description: "Attendance sheet auto-filler based on ICOOPA's template. Initially a Tailwind CSS tryout project, I let Les Octets Libres team use it to save them the burden of printing then scanning back their attendance sheet.",
-                    link: "https://benjent.github.io/attendance-sheet",
-                    conditions: [
-                        "Pre-fill sheet with default values (name, hours, public holidays)",
-                        "Comply with ICOOPA's own template",
-                        "Zero-hosting-cost",
-                        "Zero-deployment-cost",
-                        "Vue.js 3",
-                        "Tailwind CSS",
-                        "Autodeployment",
-                    ],
-                    tools: [{ label: "Vue.js", logo: "vue.png" }, { label: "Tailwind CSS", logo: "tailwind.png" }, { label: "GitHub", logo: "github.png" }],
-                },
-            ],
-            skills: {
-                dev: [
-                    // { label: "HTML", logo: "html.png" },
-                    // { label: "Pug", logo: "pug.png" },
-
-                    // { label: "CSS", logo: "css.png" },
-                    // { label: "SCSS", logo: "sass.png" },
-                    // { label: "BEM", logo: "bem.png" },
-                    // { label: "SMACSS", logo: "smacss.png" },
-                    // { label: "Styled-components", logo: "styled-components.png" },
-                    // { label: "Tailwind CSS", logo: "tailwind.png" },
-
-                    { label: "JS", logo: "js.png" },
-                    // { label: "JSDoc" },
-                    { label: "TS", logo: "ts.png" },
-
-                    { label: "Vue.js", logo: "vue.png" },
-                    { label: "React", logo: "react.png" },
-                    { label: "Next.js", logo: "next.png" },
-                    // { label: "Polymer", logo: "polymer.png" },
-                    // { label: "Angular", logo: "angular.png" },
-
-                    // { label: "Moment.js", logo: "moment.png" },
-                    // { label: "Day.js" },
-                    // { label: "Date-fns", logo: "datefns.png" },
-
-                    // { label: "Yup" },
-
-                    // { label: "Formik", logo: "formik.png" },
-
-                    // { label: "CesiumJS", logo: "cesium.png" },
-
-                    { label: "D3", logo: "d3.png" },
-                    // { label: "Recharts" },
-
-                    { label: "Storybook", logo: "storybook.png" },
-                    // { label: "Docusaurus", logo: "docusaurus.png" },
-
-                    // { label: "Axios", logo: "axios.png" },
-                    // { label: "GraphQL", logo: "gql.png" },
-                    
-                    { label: "Vite", logo: "vite.png" },
-                    // { label: "Webpack", logo: "webpack.png" },
-                    
-                    // { label: "ESLint", logo: "eslint.png" },
-                    // { label: "Prettier", logo: "prettier.png" },
-                    // { label: "Husky" },
-                    // { label: "Grunt", logo: "grunt.png" },
-
-                    // { label: "Git", logo: "git.png" },
-                    // { label: "Conventional commits", logo: "conventional-commits.png" },
-                    { label: "GitHub Actions", logo: "github.png" },
-                    // { label: "Vercel", logo: "vercel.png" },
-                    { label: "Docker", logo: "docker.png" },
-
-                    { label: "Jest", logo: "jest.png" },
-                    { label: "TestCafé", logo: "testcafe.png" },
-                    // { label: "Cypress", logo: "cypress.png" },
-                    // { label: "Jasmine", logo: "jasmine.png" },
-                    // { label: "Mocha", logo: "mocha.png" },
-                    // { label: "Chai", logo: "chai.png" },
-
-                    { label: "Storyblok", logo: "storyblok.png" },
-                    { label: "WordPress", logo: "wp.png" },
-                    // { label: "Handlebars", logo: "hb.png" },
-                    // { label: "Sendinblue", logo: "sendinblue.png" },
-
-                    { label: "SQL" },
-                    // { label: "PostgreSQL", logo: "postgresql.png" },
-                    // { label: "PostGIS", logo: "postgis.png" },
-                    // { label: "Supabase", logo: "supabase.png" },
-                    // { label: "MongoDB", logo: "mongo.png" },
-                    // { label: "Metabase", logo: "metabase.png" },
-                    // { label: "UML" },
-
-                    { label: "Node.js", logo: "node.png" },
-                    // { label: "Java", logo: "java.png" },
-                    // { label: "J2EE", logo: "java.png" },
-                    { label: "Python", logo: "py.png" },
-                    // { label: "Django", logo: "django.png" },
-                    // { label: "Flask", logo: "flask.webp" },
-                    // { label: "PHP", logo: "php.png" },
-                    /*
-                        Leftovers:
-                        - Markup: md, xml, yml
-                        - JS: jquery, lodash, knockout
-                        - Form: Tally, Google form
-                        - Doc: vuepress
-                        - Infra: turborepo, ansible, jenkins, Vue Storefront
-                        - SSR: nuxt, astro
-                        - CMS: strapi, drupal, wagtail
-                        - Programming: C
-                    */
-                ],
-                media: [
-                    { label: "Audacity", logo: "audacity.png" },
-                    { label: "Illustrator", logo: "ai.png" },
-                    { label: "Photoshop", logo: "ps.png" },
-                    // { label: "InDesign", logo: "id.png" },
-                    // { label: "Premiere Pro", logo: "premiere.png" },
-                    { label: "After Effects", logo: "ae.png" },
-                    // Leftovers: Inkscape, Gimp
-                ],
-                languages: [
-                    { label: "French (mother tongue)", logo: "fr.png" },
-                    { label: "English (fluent, C1 level)", logo: "en.png" },
-                    { label: "German (basic knowledge)", logo: "de.png" },
-                ],
-            },
+            experience,
+            education,
+            projects,
+            skills,
             copyright: new Date().getFullYear(),
         }
     },

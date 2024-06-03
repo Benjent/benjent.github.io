@@ -1,11 +1,11 @@
 .experience {
-    margin-bottom: 80px;
+    margin-bottom: 6rem;
 
     &-logo {
         float: right;
         max-height: 90px;
         max-width: 150px;
-        margin: 0 50px 20px 20px;
+        margin: 0 0 1rem 1rem;
     }
 
     &-illustration {
@@ -23,7 +23,6 @@
     }
 
     &-company {
-        font-size: 0.8em;
     }
 
     &-duration {
@@ -41,10 +40,10 @@
     }
 
     &-about {
-        margin-top: 0.6rem;
-        font-size: 1.1em;
+        margin-top: 1.6rem;
+        margin-bottom: 1.2rem;
     }
-    
+
     &-list {
         margin-top: 0.25rem;
         margin-left: 2rem;
@@ -78,11 +77,47 @@
             max-height: 20px;
         }
     }
+
+    &-projects {
+        color: grey;
+        margin: 1rem 0 2rem 4rem;
+        text-align: right;
+
+        &-item {
+            &-logo {
+                max-height: 40px;
+                max-width: 80px;
+            }
+        }
+
+        &-title {
+            color: $primary;
+        }
+
+        .experience-about {
+            display: flex;
+            gap: 1rem;
+            justify-content: right;
+            align-items: center;
+        }
+
+        .experience-list {
+            list-style-position: inside;
+        }
+
+        .experience-tools {
+            justify-content: right;
+        }
+
+        .experience-tools-item {
+            // filter: grayscale(1);
+        }
+    }
 }
 
 @media all and (max-width: $responsive) {
     .experience {
-        margin-bottom: 40px;
+        margin-bottom: 5rem;
 
         &-logo {
             max-height: 50px;
@@ -116,6 +151,39 @@
             &-item {
                 max-width: 18px;
                 max-height: 18px;
+            }
+        }
+
+        &-projects {
+            margin-left: 1rem;
+
+            &-item {
+                &-logo {
+                    max-height: 40px;
+                    max-width: 60px;
+                    margin-left: 0.4rem;
+                }
+            }
+    
+            &-title {
+                color: $primary;
+            }
+
+            .experience-about {
+                gap: 0.4rem;
+            }
+    
+            .experience-list {
+                list-style-position: inside;
+                text-align: left
+            }
+    
+            .experience-tools {
+                justify-content: right;
+            }
+    
+            .experience-tools-item {
+                // filter: grayscale(1);
             }
         }
     }
