@@ -95,6 +95,7 @@ export default [
             "Software architecture implementation allowing evolving guidelines integration",
             "UX/UI design",
         ],
+        tools: [{ label: "Polymer", logo: "polymer.png" }, { label: "Angular", logo: "angular.png" }, { label: "Typescript", logo: "ts.png" }, { label: "SCSS", logo: "sass.png" }, { label: "Cesium", logo: "cesium.png" }, { label: "Java", logo: "java.png" }, { label: "PostgreSQL", logo: "postgresql.png" }, { label: "PostgreSQL", logo: "postgis.png" }, { label: "Illustrator", logo: "ai.png" }],
     },
     {
         logo: "parachute.png",
