@@ -1,13 +1,19 @@
 <template>
 <div class="experience">
-    <img class="experience-logo" :src="$getImageUrl(logo)" :alt="logoAlt">
-    <h4 class="title title--5">
-        <span class="text--secondary">{{ title }}</span> {{ diploma }}
-    </h4>
-    <div class="experience-duration">{{ period }}</div>
-    <a class="experience-localisation link" :href="href" target="_blank" v-if="href">{{ institution }}</a>
-    <div class="experience-localisation" v-else>{{ institution }}</div>
-    <p class="experience-note text--light" v-if="note">{{ note }}</p>
+    <header class="experience-header">
+        <div>
+            <h4 class="title title--5">
+                <span class="text--secondary">{{ title }}</span> {{ diploma }}
+            </h4>
+            <div class="experience-duration">{{ period }}</div>
+            <a class="experience-localisation link" :href="href" target="_blank" v-if="href">{{ institution }}</a>
+            <div class="experience-localisation" v-else>{{ institution }}</div>
+            <p class="experience-note text--secondary" v-if="note">{{ note }}</p>
+        </div>
+        <div>
+            <img class="experience-logo" :src="$getImageUrl(logo)" :alt="logoAlt">
+        </div>
+    </header>
 </div>
 </template>
 

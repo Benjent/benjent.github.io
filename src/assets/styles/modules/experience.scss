@@ -1,28 +1,26 @@
 .experience {
     margin-bottom: 6rem;
 
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
     &-logo {
-        float: right;
         max-height: 90px;
         max-width: 150px;
-        margin: 0 0 1rem 1rem;
     }
 
-    &-illustration {
-        display: block;
-        max-height: 400px;
-        max-width: 600px;
-        z-index: -1;
-        margin: auto;
-    }
-
-    &-title {
-        display: flex;
-        gap: 0.5em;
-        align-items: baseline;
+    & &-title {
+        margin-bottom: 0;
+        letter-spacing: 0.025rem;
     }
 
     &-company {
+        font-size: 1.75rem;
+        letter-spacing: 0.1rem;
+        font-family: 'headline-font';
     }
 
     &-duration {
@@ -30,28 +28,22 @@
         flex-wrap: wrap;
         align-items: center;
         column-gap: 1.2rem;
-        font-weight: 500;
+        font-weight: 600;
     }
     
-    &-localisation {
-        // &::before {
-        //     content: ' - ';
-        // }
-    }
+    &-localisation {}
 
     &-about {
-        margin-top: 1.6rem;
-        margin-bottom: 1.2rem;
+        // margin-top: 1.6rem;
     }
 
     &-list {
         margin-top: 0.25rem;
-        margin-left: 2rem;
 
         &-item {
             list-style-type: '- ';
             font-style: italic;
-            font-size: 0.9em;
+            font-size: 0.875em;
 
             &::marker {
                 padding-right: 6px;
@@ -73,44 +65,8 @@
         flex-wrap: wrap;
 
         &-item {
-            max-width: 20px;
-            max-height: 20px;
-        }
-    }
-
-    &-projects {
-        color: grey;
-        margin: 1rem 0 2rem 4rem;
-        text-align: right;
-
-        &-item {
-            &-logo {
-                max-height: 40px;
-                max-width: 80px;
-            }
-        }
-
-        &-title {
-            color: $primary;
-        }
-
-        .experience-about {
-            display: flex;
-            gap: 1rem;
-            justify-content: right;
-            align-items: center;
-        }
-
-        .experience-list {
-            list-style-position: inside;
-        }
-
-        .experience-tools {
-            justify-content: right;
-        }
-
-        .experience-tools-item {
-            // filter: grayscale(1);
+            max-width: 22px;
+            max-height: 22px;
         }
     }
 }
@@ -122,7 +78,6 @@
         &-logo {
             max-height: 50px;
             max-width: 80px;
-            margin: 0 0 10px 10px;
         }
 
         &-title {
@@ -131,7 +86,8 @@
         }
 
         &-company {
-            font-size: inherit;
+            font-size: 1rem;
+            letter-spacing: 0.025rem;
         }
 
         &-duration {
@@ -151,39 +107,6 @@
             &-item {
                 max-width: 18px;
                 max-height: 18px;
-            }
-        }
-
-        &-projects {
-            margin-left: 1rem;
-
-            &-item {
-                &-logo {
-                    max-height: 40px;
-                    max-width: 60px;
-                    margin-left: 0.4rem;
-                }
-            }
-    
-            &-title {
-                color: $primary;
-            }
-
-            .experience-about {
-                gap: 0.4rem;
-            }
-    
-            .experience-list {
-                list-style-position: inside;
-                text-align: left
-            }
-    
-            .experience-tools {
-                justify-content: right;
-            }
-    
-            .experience-tools-item {
-                // filter: grayscale(1);
             }
         }
     }

@@ -53,7 +53,6 @@
             :tools="item.tools"
             :logo="item.logo"
             :logoAlt="item.alt"
-            :projects="item.projects"
         />
     </PageSection>
     <PageSection ref="education" id="education" class="home-education" title="Education" titleColor="secondary" color="tertiary">
@@ -265,7 +264,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '@/assets/styles/main.scss';
 
 .home {
@@ -284,7 +283,7 @@ export default {
         position: fixed;
         z-index: $zIndexNav;
         // top: calc(var(--nav-button-padding-vertical) * -2) - 16px; // TODO $font-size
-        top: 0 - var(--nav-button-padding-vertical) - var(--nav-button-padding-vertical) - 16px; // TODO $font-size
+        // top: 0 - var(--nav-button-padding-vertical) - var(--nav-button-padding-vertical) - 16px; // TODO $font-size
 
         &-burger {
             display: none;
