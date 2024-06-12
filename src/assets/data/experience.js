@@ -45,7 +45,7 @@ export default [
         localisation: "Paris, France",
         about: "Software development for green electricity consumption and consumption awareness.",
         tasks: [
-            "Website, journey, and application development for clients (company website, account site and consumption dashboard, subscription journey, blog, FAQ, ...)",
+            "Website, journey, and application development for clients (company website, account and consumption dashboard, subscription journey, blog, ...)",
             "Front-end architecture",
             "Design system maintainance in collaboration with designers",
             "Front-end training of team members",
