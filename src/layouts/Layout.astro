@@ -1,0 +1,135 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={title} />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+		<title>{title}</title>
+		<style is:global>
+			.tinsel > * {
+				transition: color 0.8s ease-in-out;
+			}
+
+			.fade {
+				opacity: 0;
+			}
+
+			.fade-in {
+				opacity: 1;
+				transition: opacity 1s ease-in-out;
+			}
+
+			.scroll-fade {
+				opacity: 0;
+				transform: translate(-20px, 0);
+			}
+
+			.scroll-fade-in {
+				opacity: 1;
+				transform: translate(0, 0);
+				transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+			}
+		</style>
+	</head>
+	<body class="font-body bg-quinary text-senary">
+		<header class="sticky top-0 z-50 shadow-xl bg-primary text-quinary text-sm lg:text-md">
+			<nav class="font-display flex justify-center">
+				<a class="uppercase tracking-widest border-b-2 border-primary px-2 py-2 lg:px-5 lg:py-4 hover:border-quinary" href="#profile">Profile</a>
+				<a class="uppercase tracking-widest border-b-2 border-primary px-2 py-2 lg:px-5 lg:py-4 hover:border-quinary" href="#experience">Experience</a>
+				<a class="uppercase tracking-widest border-b-2 border-primary px-2 py-2 lg:px-5 lg:py-4 hover:border-quinary" href="#education">Education</a>
+				<a class="uppercase tracking-widest border-b-2 border-primary px-2 py-2 lg:px-5 lg:py-4 hover:border-quinary" href="#projects">Projects</a>
+				<a class="uppercase tracking-widest border-b-2 border-primary px-2 py-2 lg:px-5 lg:py-4 hover:border-quinary" href="#tools">Tools</a>
+				<a class="uppercase tracking-widest border-b-2 border-primary px-2 py-2 lg:px-5 lg:py-4 hover:border-quinary" href="#contact">Contact</a>
+			</nav>
+		</header>
+		<slot />
+		<script>
+			/**
+			 * Apply several animations on the first section of the page
+			 */
+			function animateHero() {
+				// Fade
+				const fadingElements = document.querySelectorAll(".fade");
+				fadingElements.forEach((el) => {
+					el.classList.add("fade-in");
+				});
+				
+				// Unstable
+				const unstableElements = document.querySelectorAll(".unstable");
+				unstableElements[0].classList.add("animate-unstablize-left");
+				unstableElements[1].classList.add("animate-unstablize-right");
+
+				// Tinsel
+				const colors = ["primary", "secondary", "tertiary", "quaternary", "dark"];
+				const tinselElements = document.querySelectorAll(".tinsel");
+				tinselElements.forEach((item) => {
+					// Replace character with itself wrapped in a span
+					const text = item.innerHTML;
+					item.innerHTML = "";
+
+					const characters = text.split("");
+					characters.forEach((c) => {
+						const span = document.createElement("span");
+						span.innerHTML = c;
+						item.appendChild(span);
+					});
+				});
+
+				// Randomize colored character
+				const characters = [...tinselElements].flatMap((item) => [
+					...item.childNodes,
+				]);
+				window.setInterval(() => {
+					const randomCharacterIndex = Math.floor(Math.random() * characters.length);
+					const randomColorIndex = Math.floor(Math.random() * colors.length);
+
+					const randomCharacter = characters[randomCharacterIndex] as HTMLElement;
+
+					if (randomCharacter.classList.length > 0) {
+						// Character has already been colorized, reset
+						randomCharacter.className = "";
+					} else {
+						// Colorize character
+						const randomColor = colors[randomColorIndex];
+						randomCharacter.className = "";
+						randomCharacter.classList.add(`text-${randomColor}`);
+					}
+				}, 1000);
+			}
+
+			/**
+			 * Reveal content regarding the scroll position
+			 */
+			function revealContent() {
+				const contentsToReveal = document.querySelectorAll(".scroll-fade");
+				const coeff = 0.7; // Small offset not to reveal too soon - the closer to zero the later the reveal
+
+				contentsToReveal.forEach((content) => {
+					if (content.getBoundingClientRect().top < window.screen.height * coeff) {
+						if (!content.classList.contains("scroll-fade-in")) {
+							content.classList.add("scroll-fade-in");
+						}
+					}
+				});
+			}
+
+			setTimeout(animateHero, 400);
+
+			revealContent(); // Run it once if client refreshes in the middle of the page without scrolling afterwards
+			window.addEventListener("scroll", revealContent);
+		</script>
+	</body>
+</html>

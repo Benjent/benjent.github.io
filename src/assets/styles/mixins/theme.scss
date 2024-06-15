@@ -1,8 +1,0 @@
-@mixin theme() {
-    font-family: 'main-font';
-    font-size: 16px;
-
-    @media all and (max-width: $responsive) {
-        font-size: 14px;
-    }
-}

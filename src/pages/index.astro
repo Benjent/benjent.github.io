@@ -1,0 +1,266 @@
+---
+import ArrowUpCircle from "astro-heroicons/outline/ArrowUpCircle.astro";
+import education from "../data/education";
+import experience from "../data/experience";
+import projects from "../data/projects";
+import skills from "../data/skills";
+import Separator from "../components/Separator.astro";
+import Thumbnail from "../components/Thumbnail.astro";
+import Layout from "../layouts/Layout.astro";
+
+const fullName = "Benjamin Morvan";
+const linkedIn = "https://www.linkedin.com/in/benjamin-morvan/";
+const copyright = `${new Date().getFullYear()}`;
+const currentYear = new Date().getFullYear();
+const experienceStartYear = new Date(2015, 0).getFullYear();
+const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
+---
+
+<Layout title={`${fullName} - Webpage`}>
+	<main>
+		<section class="h-[82vh] pt-[200px] pb-[300px]">
+		<div class="unstable opacity-0 absolute border-t-[5px] border-primary w-[35%]" />
+			<h1 class="fade animate-shake font-display uppercase text-4xl lg:text-6xl tracking-wider font-bold text-center pt-6 mb-2">{fullName}</h1>
+			<h2 class="fade font-display uppercase text-2xl lg:text-[2.75rem] leading-[1.15] tracking-widest font-bold text-center">
+				<div class="tinsel">Software engineer</div>
+				<div class="tinsel">Front-end architect</div>
+				<div class="tinsel">Full-stack web developer</div>
+				</h2>
+		<div class="unstable opacity-0 absolute border-b-[5px] border-primary w-[35%] pb-4" />
+		</section>
+		<Separator bgClass="bg-quinary" />
+
+		<section id="profile" class="bg-primary text-quinary relative">
+			<div class="max-w-screen-sm lg:max-w-screen-lg mx-auto px-5 py-20 lg:py-24">
+				<h3 class="scroll-fade font-display uppercase text-3xl lg:text-6xl mb-20">Profile</h3>
+				<p class="scroll-fade text-md lg:text-xl leading-tight mb-6">
+					<span class="float-left text-7xl lg:text-8xl leading-3 text-secondary">“</span>
+					I love web technologies as well as designing user-friendly interfaces to present data.
+				</p>
+				<p class="scroll-fade text-md lg:text-xl leading-tight mb-6">
+					I prefer developing webapps with a software approach rather than websites; if possible, intervening in the whole stack. 
+				</p>
+				<p class="scroll-fade text-md lg:text-xl leading-tight mb-6">
+					I enjoy designing the front-end architecture to make sure a corporate identity and style guide is correctly implemented. While not being a pixel-perfect enthusiast, I would rather focus on storybooks, UI kits or design systems.  
+				</p>
+				<p class="scroll-fade text-md lg:text-xl leading-tight mb-6">
+					When it comes to building large applications for a brand, I am heavily influenced by <a class="text-secondary underline underline-offset-4 decoration-2 decoration-secondary/50 hover:decoration-secondary" href="http://smacss.com/"><abbr title="Scalable and Modular Architecture for Cascading Style Sheets">SMACSS</abbr></a> and <a class="text-secondary underline underline-offset-4 decoration-2 decoration-secondary/50 hover:decoration-secondary" href="http://getbem.com/"><abbr title="Block Element Modifier">BEM</abbr></a> frameworks (with a less strict approach fueled by UI components) and generally speaking have a preference for business classes topped with utility classes over the other way around.
+            		I do love using <a class="text-secondary underline underline-offset-4 decoration-2 decoration-secondary/50 hover:decoration-secondary" href="https://tailwindcss.com/">Tailwind CSS</a> when integrating smaller-sized web applications.
+				</p>
+				<p class="scroll-fade text-md lg:text-xl leading-tight mb-6">
+					My favorite front-end framework is <a class="text-secondary underline underline-offset-4 decoration-2 decoration-secondary/50 hover:decoration-secondary" href="https://vuejs.org/">Vue.js</a> and I like having a JS/TS-written back-end.
+				</p>
+				<img class="absolute z-20 right-[8%] -bottom-[80px] lg:-bottom-[140px] w-28 lg:w-64 rounded-full border-4 lg:border-[6px] border-quinary" src="/photos/square-briac.jpg" alt="Profile photo" />
+			</div>
+		</section>
+		<Separator bgClass="bg-primary" />
+
+		<section id="experience" class="bg-quinary text-primary">
+			<div class="max-w-screen-sm lg:max-w-screen-lg mx-auto px-5 py-20 lg:py-24">
+				<h3 class="scroll-fade font-display uppercase text-3xl lg:text-6xl">Professional experience</h3>
+				<p class="scroll-fade text-md lg:text-xl mb-20">({yearsOfExperience}+ years)</p>
+				<ol>
+					{experience.map((entry) => {
+						return (
+							<li class="scroll-fade mb-20">
+								<div class="flex justify-between">
+									<div>
+										<p class="text-sm lg:text-md">{entry.period}</p>
+										<h4 class="font-display text-2xl lg:text-5xl tracking-wide">{entry.position}</h4>
+										<p class="font-display text-senary text-xl lg:text-3xl tracking-wide lg:tracking-widest">
+											{entry.company.url
+												? <a class="text-secondary" href={entry.company.url}>{entry.company.name}</a>
+												: <span>{entry.company.name}</span>
+											}
+										</p>
+									</div>
+									<div>
+										<img class="max-h-12 lg:max-h-24 max-w-20 lg:max-w-32" src={`/logos/${entry.company.logo}`} alt={`${entry.company.name} logo`}>
+									</div>
+								</div>
+								<p class="text-senary text-md lg:text-lg leading-tight mt-4">{entry.about}</p>
+								<ul class="text-senary italic text-xs lg:text-sm">
+									{entry.tasks.map((task) => {
+										return <li>- {task}</li>
+									})}
+								</ul>
+								<div class="text-senary flex flex-wrap gap-3 items-center text-md lg:text-lg mt-4">
+									Tools used
+									<ul class="flex gap-3 flex-wrap">
+										{entry.tools.map((tool) => {
+											return (
+												<li class="w-4 h-4 lg:w-5 lg:h-5">
+													{tool.logo
+														? <img class="h-full w-full" src={`https://cdn.simpleicons.org/${tool.logo}/5662e8`} alt={`${tool.name} logo`} title={tool.name} />
+														: <span>{tool.name}</span>
+													}
+												</li>
+											)
+										})}
+									</ul>
+								</div>
+							</li>
+						)
+					})}
+					<li class="scroll-fade mb-20">
+						<div class="flex justify-between">
+							<div>
+								<p class="text-sm lg:text-md">Oct 2010 - June 2013</p>
+								<h4 class="font-display text-2xl lg:text-5xl tracking-wide">Co-manager and polyvalent musician</h4>
+								<p class="font-display text-senary text-xl lg:text-3xl tracking-wide lg:tracking-widest">
+									Music Act Fontaine
+								</p>
+							</div>
+							<div>
+								<img class="max-h-12 lg:max-h-24 max-w-20 lg:max-w-32" src="/logos/fontaine.png" alt="Fontaine-lès-Dijon logo">
+							</div>
+						</div>
+						<p class="text-senary text-md lg:text-lg leading-tight mt-4">Live concert and rehearsal organisation.</p>
+						<ul class="text-senary italic text-xs lg:text-sm">
+							<li>- Played the guitar and the drums, sung, filled the bass guitar position when needed</li>
+						</ul>
+					</li>
+				</ol>
+			</div>
+		</section>
+		<Separator bgClass="bg-quinary" />
+
+		<section id="education" class="bg-tertiary text-secondary">
+			<div class="max-w-screen-sm lg:max-w-screen-lg mx-auto px-5 py-20 lg:py-24">
+				<h3 class="scroll-fade font-display uppercase text-3xl lg:text-6xl mb-20">Education</h3>
+				<ol>
+					{education.map((entry) => {
+						return (
+							<li class="scroll-fade mb-20">
+								<div class="flex justify-between">
+									<div>
+										<p class="text-senary text-sm lg:text-md">{entry.period}</p>
+										<h4 class="text-senary text-md lg:text-xl leading-tight"><span class="text-secondary">{entry.title}</span> {entry.diploma}</h4>
+										<p class="text-senary text-sm lg:text-md">
+											{entry.institution.url ? <a class="underline underline-offset-2 decoration-senary/50 hover:decoration-senary" href={entry.institution.url}>{entry.institution.name}</a> : <span class="">{entry.institution.name}</span>}
+										</p>
+									</div>
+									<div>
+										<img class="max-h-12 lg:max-h-24 max-w-20 lg:max-w-32 brightness-0 invert" src={`/logos/${entry.institution.logo}`} alt={`${entry.institution.name} logo`}>
+									</div>
+								</div>
+								<ul class="italic text-xs lg:text-sm">
+									{entry.notes?.map((note) => {
+										return <li>- {note}</li>
+									})}
+								</ul>
+							</li>
+						)
+					})}
+				</ol>
+			</div>
+		</section>
+		<Separator bgClass="bg-tertiary" />
+
+		<section id="projects" class="bg-secondary text-tertiary">
+			<div class="max-w-screen-sm lg:max-w-screen-xl mx-auto px-5 py-20 lg:py-24">
+				<h3 class="scroll-fade font-display uppercase text-3xl lg:text-6xl mb-20">Projects</h3>
+				<ul class="text-quaternary">
+					{projects.map((project, index) => {
+						return (
+							<li class="scroll-fade mb-20 grid grid-cols-1 lg:grid-cols-5 gap-x-14 gap-y-4 lg:gap-y-10">
+								<Thumbnail bgImage={`/projects/${project.image}`} class={`${index % 2 ? "order-2" : "order-1"} col-span-3 hidden lg:block`}>
+									<img class="max-h-32 max-w-32" src={`/logos/${project.image}`} alt={`${project.name} logo`}>
+								</Thumbnail>
+								<div class={`${index % 2 ? "order-1" : "order-2"} col-span-2`}>
+									<h4 class="font-display text-2xl lg:text-5xl tracking-wide text-quaternary">{project.name}</h4>
+									<Thumbnail bgImage={`/projects/${project.image}`} class="lg:hidden h-56 mt-6">
+										<img class="max-h-32 max-w-32" src={`/logos/${project.image}`} alt={`${project.name} logo`}>
+									</Thumbnail>
+									<p class="text-md lg:text-lg leading-tight mt-6 lg:mt-8">{project.description}</p>
+									<p class="mt-6 lg:mt-8">Conditions:</p>
+									<ul class="italic text-xs lg:text-sm">
+										{project.conditions.map((condition) => {
+											return <li>- {condition}</li>
+										})}
+									</ul>
+								</div>
+								<div class="col-span-full flex flex-col lg:flex-row gap-4 lg:gap-10 justify-center items-center order-3">
+									<p class="text-sm lg:text-lg">
+										{project.url && <a class="underline underline-offset-2 decoration-quaternary/50 hover:decoration-quaternary" href={project.url}>See the project live</a>}
+									</p>
+									<div class="flex flex-wrap gap-3 items-center text-sm lg:text-lg">
+										Made with
+										<ul class="flex gap-3">
+											{project.tools.map((tool) => {
+												return (
+													<li class="bg-quaternary shadow-sm rounded-full p-2 w-8 h-8 lg:p-3 lg:w-12 lg:h-12 flex justify-center items-center">
+														{tool.logo
+															? <img class="h-full w-full" src={`https://cdn.simpleicons.org/${tool.logo}/5662e8`} alt={`${tool.name} logo`} title={tool.name} />
+															: <span>{tool.name}</span>
+														}
+													</li>
+												)
+											})}
+										</ul>
+									</div>
+								</div>
+							</li>
+						)
+					})}
+				</ul>
+			</div>
+		</section>
+		<Separator bgClass="bg-secondary" />
+
+		<section id="tools" class="bg-quaternary text-secondary">
+			<div class="max-w-screen-sm lg:max-w-screen-lg mx-auto px-5 py-20 lg:py-24">
+				<h3 class="scroll-fade font-display uppercase text-3xl lg:text-6xl mb-20">Tools</h3>
+				<h4 class="scroll-fade font-display text-2xl lg:text-5xl tracking-wide text-primary mb-8">Software and web development</h4>
+				<ul class="scroll-fade mb-20">
+					{skills.dev.map((tool) => {
+						return (
+							<li class="relative inline-block bg-quinary text-senary rounded-full text-sm lg:text-md px-2 lg:px-3 py-1 mt-4 mr-4 hover:bg-secondary hover:text-quinary group">
+								{tool.name}
+								{tool.logo && <img class="w-5 h-5 lg:w-7 lg:h-7 absolute -right-3 -top-3 lg:-right-4 lg:-top-4 pointer-events-none transition-all group-hover:-z-10 group-hover:right-0 group-hover:top-0 group-hover:opacity-0" src={`https://cdn.simpleicons.org/${tool.logo}/f86822`} alt={`${tool.name} logo`} title={tool.name} />}
+							</li>
+						)
+					})}
+				</ul>
+				<h4 class="scroll-fade font-display text-2xl lg:text-5xl tracking-wide text-primary mb-8">Audiovisual</h4>
+				<ul class="scroll-fade mb-20">
+					{skills.media.map((tool) => {
+						return (
+							<li class="relative inline-block bg-quinary text-senary rounded-full text-sm lg:text-md px-2 lg:px-3 py-1 mt-4 mr-4 hover:bg-secondary hover:text-quinary group">
+								{tool.name}
+								{tool.logo && <img class="w-5 h-5 lg:w-7 lg:h-7 absolute -right-3 -top-3 lg:-right-4 lg:-top-4 pointer-events-none transition-all group-hover:-z-10 group-hover:right-0 group-hover:top-0 group-hover:opacity-0" src={`https://cdn.simpleicons.org/${tool.logo}/f86822`} alt={`${tool.name} logo`} title={tool.name} />}
+							</li>
+						)
+					})}
+				</ul>
+				<h4 class="scroll-fade font-display text-2xl lg:text-5xl tracking-wide text-primary mb-8">Languages</h4>
+				<ul class="scroll-fade mb-20">
+					{skills.languages.map((tool) => {
+						return (
+							<li class="relative inline-block bg-quinary text-senary rounded-full text-sm lg:text-md px-2 lg:px-3 py-1 mt-4 mr-4 hover:bg-secondary hover:text-quinary group">
+								{tool.name}
+								<span set:html={tool.logo} class="text-lg lg:text-2xl absolute -right-3 -top-3 lg:-right-4 lg:-top-4 pointer-events-none transition-all group-hover:-z-10 group-hover:right-0 group-hover:top-0 group-hover:opacity-0" />
+							</li>
+						)
+					})}
+				</ul>
+			</div>
+		</section>
+		<Separator bgClass="bg-quaternary" />
+
+		<section id="contact" class="bg-senary text-quaternary bg-no-repeat bg-[length:180%] lg:bg-cover lg:bg-fixed bg-center bg-[url('/photos/bono.jpeg')]">
+			<div class="scroll-fade max-w-screen-sm lg:max-w-screen-lg mx-auto px-5 py-20 lg:py-24">
+				<h3 class="drop-shadow-md font-display uppercase text-3xl lg:text-6xl mb-20">Contact</h3>
+				<p class="drop-shadow-md font-display text-2xl lg:text-5xl">
+					<a href={linkedIn} target="_blank" class="underline underline-offset-4 decoration-2 decoration-quinary/50 hover:decoration-quinary">LinkedIn</a>
+				</p>
+			</div>
+			<footer class="px-8 py-4 lg:mt-[30vh]">
+				<a href="#">
+					<ArrowUpCircle class="w-12 mx-auto my-2 hover:animate-spin-once" />
+				</a>
+				<p class="drop-shadow-md text-center">{fullName} - {copyright}</p>
+			</footer>
+		</section>
+	</main>
+</Layout>
