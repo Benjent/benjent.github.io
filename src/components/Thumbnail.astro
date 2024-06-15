@@ -8,7 +8,7 @@ const { bgImage, class: classNames } = Astro.props;
 ---
 
 <div style={{'--image-url': `url(${bgImage})`}} class={`flex-1 bg-[image:var(--image-url)] bg-cover rounded-lg shadow-[0_5px_8px_#14141499] ${classNames}`}>
-	<div class="flex justify-center items-center bg-black/60 h-full w-full rounded-lg opacity-0 hover:opacity-100">
+	<div class="flex justify-center items-center bg-black/60 h-full w-full rounded-lg transition duration-200 opacity-0 hover:opacity-100">
 		<slot />
 	</div>
 </div>
