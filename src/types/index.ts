@@ -22,7 +22,7 @@ export type Experience = {
 export type Institution = {
 	name: string;
 	logo: string;
-	url: string;
+	url?: string;
 	location: string;
 };
 
@@ -38,7 +38,7 @@ export type Project = {
 	image: string;
 	name: string;
 	description: string;
-	url: string;
+	url?: string;
 	conditions: string[];
 	tools: Tool[];
 };

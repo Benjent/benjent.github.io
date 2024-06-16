@@ -165,12 +165,18 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 						return (
 							<li class="scroll-fade mb-20 grid grid-cols-1 lg:grid-cols-5 gap-x-14 gap-y-4 lg:gap-y-10">
 								<Thumbnail bgImage={`/projects/${project.image}`} class={`${index % 2 ? "order-2" : "order-1"} col-span-3 hidden lg:block`}>
-									<img class="max-h-32 max-w-32" src={`/logos/${project.image}`} alt={`${project.name} logo`}>
+									{project.name === 'Nice Resume'
+										? <p class="max-w-64 bg-gradient-to-br from-blue-700 to-pink-500 text-transparent bg-clip-text text-center text-4xl font-black tracking-widest uppercase">{project.name}</p>
+										: <img class="max-h-32 max-w-32" src={`/logos/${project.image}`} alt={`${project.name} logo`}>
+									}
 								</Thumbnail>
 								<div class={`${index % 2 ? "order-1" : "order-2"} col-span-2`}>
 									<h4 class="font-display text-2xl lg:text-5xl tracking-wide text-quaternary">{project.name}</h4>
 									<Thumbnail bgImage={`/projects/${project.image}`} class="lg:hidden h-56 mt-6">
-										<img class="max-h-32 max-w-32" src={`/logos/${project.image}`} alt={`${project.name} logo`}>
+										{project.name === 'Nice Resume'
+										? <p class="max-w-44 bg-gradient-to-br from-blue-700 to-pink-500 text-transparent bg-clip-text text-center text-2xl font-black tracking-widest uppercase">{project.name}</p>
+										: <img class="max-h-32 max-w-32" src={`/logos/${project.image}`} alt={`${project.name} logo`}>
+									}
 									</Thumbnail>
 									<p class="text-md lg:text-lg leading-tight mt-6 lg:mt-8">{project.description}</p>
 									<p class="mt-6 lg:mt-8">Conditions:</p>

@@ -67,18 +67,29 @@ const projects: Project[] = [
 			{ name: "GitHub", logo: "githubactions" },
 		],
 	},
-	// {
-	//     image: "nice-resume.png", // TODO
-	//     name: "Nice Resume",
-	//     description: "Resume builder.", // TODO
-	//     url: "https://benjent.github.io/nice-resume", // TODO
-	//     conditions: [
-	//         "Zero-hosting-cost",
-	//         "Zero-deployment-cost",
-	//         "Autodeployment",
-	//     ],
-	//     tools: [{ name: "Vue.js", logo: "vue.js" }, { name: "Tailwind CSS", logo: "tailwindcss" }, { name: "TS", logo: "typescript" }, { name: "GitHub", logo: "githubactions" }],
-	// },
+	{
+		image: "nice-resume.png",
+		name: "Nice Resume",
+		description:
+			"[Work in progress...] Resume and cover letter builder with themes. Let the user customize and print documents that match his/her own brand design.",
+		// url: "https://benjent.github.io/nice-resume", // TODO
+		conditions: [
+			"Freedom of customization (no strict theme)",
+			"Real-time preview of data edition",
+			"Internationalization",
+			"Session saving and export",
+			"JSON Resume import and compatible export",
+			// "Zero-hosting-cost",
+			// "Zero-deployment-cost",
+			"Autodeployment",
+		],
+		tools: [
+			{ name: "Vue.js", logo: "vue.js" },
+			{ name: "Tailwind CSS", logo: "tailwindcss" },
+			{ name: "TS", logo: "typescript" },
+			{ name: "GitHub", logo: "githubactions" },
+		],
+	},
 ];
 
 export default projects;
