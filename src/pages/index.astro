@@ -69,7 +69,7 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 										<h4 class="font-display text-2xl lg:text-5xl tracking-wide">{entry.position}</h4>
 										<p class="font-display text-senary text-xl lg:text-3xl tracking-wide lg:tracking-widest">
 											{entry.company.url
-												? <a class="text-secondary" href={entry.company.url}>{entry.company.name}</a>
+												? <a class="text-secondary hover:underline hover:underline-offset-4 hover:decoration-secondary hover:decoration-2" href={entry.company.url}>{entry.company.name}</a>
 												: <span>{entry.company.name}</span>
 											}
 										</p>
