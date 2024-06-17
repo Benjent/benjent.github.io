@@ -23,6 +23,7 @@ const education: Education[] = [
 			logo: "iut-dijon.png",
 			url: "https://iutdijon.u-bourgogne.fr/www/formations/buts/but-mmi.html",
 		},
+		notes: ["Third semester internship at Parachute"],
 	},
 	{
 		title: "Science",
@@ -34,6 +35,7 @@ const education: Education[] = [
 			logo: "de-gaulle.png",
 			url: "http://www.lycee-internationalcdg.fr/",
 		},
+		notes: ["English and Computer Science majors", "Music module"],
 	},
 ];
 

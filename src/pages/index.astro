@@ -123,16 +123,16 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 										<p class="text-sm lg:text-base">
 											{entry.institution.url ? <a class="underline underline-offset-2 decoration-senary/50 hover:decoration-senary" href={entry.institution.url}>{entry.institution.name}</a> : <span class="">{entry.institution.name}</span>}
 										</p>
+										<ul class="italic text-xs lg:text-sm">
+											{entry.notes?.map((note) => {
+												return <li>- {note}</li>
+											})}
+										</ul>
 									</div>
 									<div>
 										<img class="max-h-12 lg:max-h-24 max-w-20 lg:max-w-32 brightness-0 invert" src={`/logos/${entry.institution.logo}`} alt={`${entry.institution.name} logo`}>
 									</div>
 								</div>
-								<ul class="italic text-xs lg:text-sm">
-									{entry.notes?.map((note) => {
-										return <li>- {note}</li>
-									})}
-								</ul>
 							</li>
 						)
 					})}
