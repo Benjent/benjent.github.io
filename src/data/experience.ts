@@ -13,9 +13,12 @@ const experience: Experience[] = [
 		about:
 			"Software development and website generation with digital carbon footprint reduction.",
 		tasks: [
+			"Full-stack development and database management",
 			"Continuous integration and delivery automation",
 			"Technical debt analysis and removal",
+			"No-code integration",
 			"Customer relation and project estimate",
+			"UI design",
 		],
 		tools: [
 			{ name: "React", logo: "react" },
