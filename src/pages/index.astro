@@ -18,15 +18,17 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 
 <Layout title={`${fullName} - Webpage`}>
 	<main>
-		<section class="h-[82vh] pt-[200px] pb-[300px]">
-		<div class="unstable opacity-0 absolute border-t-[5px] border-primary w-[35%]" />
-			<h1 class="fade animate-shake font-display uppercase text-4xl lg:text-6xl tracking-wider font-bold text-center pt-6 mb-2">{fullName}</h1>
-			<h2 class="fade font-display uppercase text-2xl lg:text-[2.75rem] leading-[1.15] tracking-widest font-bold text-center">
-				<div class="tinsel">Software engineer</div>
-				<div class="tinsel">Front-end architect</div>
-				<div class="tinsel">Full-stack web developer</div>
-				</h2>
-		<div class="unstable opacity-0 absolute border-b-[5px] border-primary w-[35%] pb-4" />
+		<section class="h-[82vh] flex flex-col justify-center px-5 py-20 lg:py-24 pt-8 lg:pt-12">
+			<div class="relative">
+				<div class="unstable opacity-0 absolute border-t-[5px] border-primary w-[35%]" />
+					<h1 class="fade animate-shake font-display uppercase text-4xl lg:text-6xl tracking-wider font-bold text-center pt-6 mb-2">{fullName}</h1>
+					<h2 class="fade font-display uppercase text-2xl lg:text-[2.75rem] leading-[1.15] tracking-widest font-bold text-center">
+						<div class="tinsel">Software engineer</div>
+						<div class="tinsel">Front-end architect</div>
+						<div class="tinsel">Full-stack web developer</div>
+					</h2>
+				<div class="unstable opacity-0 absolute border-b-[5px] border-primary w-[35%] pb-4" />
+			</div>
 		</section>
 		<Separator bgClass="bg-quinary" />
 
