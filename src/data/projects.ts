@@ -1,4 +1,5 @@
 import type { Project } from "../types";
+import { d3, githubActions, scss, tailwind, ts, vue } from "./tools";
 
 const projects: Project[] = [
 	{
@@ -17,11 +18,7 @@ const projects: Project[] = [
 			"Autodeployment",
 			"Responsive design",
 		],
-		tools: [
-			{ name: "Vue.js", logo: "vue.js" },
-			{ name: "SCSS", logo: "sass" },
-			{ name: "GitHub Actions", logo: "githubactions" },
-		],
+		tools: [vue, scss, githubActions],
 	},
 	{
 		image: "nanovizer.png",
@@ -39,12 +36,7 @@ const projects: Project[] = [
 			"D3.js",
 			"Autodeployment",
 		],
-		tools: [
-			{ name: "Vue.js", logo: "vue.js" },
-			{ name: "SCSS", logo: "sass" },
-			{ name: "D3", logo: "d3.js" },
-			{ name: "GitHub Actions", logo: "githubactions" },
-		],
+		tools: [vue, scss, d3, githubActions],
 	},
 	{
 		image: "attendance-sheet.png",
@@ -61,11 +53,7 @@ const projects: Project[] = [
 			"Tailwind CSS",
 			"Autodeployment",
 		],
-		tools: [
-			{ name: "Vue.js", logo: "vue.js" },
-			{ name: "Tailwind CSS", logo: "tailwindcss" },
-			{ name: "GitHub Actions", logo: "githubactions" },
-		],
+		tools: [vue, tailwind, githubActions],
 	},
 	{
 		image: "nice-resume.png",
@@ -83,12 +71,7 @@ const projects: Project[] = [
 			// "Zero-deployment-cost",
 			"Autodeployment",
 		],
-		tools: [
-			{ name: "Vue.js", logo: "vue.js" },
-			{ name: "Tailwind CSS", logo: "tailwindcss" },
-			{ name: "TS", logo: "typescript" },
-			{ name: "GitHub Actions", logo: "githubactions" },
-		],
+		tools: [vue, tailwind, ts, githubActions],
 	},
 ];
 
