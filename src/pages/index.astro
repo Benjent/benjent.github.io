@@ -127,18 +127,18 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 		</section>
 		<Separator bgClass="bg-quinary" />
 
-		<section id="education" class="bg-tertiary text-secondary">
+		<section id="education" class="bg-tertiary text-senary">
 			<div class="max-w-screen-sm lg:max-w-screen-lg mx-auto px-5 py-20 lg:py-24">
-				<h3 class="scroll-fade font-display uppercase text-3xl lg:text-6xl mb-20">Education</h3>
+				<h3 class="scroll-fade font-display uppercase text-3xl lg:text-6xl mb-20 text-secondary">Education</h3>
 				<ol>
 					{education.map((entry) => {
 						return (
 							<li class="scroll-fade mb-20">
 								<div class="flex justify-between">
 									<div>
-										<p class="text-senary text-sm lg:text-base">{entry.period}</p>
-										<h4 class="text-senary text-base lg:text-xl leading-tight"><span class="text-secondary">{entry.title}</span> {entry.diploma}</h4>
-										<p class="text-senary text-sm lg:text-base">
+										<p class="text-sm lg:text-base">{entry.period}</p>
+										<h4 class="text-base lg:text-xl leading-tight"><span class="text-secondary">{entry.title}</span> {entry.diploma}</h4>
+										<p class="text-sm lg:text-base">
 											{entry.institution.url ? <a class="underline underline-offset-2 decoration-senary/50 hover:decoration-senary" href={entry.institution.url}>{entry.institution.name}</a> : <span class="">{entry.institution.name}</span>}
 										</p>
 									</div>
