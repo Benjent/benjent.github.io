@@ -43,7 +43,7 @@ const projects: Project[] = [
 			{ name: "Vue.js", logo: "vue.js" },
 			{ name: "SCSS", logo: "sass" },
 			{ name: "D3", logo: "d3.js" },
-			{ name: "GitHub", logo: "githubactions" },
+			{ name: "GitHub Actions", logo: "githubactions" },
 		],
 	},
 	{
@@ -64,7 +64,7 @@ const projects: Project[] = [
 		tools: [
 			{ name: "Vue.js", logo: "vue.js" },
 			{ name: "Tailwind CSS", logo: "tailwindcss" },
-			{ name: "GitHub", logo: "githubactions" },
+			{ name: "GitHub Actions", logo: "githubactions" },
 		],
 	},
 	{
@@ -87,7 +87,7 @@ const projects: Project[] = [
 			{ name: "Vue.js", logo: "vue.js" },
 			{ name: "Tailwind CSS", logo: "tailwindcss" },
 			{ name: "TS", logo: "typescript" },
-			{ name: "GitHub", logo: "githubactions" },
+			{ name: "GitHub Actions", logo: "githubactions" },
 		],
 	},
 ];

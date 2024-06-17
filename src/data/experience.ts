@@ -32,7 +32,7 @@ const experience: Experience[] = [
 			{ name: "Tailwind CSS", logo: "tailwindcss" },
 			{ name: "Docusaurus", logo: "docusaurus" },
 			{ name: "VitePress", logo: "vitepress" },
-			{ name: "GitHub", logo: "github" },
+			{ name: "GitHub Actions", logo: "githubactions" },
 			{ name: "Docker", logo: "docker" },
 		],
 		// projects: [
