@@ -6,6 +6,7 @@ export type Tool = {
 export type Company = {
 	name: string;
 	logo: string;
+	logoAlt?: string;
 	url?: string;
 	location: string;
 };

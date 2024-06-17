@@ -167,16 +167,25 @@ const experience: Experience[] = [
 			{ name: "Grunt", logo: "grunt" },
 		],
 	},
-	// {
-	// 	position: "Co-manager and polyvalent musician",
-	// 	company: {
-	// 		name: "Music Act Fontaine",
-	// 		logo: "fontaine.png",
-	// 		location: "Fontaine-lès-Dijon, France",
-	// 	},
-	// 	period: "Oct 2010 - June 2013",
-	// 	about: "Live concert and rehearsal organisation.",
-	// },
+	{
+		position: "Co-manager and polyvalent musician",
+		company: {
+			name: "Music Act Fontaine",
+			logo: "fontaine.png",
+			logoAlt: "Fontaine-lès-Dijon logo",
+			location: "Fontaine-lès-Dijon, France",
+		},
+		period: "Oct 2010 - June 2013",
+		about: "Live concert and rehearsal organisation.",
+		tasks: [
+			"Played the guitar, the drums and sung",
+			"Filled the bass guitar position when needed",
+		],
+		tools: [
+			// { name: "Guitar Pro", logo: "guitarpro" },
+			{ name: "Audacity", logo: "audacity" },
+		],
+	},
 ];
 
 export default experience;
