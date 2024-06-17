@@ -35,21 +35,21 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 		<section id="profile" class="bg-primary text-quinary relative">
 			<div class="max-w-screen-sm lg:max-w-screen-lg mx-auto px-5 py-20 lg:py-24">
 				<h3 class="scroll-fade font-display uppercase text-3xl lg:text-6xl mb-20">Profile</h3>
-				<p class="scroll-fade text-md lg:text-xl leading-tight mb-6">
+				<p class="scroll-fade text-base lg:text-xl leading-tight mb-6">
 					<span class="float-left text-6xl lg:text-8xl leading-[0.25] lg:leading-3 text-secondary">“</span>
 					I love web technologies as well as designing user-friendly interfaces to present data.
 				</p>
-				<p class="scroll-fade text-md lg:text-xl leading-tight mb-6">
+				<p class="scroll-fade text-base lg:text-xl leading-tight mb-6">
 					I prefer developing webapps with a software approach rather than websites; if possible, intervening in the whole stack. 
 				</p>
-				<p class="scroll-fade text-md lg:text-xl leading-tight mb-6">
+				<p class="scroll-fade text-base lg:text-xl leading-tight mb-6">
 					I enjoy designing the front-end architecture to make sure a corporate identity and style guide is correctly implemented. While not being a pixel-perfect enthusiast, I would rather focus on storybooks, UI kits or design systems.  
 				</p>
-				<p class="scroll-fade text-md lg:text-xl leading-tight mb-6">
+				<p class="scroll-fade text-base lg:text-xl leading-tight mb-6">
 					When it comes to building large applications for a brand, I am heavily influenced by <a class="text-secondary underline underline-offset-4 decoration-2 decoration-secondary/50 hover:decoration-secondary" href="http://smacss.com/"><abbr title="Scalable and Modular Architecture for Cascading Style Sheets">SMACSS</abbr></a> and <a class="text-secondary underline underline-offset-4 decoration-2 decoration-secondary/50 hover:decoration-secondary" href="http://getbem.com/"><abbr title="Block Element Modifier">BEM</abbr></a> frameworks (with a less strict approach fueled by UI components) and generally speaking have a preference for business classes topped with utility classes over the other way around.
             		I do love using <a class="text-secondary underline underline-offset-4 decoration-2 decoration-secondary/50 hover:decoration-secondary" href="https://tailwindcss.com/">Tailwind CSS</a> when integrating smaller-sized web applications.
 				</p>
-				<p class="scroll-fade text-md lg:text-xl leading-tight mb-6">
+				<p class="scroll-fade text-base lg:text-xl leading-tight mb-6">
 					My favorite front-end framework is <a class="text-secondary underline underline-offset-4 decoration-2 decoration-secondary/50 hover:decoration-secondary" href="https://vuejs.org/">Vue.js</a> and I like having a JS/TS-written back-end.
 				</p>
 				<img class="absolute z-20 right-[8%] -bottom-[80px] lg:-bottom-[140px] w-28 lg:w-64 rounded-full border-4 lg:border-[6px] border-quinary" src="/photos/square-briac.jpg" alt="Profile photo" />
@@ -60,14 +60,14 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 		<section id="experience" class="bg-quinary text-primary">
 			<div class="max-w-screen-sm lg:max-w-screen-lg mx-auto px-5 py-20 lg:py-24">
 				<h3 class="scroll-fade font-display uppercase text-3xl lg:text-6xl">Professional experience</h3>
-				<p class="scroll-fade text-md lg:text-xl mb-20">({yearsOfExperience}+ years)</p>
+				<p class="scroll-fade text-base lg:text-xl mb-20">({yearsOfExperience}+ years)</p>
 				<ol>
 					{experience.map((entry) => {
 						return (
 							<li class="scroll-fade mb-20">
 								<div class="flex justify-between">
 									<div>
-										<p class="text-sm lg:text-md">{entry.period}</p>
+										<p class="text-sm lg:text-base">{entry.period}</p>
 										<h4 class="font-display text-2xl lg:text-5xl tracking-wide">{entry.position}</h4>
 										<p class="font-display text-senary text-xl lg:text-3xl tracking-wide lg:tracking-widest">
 											{entry.company.url
@@ -80,13 +80,13 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 										<img class="max-h-12 lg:max-h-24 max-w-20 lg:max-w-32" src={`/logos/${entry.company.logo}`} alt={`${entry.company.name} logo`}>
 									</div>
 								</div>
-								<p class="text-senary text-md lg:text-lg leading-tight mt-4">{entry.about}</p>
+								<p class="text-senary text-base lg:text-lg leading-tight mt-4">{entry.about}</p>
 								<ul class="text-senary italic text-xs lg:text-sm">
 									{entry.tasks.map((task) => {
 										return <li>- {task}</li>
 									})}
 								</ul>
-								<div class="text-senary flex flex-wrap gap-3 items-center text-md lg:text-lg mt-4">
+								<div class="text-senary flex flex-wrap gap-3 items-center text-base lg:text-lg mt-4">
 									Tools used
 									<ul class="flex gap-3 flex-wrap">
 										{entry.tools.map((tool) => {
@@ -107,7 +107,7 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 					<li class="scroll-fade mb-20">
 						<div class="flex justify-between">
 							<div>
-								<p class="text-sm lg:text-md">Oct 2010 - June 2013</p>
+								<p class="text-sm lg:text-base">Oct 2010 - June 2013</p>
 								<h4 class="font-display text-2xl lg:text-5xl tracking-wide">Co-manager and polyvalent musician</h4>
 								<p class="font-display text-senary text-xl lg:text-3xl tracking-wide lg:tracking-widest">
 									Music Act Fontaine
@@ -117,7 +117,7 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 								<img class="max-h-12 lg:max-h-24 max-w-20 lg:max-w-32" src="/logos/fontaine.png" alt="Fontaine-lès-Dijon logo">
 							</div>
 						</div>
-						<p class="text-senary text-md lg:text-lg leading-tight mt-4">Live concert and rehearsal organisation.</p>
+						<p class="text-senary text-base lg:text-lg leading-tight mt-4">Live concert and rehearsal organisation.</p>
 						<ul class="text-senary italic text-xs lg:text-sm">
 							<li>- Played the guitar and the drums, sung, filled the bass guitar position when needed</li>
 						</ul>
@@ -136,9 +136,9 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 							<li class="scroll-fade mb-20">
 								<div class="flex justify-between">
 									<div>
-										<p class="text-senary text-sm lg:text-md">{entry.period}</p>
-										<h4 class="text-senary text-md lg:text-xl leading-tight"><span class="text-secondary">{entry.title}</span> {entry.diploma}</h4>
-										<p class="text-senary text-sm lg:text-md">
+										<p class="text-senary text-sm lg:text-base">{entry.period}</p>
+										<h4 class="text-senary text-base lg:text-xl leading-tight"><span class="text-secondary">{entry.title}</span> {entry.diploma}</h4>
+										<p class="text-senary text-sm lg:text-base">
 											{entry.institution.url ? <a class="underline underline-offset-2 decoration-senary/50 hover:decoration-senary" href={entry.institution.url}>{entry.institution.name}</a> : <span class="">{entry.institution.name}</span>}
 										</p>
 									</div>
@@ -180,7 +180,7 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 										: <img class="max-h-32 max-w-32" src={`/logos/${project.image}`} alt={`${project.name} logo`}>
 									}
 									</Thumbnail>
-									<p class="text-md lg:text-lg leading-tight mt-6 lg:mt-8">{project.description}</p>
+									<p class="text-base lg:text-lg leading-tight mt-6 lg:mt-8">{project.description}</p>
 									<p class="mt-6 lg:mt-8">Conditions:</p>
 									<ul class="italic text-xs lg:text-sm">
 										{project.conditions.map((condition) => {
@@ -223,7 +223,7 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 				<ul class="scroll-fade mb-20">
 					{skills.dev.map((tool) => {
 						return (
-							<li class="relative inline-block bg-quinary text-senary rounded-full text-sm lg:text-md px-2 lg:px-3 py-1 mt-4 mr-4 hover:bg-secondary hover:text-quinary group">
+							<li class="relative inline-block bg-quinary text-senary rounded-full text-sm lg:text-base px-2 lg:px-3 py-1 mt-4 mr-4 hover:bg-secondary hover:text-quinary group">
 								{tool.name}
 								{tool.logo && <img class="w-5 h-5 lg:w-7 lg:h-7 absolute -right-3 -top-3 lg:-right-4 lg:-top-4 pointer-events-none transition-all group-hover:-z-10 group-hover:right-0 group-hover:top-0 group-hover:opacity-0" src={`https://cdn.simpleicons.org/${tool.logo}/f86822`} alt={`${tool.name} logo`} title={tool.name} />}
 							</li>
@@ -234,7 +234,7 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 				<ul class="scroll-fade mb-20">
 					{skills.media.map((tool) => {
 						return (
-							<li class="relative inline-block bg-quinary text-senary rounded-full text-sm lg:text-md px-2 lg:px-3 py-1 mt-4 mr-4 hover:bg-secondary hover:text-quinary group">
+							<li class="relative inline-block bg-quinary text-senary rounded-full text-sm lg:text-base px-2 lg:px-3 py-1 mt-4 mr-4 hover:bg-secondary hover:text-quinary group">
 								{tool.name}
 								{tool.logo && <img class="w-5 h-5 lg:w-7 lg:h-7 absolute -right-3 -top-3 lg:-right-4 lg:-top-4 pointer-events-none transition-all group-hover:-z-10 group-hover:right-0 group-hover:top-0 group-hover:opacity-0" src={`https://cdn.simpleicons.org/${tool.logo}/f86822`} alt={`${tool.name} logo`} title={tool.name} />}
 							</li>
@@ -245,7 +245,7 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 				<ul class="scroll-fade mb-20">
 					{skills.languages.map((tool) => {
 						return (
-							<li class="relative inline-block bg-quinary text-senary rounded-full text-sm lg:text-md px-2 lg:px-3 py-1 mt-4 mr-4 hover:bg-secondary hover:text-quinary group">
+							<li class="relative inline-block bg-quinary text-senary rounded-full text-sm lg:text-base px-2 lg:px-3 py-1 mt-4 mr-4 hover:bg-secondary hover:text-quinary group">
 								{tool.name}
 								<span set:html={tool.logo} class="text-lg lg:text-2xl absolute -right-3 -top-3 lg:-right-4 lg:-top-4 pointer-events-none transition-all group-hover:-z-10 group-hover:right-0 group-hover:top-0 group-hover:opacity-0" />
 							</li>
@@ -267,7 +267,7 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 				<a href="#">
 					<ArrowUpCircle class="w-12 mx-auto my-2 hover:animate-spin-once" />
 				</a>
-				<p class="drop-shadow-md text-center text-xs lg:text-md">{fullName} - {copyright}</p>
+				<p class="drop-shadow-md text-center text-xs lg:text-base">{fullName} - {copyright}</p>
 			</footer>
 		</section>
 	</main>
