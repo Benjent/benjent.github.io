@@ -25,6 +25,10 @@ export const guitarPro: Tool = {
 	name: "Guitar Pro",
 	logo: "guitarpro",
 };
+export const headlessUi: Tool = {
+	name: "Headless UI",
+	logo: "headlessui",
+};
 export const illustrator: Tool = {
 	name: "Illustrator",
 	logo: "adobeillustrator",

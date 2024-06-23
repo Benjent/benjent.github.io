@@ -1,5 +1,14 @@
 import type { Project } from "../types";
-import { d3, githubActions, scss, tailwind, ts, vue } from "./tools";
+import {
+	d3,
+	githubActions,
+	headlessUi,
+	nuxt,
+	scss,
+	tailwind,
+	ts,
+	vue,
+} from "./tools";
 
 const projects: Project[] = [
 	{
@@ -62,16 +71,18 @@ const projects: Project[] = [
 			"[Work in progress...] Resume and cover letter builder with themes. Let the user customize and print documents that match his/her own brand design.",
 		// url: "https://benjent.github.io/nice-resume", // TODO
 		conditions: [
-			"Freedom of customization (no strict theme)",
+			"Template selection",
+			"Freedom of customization (not just colors and font sizes)",
 			"Real-time preview of data edition",
 			"Internationalization",
 			"Session saving and export",
 			"JSON Resume import and compatible export",
 			// "Zero-hosting-cost",
 			// "Zero-deployment-cost",
+			"Nuxt.js",
 			"Autodeployment",
 		],
-		tools: [vue, tailwind, ts, githubActions],
+		tools: [vue, nuxt, headlessUi, tailwind, ts, githubActions],
 	},
 ];
 
