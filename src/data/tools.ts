@@ -39,6 +39,7 @@ export const jest: Tool = { name: "Jest", logo: "jest" };
 export const js: Tool = { name: "JS", logo: "javascript" };
 export const mapbox: Tool = { name: "Mapbox", logo: "mapbox" };
 export const metabase: Tool = { name: "Metabase", logo: "metabase" };
+export const n8n: Tool = { name: "n8n", logo: "n8n" };
 export const next: Tool = { name: "Next", logo: "next.js" };
 export const node: Tool = { name: "Node", logo: "node.js" };
 export const nuxt: Tool = { name: "Nuxt.js", logo: "nuxt.js" };
