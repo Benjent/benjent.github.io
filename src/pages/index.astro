@@ -10,6 +10,7 @@ import Layout from "../layouts/Layout.astro";
 
 const fullName = "Benjamin Morvan";
 const linkedIn = "https://www.linkedin.com/in/benjamin-morvan/";
+const malt = "https://www.malt.fr/profile/benjaminmorvan";
 const copyright = `${new Date().getFullYear()}`;
 const currentYear = new Date().getFullYear();
 const experienceStartYear = new Date(2015, 0).getFullYear();
@@ -241,8 +242,11 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 		<section id="contact" class="bg-senary text-quaternary bg-no-repeat bg-[length:180%] lg:bg-cover lg:bg-fixed bg-center bg-[url('/photos/bono.jpeg')]">
 			<div class="scroll-fade max-w-screen-sm lg:max-w-screen-lg mx-auto px-5 py-20 lg:py-24">
 				<h3 class="drop-shadow-md font-display uppercase text-3xl lg:text-6xl mb-20">Contact</h3>
-				<p class="drop-shadow-md font-display text-2xl lg:text-5xl">
+				<p class="drop-shadow-md font-display text-2xl lg:text-5xl mb-1 lg:mb-8">
 					<a href={linkedIn} target="_blank" class="underline underline-offset-4 decoration-2 decoration-quinary/50 hover:decoration-quinary">LinkedIn</a>
+				</p>
+				<p class="drop-shadow-md font-display text-2xl lg:text-5xl mb-1 lg:mb-8">
+					<a href={malt} target="_blank" class="underline underline-offset-4 decoration-2 decoration-quinary/50 hover:decoration-quinary">Malt</a>
 				</p>
 			</div>
 			<footer class="px-8 py-4 lg:mt-[30vh]">
