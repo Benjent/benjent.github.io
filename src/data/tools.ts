@@ -33,6 +33,10 @@ export const illustrator: Tool = {
 	name: "Illustrator",
 	logo: "adobeillustrator",
 };
+export const inkscape: Tool = {
+	name: "Inkscape",
+	logo: "inkscape",
+};
 export const jasmine: Tool = { name: "Jasmine", logo: "jasmine" };
 export const java: Tool = { name: "Java", logo: "java" };
 export const jest: Tool = { name: "Jest", logo: "jest" };

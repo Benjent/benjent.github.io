@@ -6,6 +6,7 @@ import {
 	docker,
 	githubActions,
 	illustrator,
+	inkscape,
 	jest,
 	js,
 	next,
@@ -60,6 +61,7 @@ const dev: Tool[] = [
 
 const media: Tool[] = [
 	audacity,
+	inkscape,
 	illustrator,
 	photoshop,
 	// { name: "InDesign", logo: "adobeindesign" },
