@@ -2,6 +2,7 @@ import type { Tool } from "../types";
 import {
 	afterEffects,
 	audacity,
+	baserow,
 	d3,
 	docker,
 	githubActions,
@@ -55,12 +56,13 @@ const dev: Tool[] = [
 	wordPress,
 	// node,
 	python,
-	// baserow,
+	baserow,
 	{ name: "SQL" },
 ];
 
 const media: Tool[] = [
 	audacity,
+	// Guitarpro
 	inkscape,
 	illustrator,
 	photoshop,
