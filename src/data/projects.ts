@@ -1,9 +1,13 @@
 import type { Project } from "../types";
 import {
+	bulma,
 	d3,
+	docker,
 	githubActions,
 	headlessUi,
+	mapbox,
 	nuxt,
+	ruby,
 	scss,
 	tailwind,
 	ts,
@@ -83,6 +87,20 @@ const projects: Project[] = [
 			"Autodeployment",
 		],
 		tools: [vue, nuxt, headlessUi, tailwind, ts, githubActions],
+	},
+	{
+		image: "ocean-plastic-tracker.png",
+		name: "Ocean Plastic Tracker",
+		description:
+			"Web application allowing users to visualize and report pre-defined marine debris on the coast. I help the developers maintain the front-end and migrate from Vue.js v1 to v3.",
+		url: "https://oceanplastictracker.com",
+		conditions: [
+			"Cartography",
+			"Internationalization",
+			"Authentication",
+			"Vue.js 3",
+		],
+		tools: [vue, bulma, scss, mapbox, ruby, docker],
 	},
 ];
 
