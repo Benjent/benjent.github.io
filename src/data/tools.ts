@@ -17,6 +17,7 @@ export const d3: Tool = { name: "D3", logo: "d3.js" };
 export const django: Tool = { name: "Django", logo: "django" };
 export const docker: Tool = { name: "Docker", logo: "docker" };
 export const docusaurus: Tool = { name: "Docusaurus", logo: "docusaurus" };
+export const gimp: Tool = { name: "GIMP", logo: "gimp" };
 export const githubActions: Tool = {
 	name: "GitHub Actions",
 	logo: "githubactions",

@@ -24,6 +24,7 @@ import {
 	vite,
 	vue,
 	wordPress,
+	gimp,
 } from "./tools";
 
 const dev: Tool[] = [
@@ -65,6 +66,7 @@ const media: Tool[] = [
 	audacity,
 	guitarPro,
 	inkscape,
+	gimp,
 	illustrator,
 	photoshop,
 	// { name: "InDesign", logo: "adobeindesign" },
