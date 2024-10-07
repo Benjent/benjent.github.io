@@ -5,6 +5,7 @@ import {
 	baserow,
 	d3,
 	docker,
+	guitarPro,
 	githubActions,
 	illustrator,
 	inkscape,
@@ -62,7 +63,7 @@ const dev: Tool[] = [
 
 const media: Tool[] = [
 	audacity,
-	// Guitarpro
+	guitarPro,
 	inkscape,
 	illustrator,
 	photoshop,

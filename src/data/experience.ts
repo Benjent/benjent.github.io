@@ -13,6 +13,7 @@ import {
 	githubActions,
 	graphQl,
 	grunt,
+	guitarPro,
 	illustrator,
 	jasmine,
 	mapbox,
@@ -211,10 +212,7 @@ const experience: Experience[] = [
 			"Played the guitar, the drums and sung",
 			"Filled the bass guitar position when needed",
 		],
-		tools: [
-			// guitarPro,
-			audacity,
-		],
+		tools: [guitarPro, audacity],
 	},
 ];
 
