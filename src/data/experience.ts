@@ -108,7 +108,7 @@ const experience: Experience[] = [
 	{
 		position: "Full-stack web developer",
 		company: {
-			name: "Octopus Energy France",
+			name: "Octopus Energy",
 			logo: "octopus.png",
 			url: "https://octopusenergy.fr/",
 			location: "Paris, France",
