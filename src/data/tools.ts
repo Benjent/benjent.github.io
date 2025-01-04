@@ -2,7 +2,6 @@ import type { Tool } from "../types";
 
 export const afterEffects: Tool = {
 	name: "After Effects",
-	logo: "adobeaftereffects",
 };
 export const angular: Tool = { name: "Angular", logo: "angular" };
 export const astro: Tool = { name: "Astro", logo: "astro" };
@@ -13,7 +12,7 @@ export const brevo: Tool = { name: "Brevo", logo: "brevo" };
 export const bulma: Tool = { name: "Bulma", logo: "bulma" };
 export const cesium: Tool = { name: "Cesium", logo: "cesium" };
 export const cypress: Tool = { name: "Cypress", logo: "cypress" };
-export const d3: Tool = { name: "D3", logo: "d3.js" };
+export const d3: Tool = { name: "D3", logo: "d3" };
 export const django: Tool = { name: "Django", logo: "django" };
 export const docker: Tool = { name: "Docker", logo: "docker" };
 export const docusaurus: Tool = { name: "Docusaurus", logo: "docusaurus" };
@@ -34,7 +33,6 @@ export const headlessUi: Tool = {
 };
 export const illustrator: Tool = {
 	name: "Illustrator",
-	logo: "adobeillustrator",
 };
 export const inkscape: Tool = {
 	name: "Inkscape",
@@ -50,8 +48,8 @@ export const metabase: Tool = { name: "Metabase", logo: "metabase" };
 export const n8n: Tool = { name: "n8n", logo: "n8n" };
 export const next: Tool = { name: "Next", logo: "next.js" };
 export const node: Tool = { name: "Node", logo: "node.js" };
-export const nuxt: Tool = { name: "Nuxt.js", logo: "nuxt.js" };
-export const photoshop: Tool = { name: "Photoshop", logo: "adobephotoshop" };
+export const nuxt: Tool = { name: "Nuxt.js", logo: "nuxt" };
+export const photoshop: Tool = { name: "Photoshop" };
 export const polymer: Tool = { name: "Polymer", logo: "polymerproject" };
 export const postGis: Tool = { name: "PostGIS", logo: "postgis" };
 export const postgreSql: Tool = { name: "PostgreSQL", logo: "postgresql" };
