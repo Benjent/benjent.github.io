@@ -21,6 +21,7 @@ import {
 	n8n,
 	next,
 	node,
+	nuxt,
 	polymer,
 	postgreSql,
 	react,
@@ -39,6 +40,25 @@ import {
 
 const experience: Experience[] = [
 	{
+		position: "Web designer and developer",
+		company: {
+			name: "Piksail",
+			logo: "piksail.svg",
+			url: "https://www.piksail.fr/",
+			location: "Riantec, France",
+		},
+		period: "Since Apr 2025",
+		about: "Software development and website creation.",
+		tasks: [
+			"UI/UX design",
+			"Project management",
+			"Customer relation",
+			"Task automation",
+			"Full-stack development",
+		],
+		tools: [vue, nuxt, ts, n8n, baserow, strapi, astro, tailwind, docker],
+	},
+	{
 		position: "Full-stack web developer",
 		company: {
 			name: "Les Octets Libres",
@@ -46,7 +66,7 @@ const experience: Experience[] = [
 			url: "https://www.lesoctetslibres.com/",
 			location: "Quimperlé, France",
 		},
-		period: "Since Nov 2023",
+		period: "Nov 2023 - Apr 2025",
 		about:
 			"Software development and website generation with digital carbon footprint reduction.",
 		tasks: [
@@ -75,35 +95,6 @@ const experience: Experience[] = [
 			githubActions,
 			docker,
 		],
-		// projects: [
-		// 	{
-		// 		logo: "adria.png",
-		// 		alt: "ADRIA logo",
-		// 		about: "Software development for food expertise and regulations.",
-		// 		tasks: [
-		// 			"Technical specification",
-		// 			"Database analytics and querying setup",
-		// 		],
-		// 		tools: [
-		// 			react,
-		// 			wagtail,
-		// 			django,
-		// 			metabase,
-		// 		],
-		// 	},
-		// 	{
-		// 		logo: "smile56.png",
-		// 		alt: "Smile56 logo",
-		// 		about:
-		// 			"Website development for an organization helping children in foster care in the Morbihan department.",
-		// 		tasks: [],
-		// 		tools: [
-		// 			react,
-		// 			astro,
-		// 			strapi,
-		// 		],
-		// 	},
-		// ],
 	},
 	{
 		position: "Full-stack web developer",
