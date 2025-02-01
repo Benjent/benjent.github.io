@@ -1,5 +1,6 @@
 import type { Project } from "../types";
 import {
+	astro,
 	bulma,
 	d3,
 	docker,
@@ -9,6 +10,7 @@ import {
 	nuxt,
 	ruby,
 	scss,
+	strapi,
 	tailwind,
 	ts,
 	vue,
@@ -101,6 +103,15 @@ const projects: Project[] = [
 			"Vue.js 3",
 		],
 		tools: [vue, bulma, scss, mapbox, ruby, docker],
+	},
+	{
+		image: "l8l.png",
+		name: "Les Octets Libres",
+		description:
+			"Website migration from Jekyll+SCSS to Astro+TailwindCSS and UX/UI improvements.",
+		url: "https://lesoctetslibres.com",
+		conditions: ["Astro v4", "Strapi v4", "TailwindCSS v3", "Ecodesign"],
+		tools: [astro, strapi, tailwind],
 	},
 ];
 
