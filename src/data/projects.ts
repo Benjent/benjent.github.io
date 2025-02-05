@@ -130,6 +130,15 @@ const projects: Project[] = [
 		conditions: ["Astro v4", "Strapi v4", "TailwindCSS v3", "Ecodesign"],
 		tools: [astro, strapi, tailwind],
 	},
+	{
+		image: "fkbr.png",
+		name: "FKBR",
+		description:
+			"[Work in progress...] Personal website for a DevOps engineer.",
+		// url: "https://lesoctetslibres.com", TODO url
+		conditions: ["Simple design", "Close to linear design"],
+		tools: [astro, tailwind],
+	},
 ];
 
 export default projects;
