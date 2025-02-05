@@ -1,12 +1,15 @@
 import type { Project } from "../types";
 import {
 	astro,
+	baserow,
 	bulma,
 	d3,
 	docker,
 	githubActions,
 	headlessUi,
 	mapbox,
+	n8n,
+	next,
 	nuxt,
 	ruby,
 	scss,
@@ -103,6 +106,20 @@ const projects: Project[] = [
 			"Vue.js 3",
 		],
 		tools: [vue, bulma, scss, mapbox, ruby, docker],
+	},
+	{
+		image: "cf-fsu.png",
+		name: "Centre de formation de la F.S.U.",
+		description:
+			"Web application to list union-related courses, administrate user registrations and manage content. This project automates processes so that members can focus on giving courses.",
+		url: "https://formation.fsu.fr",
+		conditions: [
+			"User management",
+			"No-code integration",
+			"E-mail sending automation",
+			"Free-tier third party integration",
+		],
+		tools: [next, tailwind, baserow, n8n],
 	},
 	{
 		image: "l8l.png",
