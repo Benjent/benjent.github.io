@@ -6,11 +6,11 @@ import {
 	d3,
 	docker,
 	githubActions,
-	headlessUi,
 	mapbox,
 	n8n,
 	next,
 	nuxt,
+	primeVue,
 	ruby,
 	scss,
 	strapi,
@@ -21,6 +21,7 @@ import {
 
 const projects: Project[] = [
 	{
+		wip: false,
 		image: "prog-snack.png",
 		name: "Prog Snack",
 		description:
@@ -39,6 +40,7 @@ const projects: Project[] = [
 		tools: [vue, scss, githubActions],
 	},
 	{
+		wip: false,
 		image: "nanovizer.png",
 		name: "NanoViZer",
 		description:
@@ -57,6 +59,7 @@ const projects: Project[] = [
 		tools: [vue, scss, d3, githubActions],
 	},
 	{
+		wip: false,
 		image: "attendance-sheet.png",
 		name: "Attendance Sheet",
 		description:
@@ -74,26 +77,26 @@ const projects: Project[] = [
 		tools: [vue, tailwind, githubActions],
 	},
 	{
+		wip: true,
 		image: "nice-resume.png",
 		name: "Nice Resume",
 		description:
-			"[Work in progress...] Resume and cover letter builder with themes. Let the user customize and print documents that match his/her own brand design.",
+			"Resume and cover letter builder with themes. Let the user customize and print documents that match his/her own brand design.",
 		// url: "https://benjent.github.io/nice-resume", // TODO
 		conditions: [
-			"Template selection",
+			"Theme selection",
 			"Freedom of customization (not just colors and font sizes)",
 			"Real-time preview of data edition",
 			"Internationalization",
 			"Session saving and export",
 			"JSON Resume import and compatible export",
-			// "Zero-hosting-cost",
-			// "Zero-deployment-cost",
 			"Nuxt.js",
 			"Autodeployment",
 		],
-		tools: [vue, nuxt, headlessUi, tailwind, ts, githubActions],
+		tools: [vue, nuxt, primeVue, tailwind, ts, githubActions],
 	},
 	{
+		wip: true,
 		image: "ocean-plastic-tracker.png",
 		name: "Ocean Plastic Tracker",
 		description:
@@ -102,12 +105,13 @@ const projects: Project[] = [
 		conditions: [
 			"Cartography",
 			"Internationalization",
-			"Authentication",
+			"Optional authentication",
 			"Vue.js 3",
 		],
 		tools: [vue, bulma, scss, mapbox, ruby, docker],
 	},
 	{
+		wip: false,
 		image: "cf-fsu.png",
 		name: "Centre de formation de la F.S.U.",
 		description:
@@ -122,21 +126,26 @@ const projects: Project[] = [
 		tools: [next, tailwind, baserow, n8n],
 	},
 	{
+		wip: false,
 		image: "l8l.png",
 		name: "Les Octets Libres",
 		description:
-			"Website migration from Jekyll+SCSS to Astro+TailwindCSS and UX/UI improvements.",
+			"Website migration from Jekyll+SCSS to Astro+TailwindCSS with small UX/UI improvements.",
 		url: "https://lesoctetslibres.com",
 		conditions: ["Astro v4", "Strapi v4", "TailwindCSS v3", "Ecodesign"],
 		tools: [astro, strapi, tailwind],
 	},
 	{
+		wip: true,
 		image: "fkbr.png",
-		name: "FKBR",
-		description:
-			"[Work in progress...] Personal website for a DevOps engineer.",
+		name: "Franck Kerbiriou",
+		description: "Personal website for a DevOps engineer.",
 		// url: "https://lesoctetslibres.com", TODO url
-		conditions: ["Simple design", "Close to linear design"],
+		conditions: [
+			"Simple design",
+			"Linear-design like",
+			"Dark and orange color usage",
+		],
 		tools: [astro, tailwind],
 	},
 ];

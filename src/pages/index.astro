@@ -92,7 +92,7 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 									<ul class="flex gap-3 flex-wrap">
 										{entry.tools.map((tool) => {
 											return (
-												<li class="w-4 h-4 lg:w-5 lg:h-5">
+												<li class="w-4 h-4 lg:w-5 lg:h-5 text-xs">
 													{tool.logo
 														? <img class="h-full w-full" src={`https://cdn.simpleicons.org/${tool.logo}/5662e8`} alt={`${tool.name} logo`} title={tool.name} />
 														: <span>{tool.name}</span>
@@ -157,6 +157,7 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 								</Thumbnail>
 								<div class={`${index % 2 ? "order-1" : "order-2"} col-span-2`}>
 									<h4 class="font-display text-2xl lg:text-5xl tracking-wide text-quaternary">{project.name}</h4>
+									{project.wip && <p class="text-septenary uppercase text-xs font-bold tracking-wide">Work in progress</p>}
 									<Thumbnail bgImage={`/projects/${project.image}`} class="lg:hidden h-56 mt-6">
 										{project.name === 'Nice Resume'
 										? <p class="max-w-44 bg-gradient-to-br from-blue-700 to-pink-500 text-transparent bg-clip-text text-center text-2xl font-black tracking-widest uppercase">{project.name}</p>
@@ -182,7 +183,7 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 												return (
 													<li class="bg-quaternary shadow-sm rounded-full p-2 w-8 h-8 lg:p-3 lg:w-12 lg:h-12 flex justify-center items-center">
 														{tool.logo
-															? <img class="h-full w-full" src={`https://cdn.simpleicons.org/${tool.logo}/5662e8`} alt={`${tool.name} logo`} title={tool.name} />
+															? <img class="h-full w-full text-xs" src={`https://cdn.simpleicons.org/${tool.logo}/5662e8`} alt={`${tool.name} logo`} title={tool.name} />
 															: <span>{tool.name}</span>
 														}
 													</li>

@@ -53,6 +53,7 @@ export const photoshop: Tool = { name: "Photoshop" };
 export const polymer: Tool = { name: "Polymer", logo: "polymerproject" };
 export const postGis: Tool = { name: "PostGIS", logo: "postgis" };
 export const postgreSql: Tool = { name: "PostgreSQL", logo: "postgresql" };
+export const primeVue: Tool = { name: "PrimeVue", logo: "primevue" };
 export const pug: Tool = { name: "Pug", logo: "pug" };
 export const python: Tool = { name: "Python", logo: "python" };
 export const react: Tool = { name: "React", logo: "react" };
