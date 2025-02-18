@@ -1,5 +1,6 @@
 import type { Project } from "../types";
 import {
+	alpine,
 	astro,
 	baserow,
 	bulma,
@@ -130,6 +131,17 @@ const projects: Project[] = [
 		tools: [vue, bulma, scss, mapbox, ruby, docker],
 	},
 	{
+		wip: true,
+		hasLogo: true,
+		image: "smile.png",
+		name: "Smile Sourire Ensemble",
+		description:
+			"Website migration from Jekyll+SCSS to Astro+TailwindCSS with small UX/UI improvements.",
+		// url: "https://smilesourireensemble.fr", TODO url
+		conditions: ["Donation"],
+		tools: [astro, strapi, tailwind],
+	},
+	{
 		wip: false,
 		hasLogo: true,
 		image: "cf-fsu.png",
@@ -180,6 +192,17 @@ const projects: Project[] = [
 		// url: "https://lesoctetslibres.com", TODO url
 		conditions: [],
 		tools: [astro, tailwind],
+	},
+	{
+		wip: false,
+		hasLogo: true,
+		image: "piksail.png",
+		name: "Piksail",
+		description:
+			"Personal website for a cultural mediator. This project aims to highlight experience and projects through a exciting, playful design.",
+		url: "https://piksail.fr",
+		conditions: [],
+		tools: [astro, tailwind, alpine],
 	},
 ];
 

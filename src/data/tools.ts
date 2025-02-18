@@ -3,6 +3,7 @@ import type { Tool } from "../types";
 export const afterEffects: Tool = {
 	name: "After Effects",
 };
+export const alpine: Tool = { name: "alpine", logo: "alpinedotjs" };
 export const angular: Tool = { name: "Angular", logo: "angular" };
 export const astro: Tool = { name: "Astro", logo: "astro" };
 export const audacity: Tool = { name: "Audacity", logo: "audacity" };

@@ -143,59 +143,61 @@ const yearsOfExperience = Math.abs(currentYear - experienceStartYear);
 		<Separator bgClass="bg-tertiary" />
 
 		<section id="projects" class="bg-secondary text-tertiary">
-			<div class="max-w-screen-sm lg:max-w-screen-xl mx-auto px-5 py-20 lg:py-24">
+			<div class="max-w-screen-md lg:max-w-screen-2xl mx-auto px-5 py-20 lg:py-24">
 				<h3 class="scroll-fade font-display uppercase text-3xl lg:text-6xl mb-20">Projects</h3>
-				<ul class="text-quaternary">
-					{projects.map((project, index) => {
-						return (
-							<li class="scroll-fade mb-24 grid grid-cols-1 lg:grid-cols-5 gap-x-14 gap-y-4 lg:gap-y-10">
-								<Thumbnail bgImage={`/projects/${project.image}`} class={`${index % 2 ? "order-2" : "order-1"} col-span-3 hidden lg:block`}>
-									{!project.hasLogo
-										? <p class="max-w-64 text-white text-center text-4xl font-black tracking-widest uppercase">{project.name}</p>
-										: <img class="max-h-32 max-w-32" src={`/logos/${project.image}`} alt={`${project.name} logo`}>
-									}
-								</Thumbnail>
-								<div class={`${index % 2 ? "order-1" : "order-2"} col-span-2`}>
-									<h4 class="font-display text-2xl lg:text-5xl tracking-wide text-quaternary">{project.name}</h4>
-									{project.wip && <p class="text-septenary uppercase text-xs font-bold tracking-wide">Work in progress</p>}
-									<Thumbnail bgImage={`/projects/${project.image}`} class="lg:hidden h-56 mt-6">
+				<div x-data={`{ project: 0, projects: ${JSON.stringify(projects)} }`} class="flex gap-10">
+					<ul class="text-quaternary flex flex-col lg:grid lg:grid-cols-12 [grid-auto-rows:minmax(50px,auto)] gap-10 w-5/12 md:w-2/3">
+						{projects.map((project, index) => {
+							return (
+								<li x-on:click=`project = ${index}` :class=`project === ${index} ? 'border-current' : 'border-transparent'` class={`scroll-fade cursor-pointer min-h-28 ${index === 0 ? 'col-span-12 md:col-span-6 xl:col-span-4 xl:row-span-3' : ''} ${index === 1 ? 'col-span-12 md:col-span-6 xl:col-span-5 xl:row-span-2' : ''} ${index === 2 ? 'col-span-12 md:col-span-6 xl:col-span-3 xl:row-span-2' : ''} ${index === 3 ? 'col-span-12 md:col-span-6 xl:col-span-2 xl:row-span-2 [&>*]:[background-position:right]' : ''} ${index === 4 ? 'col-span-12 md:col-span-6 xl:col-span-2 xl:row-span-2 [&>*]:[background-position:center]' : ''} ${index === 5 ? 'col-span-12 md:col-span-6 xl:col-span-2 xl:row-span-2 [&>*]:[background-position:right]' : ''} ${index === 6 ? 'col-span-12 md:col-span-6 xl:col-span-2 xl:row-span-2' : ''} ${index === 7 ? 'col-span-12 md:col-span-6 xl:col-span-4 xl:row-span-3 [&>*]:[background-position:center]' : ''} ${index === 8 ? 'col-span-12 md:col-span-6 xl:col-span-3 xl:row-span-2' : ''} ${index === 9 ? 'col-span-12 md:col-span-6 xl:col-span-5 xl:row-span-4' : ''} ${index === 10 ? 'col-span-12 md:col-span-6 xl:col-span-3 xl:row-span-2 [&>*]:[background-position:center]' : ''} ${index === 11 ? 'col-span-12 md:col-span-6 xl:col-span-4 xl:row-span-2 [&>*]:[background-position:50%_30%]' : ''}`}>
+									<Thumbnail bgImage={`/projects/${project.image}`}>
 										{!project.hasLogo
-										? <p class="max-w-44 text-white text-center text-2xl font-black tracking-widest uppercase">{project.name}</p>
-										: <img class="max-h-32 max-w-32" src={`/logos/${project.image}`} alt={`${project.name} logo`}>
-									}
+											? <p class="hidden md:block max-w-64 text-white text-center text-2xl font-black tracking-widest uppercase">{project.name}</p>
+											: <img class="hidden md:block max-h-20 xl:max-h-32 max-w-20 xl:max-w-32" src={`/logos/${project.image}`} alt={`${project.name} logo`}>
+										}
 									</Thumbnail>
-									<p class="text-base lg:text-lg leading-tight mt-6 lg:mt-8">{project.description}</p>
-									<p class="mt-6 lg:mt-8">Conditions:</p>
-									<ul class="italic text-xs lg:text-sm">
-										{project.conditions.map((condition) => {
-											return <li>- {condition}</li>
-										})}
-									</ul>
-								</div>
-								<div class="col-span-full flex flex-col lg:flex-row gap-4 lg:gap-10 justify-center items-center order-3">
-									<p class="text-sm lg:text-lg">
-										{project.url && <a class="underline underline-offset-2 decoration-quaternary/50 hover:decoration-quaternary" href={project.url}>See the project live</a>}
-									</p>
-									<div class="flex flex-wrap gap-3 items-center text-sm lg:text-lg">
-										Made with
-										<ul class="flex gap-3">
-											{project.tools.map((tool) => {
-												return (
-													<li class="bg-quaternary shadow-sm rounded-full p-2 w-8 h-8 lg:p-3 lg:w-12 lg:h-12 flex justify-center items-center">
-														{tool.logo
-															? <img class="h-full w-full text-xs" src={`https://cdn.simpleicons.org/${tool.logo}/5662e8`} alt={`${tool.name} logo`} title={tool.name} />
-															: <span>{tool.name}</span>
-														}
-													</li>
-												)
-											})}
-										</ul>
-									</div>
-								</div>
-							</li>
-						)
-					})}
-				</ul>
+								</li>
+							)
+						})}
+					</ul>
+					<aside class="w-7/12 lg:w-1/3 h-fit sticky top-16 lg:top-24">
+						<div>
+							<h4 x-text="projects[project].name" class="font-display text-2xl lg:text-5xl tracking-wide text-quaternary" />
+							<template x-if="projects[project].wip" >
+								<p class="text-septenary uppercase text-xs font-bold tracking-wide">Work in progress</p>
+							</template>
+							<p x-text="projects[project].description" class="text-base lg:text-lg leading-tight mt-6 lg:mt-8" />
+							{/* <p class="mt-6 lg:mt-8">Conditions:</p>
+							<ul class="italic text-xs lg:text-sm">
+								<template x-for="(value, index) in projects[project].conditions">
+									<li x-text="value" />
+								</template>
+							</ul> */}
+						</div>
+						<div class="flex flex-col gap-4 lg:gap-10 justify-center items-center mt-6">
+							<template x-if="projects[project].url" >
+								<p class="text-sm lg:text-lg">
+									<a class="underline underline-offset-2 decoration-quaternary/50 hover:decoration-quaternary" x-bind:href="projects[project].url">See the project live</a>
+								</p>
+							</template>
+							<div class="flex flex-wrap gap-3 items-center text-sm lg:text-lg">
+								Made with
+								<ul class="flex flex-wrap gap-3">
+									<template x-for="(value, index) in projects[project].tools">
+										<li class="bg-quaternary shadow-sm rounded-full p-2 w-8 h-8 lg:p-3 lg:w-12 lg:h-12 flex justify-center items-center">
+											<template x-if="value.logo">
+												<img class="h-full w-full text-xs" x-bind:src="`https://cdn.simpleicons.org/${value.logo}/5662e8`" x-bind:alt="`${value.name} logo`" x-bind:title="value.name" />
+											</template>
+											<template x-if="!value.logo">
+												<span x-text="value.name" />
+											</template>
+										</li>
+									</template>
+								</ul>
+							</div>
+						</div>
+					</aside>
+				</div>
 			</div>
 		</section>
 		<Separator bgClass="bg-secondary" />
