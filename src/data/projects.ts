@@ -22,6 +22,7 @@ import {
 const projects: Project[] = [
 	{
 		wip: false,
+		hasLogo: true,
 		image: "prog-snack.png",
 		name: "Prog Snack",
 		description:
@@ -41,6 +42,7 @@ const projects: Project[] = [
 	},
 	{
 		wip: false,
+		hasLogo: true,
 		image: "nanovizer.png",
 		name: "NanoViZer",
 		description:
@@ -60,6 +62,7 @@ const projects: Project[] = [
 	},
 	{
 		wip: false,
+		hasLogo: true,
 		image: "attendance-sheet.png",
 		name: "Attendance Sheet",
 		description:
@@ -78,6 +81,7 @@ const projects: Project[] = [
 	},
 	{
 		wip: true,
+		hasLogo: false,
 		image: "nice-resume.png",
 		name: "Nice Resume",
 		description:
@@ -97,6 +101,7 @@ const projects: Project[] = [
 	},
 	{
 		wip: true,
+		hasLogo: true,
 		image: "lea-kormas.png",
 		name: "Léa Kormas",
 		description:
@@ -110,6 +115,7 @@ const projects: Project[] = [
 	},
 	{
 		wip: true,
+		hasLogo: true,
 		image: "ocean-plastic-tracker.png",
 		name: "Ocean Plastic Tracker",
 		description:
@@ -125,6 +131,7 @@ const projects: Project[] = [
 	},
 	{
 		wip: false,
+		hasLogo: true,
 		image: "cf-fsu.png",
 		name: "Centre de formation de la F.S.U.",
 		description:
@@ -140,6 +147,7 @@ const projects: Project[] = [
 	},
 	{
 		wip: false,
+		hasLogo: true,
 		image: "l8l.png",
 		name: "Les Octets Libres",
 		description:
@@ -150,6 +158,7 @@ const projects: Project[] = [
 	},
 	{
 		wip: true,
+		hasLogo: true,
 		image: "fkbr.png",
 		name: "Franck Kerbiriou",
 		description: "Personal website for a DevOps engineer.",
@@ -159,6 +168,17 @@ const projects: Project[] = [
 			"Linear-design like",
 			"Dark and orange color usage",
 		],
+		tools: [astro, tailwind],
+	},
+	{
+		wip: true,
+		hasLogo: false,
+		image: "nolwenn-quinquis.png",
+		name: "Nolwenn Quinquis",
+		description:
+			"Personal website for a cultural mediator. This project aims to highlight experience and projects through a exciting, playful design.",
+		// url: "https://lesoctetslibres.com", TODO url
+		conditions: [],
 		tools: [astro, tailwind],
 	},
 ];

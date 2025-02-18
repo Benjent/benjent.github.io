@@ -37,6 +37,7 @@ export type Education = {
 
 export type Project = {
 	wip: boolean;
+	hasLogo: boolean;
 	image: string;
 	name: string;
 	description: string;
