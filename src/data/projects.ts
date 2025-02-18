@@ -97,6 +97,19 @@ const projects: Project[] = [
 	},
 	{
 		wip: true,
+		image: "lea-kormas.png",
+		name: "Léa Kormas",
+		description:
+			"Personal website for an animal osteopath. The design must be simple and extends existing leaflets.",
+		// url: "https://benjent.github.io/lea-kormas", TODO url
+		conditions: [
+			"SEO improvement",
+			"Brown and light color usage to match existing print design",
+		],
+		tools: [astro, tailwind],
+	},
+	{
+		wip: true,
 		image: "ocean-plastic-tracker.png",
 		name: "Ocean Plastic Tracker",
 		description:
